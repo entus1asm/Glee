@@ -14,27 +14,83 @@
 	<body>
 		<header class="header">
 			<div class="container">
-				<div class="header__row">
-					<div class="logo">ВебКадеми</div>
+				<div class="header__inner">
+					<!-- Logo -->
+					<a href="#" class="logo">
+						<svg class="logo-icon icon heart-line">
+							<use href="./img/svgsprite/sprite.symbol.svg#logo-icon"></use>
+						</svg>
+						<span class="logo__text">Glee.</span>
+					</a>
+
+					<!-- Navigation -->
 					<nav class="header__nav nav">
 						<ul class="nav__list">
-							<li><a href="index.html" class="active">Главная</a></li>
-							<li><a href="docs.html">Документация</a></li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Home +</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">About</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Services</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Pages +</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">News</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Contact</a>
+							</li>
 						</ul>
 					</nav>
-					<button class="mobile-nav-btn">
-						<div class="nav-icon"></div>
-					</button>
+
+					<!-- Actions -->
+					<div class="header__actions actions">
+						<button class="actions__btn actions__btn--search" aria-label="Search"></button>
+						<button class="actions__btn actions__btn--user" aria-label="Account"></button>
+						<button class="actions__btn actions__btn--wishlist" aria-label="Wishlist">
+							<!-- <span class="actions__count">2</span> -->
+						</button>
+						<button class="actions__btn actions__btn--cart" aria-label="Cart">
+							<!-- <span class="actions__count">2</span> -->
+						</button>
+						<button class="actions__btn actions__btn--more" aria-label="More actions"></button>
+					</div>
 				</div>
 			</div>
 		</header>
-		<div class="mobile-nav">
-			<ul class="mobile-nav__list">
-				<li><a href="index.html">Главная</a></li>
-				<li><a href="docs.html">Документация</a></li>
-			</ul>
-		</div>
 
+		<!-- <header class="header">
+    <div class="container">
+        <div class="header__row">
+            <div class="logo">
+                <svg class="icon icon heart-line">
+                    <use href="./img/svgsprite/sprite.symbol.svg#logo-icon"></use>
+                </svg>
+
+            </div>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="docs.html">Документация</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-btn">
+                <div class="nav-icon"></div>
+            </button>
+        </div>
+    </div>
+</header>
+<div class="mobile-nav">
+	<ul class="mobile-nav__list">
+		<li><a href="index.html">Главная</a></li>
+		<li><a href="docs.html">Документация</a></li>
+	</ul>
+</div>
+ -->
 		<main class="docs">
 			<section>
 				<div class="container">

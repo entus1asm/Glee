@@ -1,16 +1,116 @@
 .header {
-	background-color: #c0e4f4;
-	padding: 50px 0;
+	padding: 45px 0px 48px;
+	// .header__inner
 
-	&__row {
+	&__inner {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
+		justify-content: space-between;
 	}
+
+	// .header__nav
+
+	&__nav {
+		font-family: var(--font-titles);
+		font-weight: 500;
+	}
+
+	// .header__actions
+
+	&__actions {}
 }
 
-.header__nav {
-	@include tablet {
-		display: none;
-	}
+.container {}
+
+.logo {
+	font-family: var(--font-titles);
+	display: flex;
+	align-items: center;
+	column-gap: 14px;
+	font-size: 36px;
+	font-weight: 500;
+	// .logo__text
+
+	&__text {}
 }
+
+.logo-icon {}
+
+.icon {}
+
+.heart-line {}
+
+.nav {
+
+	// .nav__list
+
+	&__list {
+		display: flex;
+		column-gap: 35px;
+		font-size: 15px;
+	}
+
+	// .nav__item
+
+	&__item {}
+
+	// .nav__link
+
+	&__link {}
+}
+
+.actions {
+
+	// .actions__btn
+
+	&__btn {}
+
+	// .actions__btn--search
+
+	&__btn--search {}
+
+	// .actions__btn--user
+
+	&__btn--user {}
+
+	// .actions__btn--wishlist
+
+	&__btn--wishlist {}
+
+	// .actions__btn--cart
+
+	&__btn--cart {}
+
+	// .actions__btn--more
+
+	&__btn--more {}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .header {
+// 	background-color: #c0e4f4;
+// 	padding: 50px 0;
+
+// 	&__row {
+// 		display: flex;
+// 		justify-content: space-between;
+// 		align-items: center;
+// 	}
+// }
+
+// .header__nav {
+// 	@include tablet {
+// 		display: none;
+// 	}
+// }
