@@ -7,17 +7,60 @@
 	--font-titles: var(--font-accent);
 
 	--page-bg: #fff;
-	--text-color: #000;
-	--accent: #ac182c;
+	--title-color: #404040;
+	--text-color: #243f4d;
+	--accent: #a3bbc8;
 	--link-color: #436372;
 
 
-    --laptop-size: 1199px;
+	--laptop-size: 1199px;
 	--tablet-size: 959px;
 	--mobile-size: 599px;
+
+	//////////////////////BUTTON////////////////////////////////////////////BUTTON//////////////////////
+	%btn {
+
+		color: #fff;
+		cursor: pointer;
+		background-color: var(--accent);
+		font-family: var(--font-accent);
+	}
+//////////////////////SWIPER BUTTONS////////////////////////////////////////////SWIPER BUTTONS//////////////////////
+		%swiper-pagination-bullet {
+		background-color: transparent;
+		width: 29px;
+		height: 29px;
+		border: 1px solid transparent;
+		position: relative;
+		opacity: 1;
+		line-height: 27px;
+		font-size: 11px;
+		font-weight: 500;
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 29px;
+			height: 29px;
+			border-radius: 50%;
+			background-color: rgba(255, 255, 255, 0.5);
+			opacity: 1;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	%swiper-pagination-bullet-active {
+
+		&::before {
+			z-index: -1;
+			background-color: #fff;
+		}
+	}
 }
 
 .dark {
-    --page-bg: #252526;
-    --text-color: #fff;
+	--page-bg: #252526;
+	--text-color: #fff;
 }
