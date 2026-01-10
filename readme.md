@@ -7,7 +7,5 @@ The project follows **BEM methodology**, uses a modular SCSS structure, and incl
 ### ✨ Key features:
 - 🧱 BEM-based HTML & SCSS architecture
 - 🎨 Clean and modern UI design
-- 🖼️ Hero section with Swiper slider
-- 💡 Benefits information section
 - ⚙️ Gulp / Webpack build setup
 - 📦 Scalable project structure for future growth
