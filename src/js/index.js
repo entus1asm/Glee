@@ -1,14 +1,26 @@
-// // Галерея и лайтбоксы от Fancybox
-// import { Fancybox } from '@fancyapps/ui';
-// import '@fancyapps/ui/dist/fancybox/fancybox.css';
+// Галерея и лайтбоксы от Fancybox
+import { Fancybox } from '@fancyapps/ui';
+import '@fancyapps/ui/dist/fancybox/fancybox.css';
 
-// Fancybox.bind('[data-fancybox]', {
-// 	// Your custom options
-// });
+Fancybox.bind('[data-fancybox]', {
+	// Your custom options
+});
 
 // // Мобильная навигация
 // import mobileNav from './modules/mobile-nav.js';
 // mobileNav();
+
+import mixitup from 'mixitup';
+
+const mixer = mixitup('.products__grid', {
+  selectors: {
+    target: '.product-card',
+  },
+  animation: {
+    duration: 300,
+  },
+});
+
 
 //////////////////////////////////////// SWIPER JS ////////////////////////////////////////
 

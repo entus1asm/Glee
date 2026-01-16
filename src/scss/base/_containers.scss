@@ -14,6 +14,14 @@
 	width: 100%;
 }
 
+.container--narrow {
+	margin: 0 auto;
+	padding: 0 var(--container-padding);
+
+	max-width: var(--container-width-narrow);
+	width: 100%;
+}
+
 .container-full {
 	padding: 0 var(--container-padding);
 	max-width: 100%;

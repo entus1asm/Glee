@@ -46,8 +46,9 @@
 	],
 	"dependencies": {
 		"@fancyapps/fancybox": "^3.5.7",
-		"@fancyapps/ui": "^5.0.35",
+		"@fancyapps/ui": "^5.0.36",
 		"avif-webp-checker": "^1.0.0",
+		"mixitup": "^3.3.2",
 		"swiper": "^11.2.10"
 	}
 }
