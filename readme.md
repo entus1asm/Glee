@@ -1,25 +1,11 @@
-# Gulp сборка для верстки сайтов от [ВебКадеми](https://webcademy.ru)
+## 🛋️ Glee — Furniture E-commerce Website
 
-- HTML,
-- SCSS,
-- Gulp,
-- JS
+Glee is a modern furniture e-commerce website built with a focus on clean UI, scalability, and maintainable architecture.
 
-Документация и примеры использования внутри.
+The project follows **BEM methodology**, uses a modular SCSS structure, and includes an interactive **hero slider**, reusable UI components, and well-organized sections based on real commercial layouts.
 
-Установить зависимости:
-```
-npm i
-```
-
-Зпустить в режиме разработки:
-```
-gulp
-```
-
-Собрать версию для публикации:
-```
-gulp docs
-```
-
-[Смотреть демо](https://user.github.io/repo/)
+### ✨ Key features:
+- 🧱 BEM-based HTML & SCSS architecture
+- 🎨 Clean and modern UI design
+- ⚙️ Gulp / Webpack build setup
+- 📦 Scalable project structure for future growth
