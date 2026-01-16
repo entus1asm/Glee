@@ -108,10 +108,13 @@
 
 	&__input {
 		background-color: #fef7f0;
+		color: #234969;
+
 		&::placeholder {
 			font-size: 12px;
 			color: #234969;
 		}
+
 		padding: 15px 78px 15px 15px;
 	}
 
@@ -136,11 +139,20 @@
 
 	// .footer__menu
 
-	&__menu {}
+	&__menu {
+		display: flex;
+	}
 
 	// .footer__menu-item
 
-	&__menu-item {}
+	&__menu-item {
+		&:not(:last-child) {
+			&::after {
+				content: '|';
+				margin: 0 14px;
+			}
+		}
+	}
 
 	// .footer__menu-link
 
