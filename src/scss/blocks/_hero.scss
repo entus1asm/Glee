@@ -49,15 +49,19 @@
     position: relative;
     align-items: center;
 
-    &::after {
-      content: '';
-      background-image: url('../../img/icons/arrow-icon.svg');
-      width: 22px;
-      height: 9px;
+
+    .arrow-hero {
       position: absolute;
       right: 20px;
-      align-self: center;
+
+      .arrow-icon {
+        width: 22px;
+        height: 9px;
+      }
     }
+      .arrow-icon {
+        fill: #fff;
+      }
   }
 
   &__img {
