@@ -1,0 +1,24 @@
+.brands {
+  margin-top: -185px;
+  background-color: #fef7f0;
+  height: 435px;
+  position: relative;
+  // .brands__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 90px;
+    column-gap: 100px;
+  }
+
+  // .brands__item
+
+  &__item {}
+}
+
+.container-brands {
+  display: flex;
+  justify-content: center;
+}
