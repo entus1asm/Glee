@@ -12,13 +12,28 @@ Fancybox.bind('[data-fancybox]', {
 
 import mixitup from 'mixitup';
 
-const mixer = mixitup('.products__grid', {
+mixitup('.products__controls', {
   selectors: {
-    target: '.product-card',
+    target: '.product-card'
+  },
+  controls: {
+    scope: 'local'
   },
   animation: {
-    duration: 300,
+    duration: 300
+  }
+});
+
+mixitup('.designs__controls', {
+  selectors: {
+    target: '.design-card'
   },
+  controls: {
+    scope: 'local'
+  },
+  animation: {
+    duration: 300
+  }
 });
 
 

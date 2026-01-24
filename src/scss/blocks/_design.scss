@@ -1,0 +1,152 @@
+.designs {
+  padding-top: 75px;
+  padding-bottom: 90px;
+  // .designs__head
+
+  &__head {}
+
+  // .designs__title
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 600;
+    color: #191919;
+    font-size: 36px;
+  }
+
+  // .designs__filters
+
+  &__filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  // .designs__filter
+
+  &__filter {
+    button {
+      transition: all 0.3s;
+      color: #8b8b8b;
+      font-weight: 600;
+    }
+
+    &+& {
+      margin-left: 30px;
+    }
+  }
+
+  .mixitup-control-active {
+    color: #1a1a1a;
+  }
+
+  // .designs__grids
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px 30px;
+  }
+}
+
+.container {}
+
+.design-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  // .design-card__image
+
+  &__image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  &__image img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  &__content {
+    max-width: 195px;
+    top: 40px;
+    left: 35px;
+    position: absolute;
+  }
+
+  // .design-card__actions
+
+  &__actions {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    transform: translateY(300%);
+    transition: all 0.3s;
+  }
+
+  // .design-card__action
+
+  &__action {
+    align-items: center;
+    transition: all .3s;
+    border-radius: 50%;
+    padding: 11px;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.2);
+
+    &+& {
+      margin-left: 15px;
+    }
+  }
+
+  &__action:hover {
+    background-color: #a3bac7;
+
+    path {
+      fill: #fff;
+      transition: all .3s;
+    }
+  }
+
+  // .design-card__action--view
+
+  &__action--view {}
+
+  // .design-card__action--cart
+
+  &__action--cart {}
+
+  // .design-card__action--favorite
+
+  &__action--favorite {}
+
+  // .design-card__title
+
+  &__title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #1a1a1a;
+  }
+
+  // .design-card__price
+
+  &__price {
+    font-weight: 600;
+    color: #a3bbc8;
+  }
+
+  &:hover {
+    .design-card__actions {
+      transform: translateY(0);
+    }
+  }
+
+}
