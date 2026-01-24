@@ -1,0 +1,23 @@
+.brand-video {
+
+  // .brand-video__popout-inner
+
+  &__popout-inner {
+    background-image: url(../../img/brand-video/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // .brand-video__popout-link
+
+  &__popout-link {
+  }
+}
+
+.container-full {
+  padding: 0;
+}
