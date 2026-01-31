@@ -1,0 +1,109 @@
+.about-mission {
+  padding-top: 120px;
+
+  &__inner {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+  }
+
+  &__media {
+    flex: 0 0 570px;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__experience {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__years {
+    font-size: 140px;
+    font-weight: 700;
+    color: #a3bbc8;
+    font-family: var(--font-accent);
+  }
+
+  &__years-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    line-height: 1.2;
+    color: #243f4d;
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #243f4d;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 65px;
+  }
+
+  &__stats {
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 30px;
+    gap: 34px;
+  }
+
+  &__stat {
+    display: grid;
+    grid-template-columns: 34px auto;
+    grid-template-rows: auto auto;
+    column-gap: 20px;
+    row-gap: 2px;
+    align-items: center;
+
+    &:not(:last-child) {
+      padding-right: 34px;
+      border-right: 1px solid #e6e6e6;
+    }
+  }
+
+  &__stat-icon {
+    grid-row: 1 / 3;
+    width: 36px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  &__stat-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.1;
+  }
+
+  &__stat-label {
+    color: #4c4c4c;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+}
