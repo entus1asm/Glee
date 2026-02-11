@@ -61,6 +61,15 @@
 	}
 }
 
+%checkbox-hidden,
+%radio-hidden {
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	position: absolute;
+}
+
 .dark {
 	--page-bg: #252526;
 	--text-color: #fff;
