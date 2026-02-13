@@ -1,99 +1,110 @@
+// /src/js/index.js (или твой главный entry)
+
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
 import mixitup from "mixitup";
+
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
-import $ from 'jquery';
-import 'ion-rangeslider';
-import 'ion-rangeslider/css/ion.rangeSlider.min.css';
 
+import StarRating from "star-rating.js";
+import "star-rating.js/dist/star-rating.css";
 
-Fancybox.bind('[data-fancybox]', {
-	// Your custom options
-});
-
-// // Мобильная навигация
-// import mobileNav from './modules/mobile-nav.js';
-// mobileNav();
+import $ from "jquery";
+import "ion-rangeslider";
+import "ion-rangeslider/css/ion.rangeSlider.min.css";
 
 const fmt2 = (v) => Number(v).toFixed(2);
 
-$('.filter-price__input').ionRangeSlider({
-  type: 'double',
-  prefix: '$',
-  prettify_enabled: true,
-  prettify: (num) => fmt2(num),
+const qs = (sel, root = document) => root.querySelector(sel);
+const qsa = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
-  onStart: (data) => {
-    $('.filter-price__from').text(fmt2(data.from));
-    $('.filter-price__to').text(fmt2(data.to));
-  },
-
-  onChange: (data) => {
-    $('.filter-price__from').text(fmt2(data.from));
-    $('.filter-price__to').text(fmt2(data.to));
-  },
-});
-
-mixitup('.products__controls', {
-  selectors: {
-    target: '.product-card'
-  },
-  controls: {
-    scope: 'local'
-  },
-  animation: {
-    duration: 300
+const safeInit = (condition, initFn) => {
+  if (!condition) return null;
+  try {
+    return initFn();
+  } catch (e) {
+    console.warn("[init skipped/error]", e);
+    return null;
   }
-});
+};
 
-mixitup('.designs__controls', {
-  selectors: {
-    target: '.design-card'
-  },
-  controls: {
-    scope: 'local'
-  },
-  animation: {
-    duration: 300
-  }
-});
+document.addEventListener("DOMContentLoaded", () => {
+  // Fancybox
+  safeInit(qs("[data-fancybox]"), () =>
+    Fancybox.bind("[data-fancybox]", {
+      // options
+    })
+  );
 
+  // Ion.RangeSlider (jQuery plugin)
+  safeInit($(".filter-price__input").length, () => {
+    $(".filter-price__input").ionRangeSlider({
+      type: "double",
+      prefix: "$",
+      prettify_enabled: true,
+      prettify: (num) => fmt2(num),
 
+      onStart: (data) => {
+        $(".filter-price__from").text(fmt2(data.from));
+        $(".filter-price__to").text(fmt2(data.to));
+      },
 
-//////////////////////////////////////// SWIPER JS ////////////////////////////////////////
+      onChange: (data) => {
+        $(".filter-price__from").text(fmt2(data.from));
+        $(".filter-price__to").text(fmt2(data.to));
+      },
+    });
+  });
 
+  // MixItUp
+  safeInit(qs(".products__controls"), () =>
+    mixitup(".products__controls", {
+      selectors: { target: ".product-card" },
+      controls: { scope: "local" },
+      animation: { duration: 300 },
+    })
+  );
 
+  safeInit(qs(".designs__controls"), () =>
+    mixitup(".designs__controls", {
+      selectors: { target: ".design-card" },
+      controls: { scope: "local" },
+      animation: { duration: 300 },
+    })
+  );
 
-const heroSlider = new Swiper('.hero__slider', {
-  direction: 'horizontal',
-  slidesPerView: 1,
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true,
-  },
-  speed: 800,
-  loop: true,
+  // Swiper
+  safeInit(qs(".hero__slider"), () => {
+    const heroSlider = new Swiper(".hero__slider", {
+      direction: "horizontal",
+      slidesPerView: 1,
+      effect: "fade",
+      fadeEffect: { crossFade: true },
+      speed: 800,
+      loop: true,
+      autoplay: { delay: 4000, disableOnInteraction: false },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: (index, className) =>
+          `<span class="${className}">${index + 1}</span>`,
+      },
+    });
 
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
+    return heroSlider;
+  });
 
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    renderBullet: function (index, className) {
-      return `<span class="${className}">${index + 1}</span>`;
-    },
-  },
-
-  // navigation: {
-  //   nextEl: '.slider__btn--next',
-  //   prevEl: '.slider__btn--prev',
-  // },
-
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
+  // StarRating (инициализируем все селекты на странице)
+  safeInit(qsa(".star-rating").length, () => {
+    qsa(".star-rating").forEach((el) => {
+      new StarRating(el, {
+        maxStars: 5,
+        clearable: false,
+        tooltip: false,
+        readOnly: true,
+      });
+    });
+  });
 });

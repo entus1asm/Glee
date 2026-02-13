@@ -18,6 +18,13 @@
 	--tablet-size: 959px;
 	--mobile-size: 599px;
 
+	//////////////////////STARS////////////////////////////////////////////STARS//////////////////////
+	.gl-star-rating {
+  --gl-star-empty: url("../../img/product-list-one/star-solid-empty.svg");
+  --gl-star-full:  url("../../img/product-list-one/star-solid-full.svg");
+	--gl-star-size: 32px;
+	}
+
 	//////////////////////BUTTON////////////////////////////////////////////BUTTON//////////////////////
 	%btn {
 
@@ -26,8 +33,9 @@
 		background-color: var(--accent);
 		font-family: var(--font-accent);
 	}
-//////////////////////SWIPER BUTTONS////////////////////////////////////////////SWIPER BUTTONS//////////////////////
-		%swiper-pagination-bullet {
+
+	//////////////////////SWIPER BUTTONS////////////////////////////////////////////SWIPER BUTTONS//////////////////////
+	%swiper-pagination-bullet {
 		background-color: transparent;
 		width: 29px;
 		height: 29px;

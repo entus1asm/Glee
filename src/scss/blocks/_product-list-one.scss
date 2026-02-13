@@ -282,14 +282,17 @@
 .recent-list {
 
   &__item {
+    &+& {
+      margin-top: 14px;
+    }
+  }
+
+  &__link {
+
     display: grid;
     grid-template-columns: 71px 1fr;
     gap: 12px;
     align-items: center;
-
-    &+& {
-      margin-top: 14px;
-    }
   }
 
   &__img {
@@ -301,22 +304,29 @@
 
   &__name {
     display: inline-block;
-    color: #1a1a1a;
+    color: #333;
     text-decoration: none;
-    font-weight: 500;
-    margin-bottom: 4px;
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
 
-    &:hover {
-      color: #6d8896;
+  .gl-star-rating {
+    --gl-star-size: 11px;
+  }
+
+  .gl-star-rating {
+        margin-bottom: 6px;
+    .gl-star-rating--stars {
+      span {
+        cursor: pointer;
+      }
     }
   }
 
-
-
   &__price {
-    margin-top: 4px;
-    color: #8b8b8b;
-    font-size: 14px;
+    font-family: var(--font-accent);
+    color: #333;
+    font-size: 15px;
   }
 }
 
