@@ -1,0 +1,32 @@
+.product-details__tabs {
+  padding-bottom: 130px;
+}
+
+.tabs__nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.tabs__btn {
+  min-width: 220px;
+  height: 48px;
+  padding: 0 18px;
+  border-radius: 4px;
+  background: #edf1f4;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+
+  &--active {
+    background: #a3bbc8;
+    color: #fff;
+  }
+}
+
+.tabs__panel {
+  font-size: 14px;
+  line-height: 1.9;
+}
