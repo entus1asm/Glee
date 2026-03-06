@@ -1,0 +1,269 @@
+.blog-page {
+
+  &__layout {
+    padding: 120px 0px 120px;
+    display: grid;
+    grid-template-columns: minmax(0, 830px) 270px;
+    gap: 70px;
+    align-items: start;
+  }
+
+  &__content {
+    min-width: 0;
+  }
+
+  &__aside {
+    min-width: 0;
+  }
+
+  &__search {
+    margin-bottom: 40px;
+  }
+
+  &__search-form {
+    display: grid;
+    grid-template-columns: 1fr 46px;
+  }
+
+  &__search-input {
+    height: 46px;
+    padding: 0 15px;
+    border: 1px solid #dbe5ea;
+    border-right: none;
+    background-color: #fff;
+    font-size: 14px;
+    color: #7b8b97;
+    outline: none;
+
+    &::placeholder {
+      color: #9aa9b4;
+    }
+
+    &:focus {
+      border-color: #c9d7df;
+    }
+  }
+
+  &__search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dbe5ea;
+    background-color: #edf3f6;
+    color: #8aa0ae;
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+
+    &:hover {
+      background-color: #e1ebf0;
+      color: #6e8695;
+      border-color: #cfdae1;
+    }
+  }
+
+  &__search-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+
+  .blog-page__layout {
+    .pagination {
+      justify-content: unset;
+    }
+  }
+
+}
+
+.blog-card {
+  &:not(:last-child) {
+    margin-bottom: 52px;
+  }
+
+  &__image-link {
+    display: block;
+    position: relative;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+  }
+
+  &__meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 44px;
+    margin-top: -70px;
+    position: absolute;
+    z-index: 2;
+    min-height: 70px;
+    padding: 0 40px;
+    background-color: #b8c8d1;
+  }
+
+  &__meta-item {
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  span {
+    position: relative;
+
+    .icon--calendar-blog {
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      fill: currentColor;
+      top: -2px;
+      left: -20px;
+    }
+
+    .icon--user-blog {
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      fill: none;
+      stroke: currentColor;
+      left: -20px;
+    }
+  }
+
+
+
+
+  &__title {
+    margin-top: 32px;
+    margin-bottom: 22px;
+    font-size: 36px;
+    line-height: 1.15;
+    font-weight: 400;
+    color: #292929;
+  }
+
+  &__title-link {
+    transition: color .3s ease;
+
+    &:hover {
+      color: #8aa0ae;
+    }
+  }
+
+  &__text {
+    max-width: 720px;
+    margin-bottom: 28px;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #6a7a86;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    min-width: 180px;
+    height: 60px;
+    padding: 0 19px;
+    border: 1px solid #a3bbc8;
+    color: #a3bbc8;
+    font-size: 14px;
+    line-height: 1;
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+
+    &:hover {
+      background-color: #edf3f6;
+      border-color: #bfcfd8;
+      color: #6f8694;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: start;
+    min-width: 46px;
+    height: 46px;
+    padding: 0 16px;
+    border: 1px solid #d5e0e7;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    color: #5d6d78;
+    transition: background-color .3s ease, border-color .3s ease, color .3s ease;
+
+    &:hover {
+      background-color: #edf3f6;
+      border-color: #cddae2;
+      color: #2f3c46;
+    }
+
+    &.is-active {
+      background-color: #d9e5ec;
+      border-color: #d9e5ec;
+      color: #2f3c46;
+    }
+  }
+
+  &__btn--next {
+    min-width: 70px;
+  }
+}
+
+
+a {
+  position: relative;
+
+  .arrow-hero {
+    .icon--arrow-blog {
+      fill: #a3bbc8;
+    }
+  }
+}
+
+.blog-card__btn {
+  .arrow-hero {
+    position: absolute;
+    right: 20px;
+
+    .arrow-icon {
+      width: 22px;
+      height: 9px;
+    }
+  }
+}
+
+.blog-page {
+  .brands {
+    margin-top: 0;
+    height: 250px;
+  }
+}
+
+.recent-list {
+  &__date {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #9a9a9a;
+  }
+
+  &__date-icon {
+    width: 13px;
+    height: 13px;
+    fill: currentColor;
+    flex-shrink: 0;
+  }
+}
