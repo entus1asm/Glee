@@ -1,0 +1,136 @@
+.benefits {
+  &__container {
+    background-color: #fef7f0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 170px;
+    align-items: stretch;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    padding: 0 48px;
+    min-width: 0;
+  }
+
+  &__link--line::before,
+  &__link--line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: var(--accent);
+    opacity: 0.3;
+  }
+
+  &__link--line::before {
+    left: 0;
+  }
+
+  &__link--line::after {
+    right: 0;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+  }
+
+  &__icon-svg {
+    width: 53px;
+    height: 53px;
+  }
+
+  &__content {
+    min-width: 0;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--title-color);
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 2.14;
+    color: var(--text-muted);
+  }
+
+  @include laptop {
+    &__item {
+      padding: 0 28px;
+    }
+  }
+
+  @include tablet {
+    &__list {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    &__item {
+      padding: 24px 20px;
+    }
+
+    &__link--line::before,
+    &__link--line::after {
+      content: none;
+      display: none;
+    }
+
+    &__item:nth-child(3)::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      top: 0px;
+      height: 1px;
+      background-color: var(--accent);
+      opacity: 0.3;
+    }
+
+    &__item:nth-child(1)::after {
+      content: '';
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 0;
+      height: 1px;
+      background-color: var(--accent);
+      opacity: 0.3;
+    }
+  }
+
+  @include mobile {
+    &__item {
+      padding: 20px 16px;
+      column-gap: 14px;
+    }
+
+    &__icon-svg {
+      width: 44px;
+      height: 44px;
+    }
+
+    &__text {
+      line-height: 22px;
+    }
+
+    &__text br {
+      display: none;
+    }
+
+    &__item:nth-child(1)::after,
+    &__item:nth-child(3)::before {
+      left: 16px;
+      right: 16px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.brand-video {
+  &__popout-inner {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../img/brand-video/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include laptop {
+      min-height: 420px;
+    }
+
+    @include tablet {
+      min-height: 340px;
+    }
+
+    @include mobile {
+      min-height: 260px;
+    }
+
+    @include mobile-sm {
+      min-height: 200px;
+    }
+  }
+
+  &__popout-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    img {
+      display: block;
+
+      @include tablet {
+        width: 90px;
+        height: 90px;
+      }
+
+      @include mobile {
+        width: 72px;
+        height: 72px;
+      }
+
+      @include mobile-sm {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+.container-full {
+  padding: 0;
+}

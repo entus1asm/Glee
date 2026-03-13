@@ -1,0 +1,42 @@
+.related-products {
+  padding: 40px 0 70px;
+}
+
+.related-products__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.related-products__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.related-products__nav {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.related-products__btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e7edf2;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background: #f5f8fb;
+  }
+}
+
+/* Важно: Swiper по умолчанию тянет слайды по высоте — фикс */
+.related-products__slider .swiper-slide {
+  height: auto;
+}
+
+/* Чтобы карточка занимала весь слайд */

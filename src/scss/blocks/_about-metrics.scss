@@ -1,0 +1,63 @@
+.about-metrics {
+  background-color: #fcd7b6;
+  // .about-metrics__list
+
+  &__list {
+    padding: 85px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  // .about-metrics__item
+
+  &__item {
+    text-align: center;
+  }
+
+  // .about-metrics__icon
+
+  &__icon {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 8px;
+
+    .icon {
+      width: 67px;
+      height: 64px;
+    }
+
+    svg {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      right: -6px;
+      width: 34px;
+      height: 34px;
+      background: url("../../img/about-us/about-metrics/ellipse.svg") no-repeat center / contain;
+      pointer-events: none;
+      z-index: 0;
+    }
+  }
+
+  // .about-metrics__value
+
+  &__value {
+    display: block;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  // .about-metrics__label
+
+  &__label {
+    font-weight: 600;
+    font-size: 18px;
+  }
+}

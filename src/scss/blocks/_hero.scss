@@ -1,0 +1,234 @@
+.hero {
+  padding-top: 45px;
+
+  @include laptop {
+    padding-top: 32px;
+  }
+
+  @include mobile {
+    padding-top: 20px;
+  }
+
+  &__container {
+    background-image: url(../../img/hero/hero-decoration.png);
+    background-color: #fcd7b6;
+    background-repeat: no-repeat;
+    background-position: right clamp(40px, 12vw, 210px) center;
+
+    @include laptop {
+      background-position: right 80px center;
+      background-size: 260px auto;
+    }
+
+    @include tablet {
+      background-position: center top 40px;
+      background-size: 220px auto;
+    }
+
+    @include mobile {
+      background-position: center top 20px;
+      background-size: 160px auto;
+    }
+  }
+
+  &__slider {
+    height: 820px;
+
+    @include laptop {
+      height: 680px;
+    }
+
+    @include tablet {
+      height: auto;
+    }
+  }
+
+  &__item {
+    position: relative;
+    height: 100%;
+
+    @include laptop {
+      display: grid;
+      grid-template-columns: minmax(0, 430px) minmax(0, 1fr);
+      align-items: center;
+      column-gap: 40px;
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 60px;
+      padding: 120px 40px 80px;
+    }
+
+    @include mobile {
+      padding: 80px 20px 60px;
+      row-gap: 40px;
+    }
+  }
+
+  &__content {
+    padding-left: clamp(40px, 8vw, 300px);
+    padding-top: 225px;
+    position: relative;
+    z-index: 2;
+
+    @include laptop {
+      padding-left: 60px;
+      padding-top: 0;
+    }
+
+    @include tablet {
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    max-width: 427px;
+    font-size: 72px;
+    line-height: 70px;
+    color: var(--title-color);
+    font-family: var(--font-accent);
+    font-weight: 500;
+    margin-bottom: 45px;
+
+    @include laptop {
+      max-width: 360px;
+      font-size: 56px;
+      line-height: 58px;
+      margin-bottom: 30px;
+    }
+
+    @include tablet {
+      max-width: 100%;
+      font-size: 44px;
+      line-height: 48px;
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text {
+    font-family: var(--font-accent);
+    color: var(--link-color);
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 359px;
+    margin-bottom: 45px;
+
+    @include laptop {
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 30px;
+    }
+
+    @include tablet {
+      max-width: 100%;
+      margin-bottom: 45px;
+    }
+
+    @include mobile {
+      font-size: 15px;
+      line-height: 24px;
+      margin-bottom: 35px;
+    }
+  }
+
+  &__link {
+    @extend %btn;
+    position: relative;
+    align-items: center;
+    padding: 21px 100px 21px 25px;
+    font-weight: 500;
+    font-size: 15px;
+
+    @include mobile {
+      padding: 18px 70px 18px 20px;
+      font-size: 14px;
+    }
+
+    .arrow-hero {
+      position: absolute;
+      right: 20px;
+
+      @include mobile {
+        right: 16px;
+      }
+
+      .arrow-icon {
+        width: 22px;
+        height: 9px;
+      }
+    }
+
+    .arrow-icon {
+      fill: #fff;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: clamp(40px, 8vw, 320px);
+    bottom: 280px;
+    width: 100%;
+    max-width: clamp(420px, 42vw, 650px);
+    height: auto;
+
+    @include laptop {
+      position: static;
+      right: auto;
+      bottom: auto;
+      justify-self: center;
+      align-self: center;
+      width: min(100%, 520px);
+      max-width: 100%;
+    }
+
+    @include tablet {
+      max-width: 320px;
+      width: 100%;
+    }
+
+    @include mobile {
+      max-width: 220px;
+    }
+  }
+}
+
+.slider {
+  &__wrapper {
+    height: 100%;
+  }
+
+  &__slide {
+    height: 100%;
+  }
+
+  &__pagination {
+    margin-bottom: 10px;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  @extend %swiper-pagination-bullet;
+}
+
+.swiper-pagination-bullet-active {
+  @extend %swiper-pagination-bullet-active;
+}

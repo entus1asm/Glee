@@ -1,0 +1,38 @@
+.breadcrumbs {
+  background-color: #edf1f4;
+  height: 125px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+  .container-full {
+    text-align: center;
+  }
+
+  .breadcrumb-title {
+    font-family: var(--font-accent);
+    font-size: 36px;
+    color: #222933;
+    font-weight: 300;
+  }
+
+  .breadcrumb-nav {
+    margin-top: 5px;
+
+    .breadcrumb-link {
+      text-decoration: none;
+      color: #737980;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .breadcrumb-separator {
+      color: #737980;
+    }
+
+    .breadcrumb-current {
+      color: #737980;
+    }
+  }
+}

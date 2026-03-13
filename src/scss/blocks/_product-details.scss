@@ -1,0 +1,275 @@
+.product-details {
+  padding: 120px 0px 180px 0px;
+}
+
+.product-details__top {
+  display: grid;
+  grid-template-columns: minmax(530px, 1fr) minmax(360px, 470px);
+  gap: 50px;
+  align-items: start;
+}
+
+.product-details__media {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.product-details__thumbs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.product-details__thumb {
+  border: 1px solid #a3bbc8;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.product-details__thumb-btn {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(157, 178, 192, 0.8);
+    outline-offset: 2px;
+  }
+}
+
+// ----------------------------
+// Swiper (thumbs -> main)
+// ----------------------------
+.product-details__thumbs-swiper {
+  width: 100px;
+  height: 530px;
+
+  .swiper-slide {
+    height: 100px;
+    border: 1px solid #f2f2f2;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  // активный thumb
+  .swiper-slide-thumb-active {
+    border-color: rgba(157, 178, 192, 0.9);
+    box-shadow: 0 0 0 2px rgba(157, 178, 192, 0.25) inset;
+  }
+}
+
+.product-details__main-swiper {
+  width: 100%;
+}
+
+
+.product-details__main {
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  background: #fff;
+  padding: 18px;
+  min-height: 530px;
+  display: grid;
+  place-items: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+// ----------------------------
+// Info
+// ----------------------------
+.product-details__info {
+  padding-top: 8px;
+}
+
+.product-details__title {
+  font-size: 40px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.product-details__rating {
+  .gl-star-rating {
+    --gl-star-size: 18px;
+  }
+
+  margin-bottom: 15px;
+}
+
+.product-details__price {
+  font-size: 30px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.product-details__text {
+  font-size: 16px;
+  line-height: 1.875;
+  max-width: 550px;
+  margin: 0 0 22px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.product-details__actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.qty {
+  display: inline-flex;
+  border: 1px solid #a3bbc8;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 44px;
+  background: #fff;
+
+  &__btn {
+    width: 44px;
+    border: 0;
+    background: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    display: grid;
+    place-items: center;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.03);
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba(157, 178, 192, 0.8);
+      outline-offset: -2px;
+    }
+  }
+
+  &__input {
+    width: 56px;
+    border: 0;
+    border-left: 1px solid #a3bbc8;
+    border-right: 1px solid #a3bbc8;
+    text-align: center;
+    font-size: 14px;
+    outline: none;
+
+    // убрать стрелки
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[type="number"] {
+      -moz-appearance: textfield;
+    }
+  }
+}
+
+.product-details__add {
+  height: 44px;
+  padding: 0 34px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background: #a3bbc8;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 13px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.06s ease, background 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.92;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(157, 178, 192, 0.8);
+    outline-offset: 2px;
+  }
+}
+
+.product-details__meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    font-weight: 500;
+  }
+}
+
+// Zoom follow cursor
+.product-details__main {
+  overflow: hidden;
+}
+
+.product-details__main img {
+  transition: transform 0.12s ease;
+  transform: scale(1);
+  transform-origin: var(--zoom-x, 50%) var(--zoom-y, 50%);
+}
+
+@media (hover: hover) {
+  .product-details__main.is-zoom img {
+    transform: scale(1.8);
+  }
+}
+
+.related-products__slider.swiper {
+  padding: 45px 0px;
+  margin: -45px -0px;
+}
+
+
+
