@@ -190,4 +190,16 @@
       column-gap: 20px;
     }
   }
+
+  &__meta-item {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 7px;
+  }
+
+  &__meta-icon {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
 }

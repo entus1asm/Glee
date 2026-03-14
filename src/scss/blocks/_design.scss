@@ -66,7 +66,7 @@
       }
     }
 
-    & + & {
+    &+& {
       margin-left: 0;
     }
   }
@@ -89,7 +89,7 @@
       gap: 24px 20px;
     }
 
-    @include mobile {
+    @media (max-width: 576px) {
       grid-template-columns: 1fr;
       gap: 20px;
     }
@@ -103,12 +103,7 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
-
-  @include mobile {
-    width: 100%;
-    max-width: 370px;
-    margin-inline: auto;
-  }
+  width: 100%;
 
   &__image {
     position: relative;
@@ -116,6 +111,8 @@
     padding: 0 0 24px;
     background-color: #f8f8f8;
     overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 
     @include laptop {
       min-height: 225px;
@@ -223,14 +220,14 @@
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.2);
     transition: background-color 0.3s;
 
-    & + & {
+    &+& {
       margin-left: 15px;
     }
 
     @include mobile {
       padding: 9px;
 
-      & + & {
+      &+& {
         margin-left: 10px;
       }
     }
@@ -323,5 +320,19 @@
       max-width: 145px;
       max-height: 175px;
     }
+  }
+}
+
+.design-card--chair {
+  .design-card__image img {
+    right: 55px;
+    bottom: 18px;
+  }
+}
+
+.design-card--sofa {
+  .design-card__image img {
+    right: -25px;
+    bottom: 18px;
   }
 }
