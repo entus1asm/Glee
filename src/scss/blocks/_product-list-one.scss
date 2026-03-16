@@ -2,6 +2,14 @@
   background: #eef3f6;
   padding: 40px 0;
 
+  @include tablet {
+    padding: 32px 0;
+  }
+
+  @include mobile {
+    padding: 24px 0;
+  }
+
   &__inner {
     text-align: center;
   }
@@ -11,12 +19,28 @@
     font-weight: 500;
     font-size: 34px;
     color: #1a1a1a;
+
+    @include tablet {
+      font-size: 30px;
+    }
+
+    @include mobile {
+      font-size: 26px;
+    }
   }
 }
 
 .breadcrumbs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 4px;
   font-size: 14px;
   color: #8b8b8b;
+
+  @include mobile {
+    font-size: 13px;
+  }
 
   &__link {
     color: #8b8b8b;
@@ -33,19 +57,166 @@
 }
 
 .product-list-one {
+  position: relative;
   padding: 70px 0 90px;
+
+  @include laptop {
+    padding: 60px 0 70px;
+  }
+
+  @include tablet {
+    padding: 50px 0 60px;
+  }
+
+  @include mobile {
+    padding: 40px 0 50px;
+  }
 
   &__layout {
     display: grid;
     grid-template-columns: 260px 1fr;
     gap: 40px;
     align-items: start;
+
+    @include laptop {
+      grid-template-columns: 220px 1fr;
+      gap: 30px;
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
   }
 
-  // only this page: 3 columns (your global grid is 4)
+  &__overlay {
+    @include tablet {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(36, 63, 77, 0.35);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      z-index: 40;
+    }
+
+    &.is-active {
+      @include tablet {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  &__sidebar {
+    min-width: 0;
+
+    @include tablet {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: min(360px, 100%);
+      height: 100dvh;
+      padding: 24px 20px 30px;
+      background-color: #fff;
+      overflow-y: auto;
+      z-index: 50;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+    }
+
+    @include mobile {
+      width: 100%;
+      padding: 20px 16px 24px;
+    }
+
+    &.is-open {
+      @include tablet {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__sidebar-top {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #e5edf1;
+    }
+  }
+
+  &__sidebar-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #243f4d;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+
+  &__sidebar-close {
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: 30px;
+    line-height: 1;
+    color: #243f4d;
+    cursor: pointer;
+  }
+
+  &__toolbar {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 24px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__filters-btn {
+    min-width: 130px;
+    height: 44px;
+    padding: 0 18px;
+    border: 1px solid #a3bbc8;
+    background-color: #fff;
+    color: #243f4d;
+    font-family: var(--font-accent);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #f2f6f8;
+    }
+  }
+
   &__content {
+    min-width: 0;
+
     .products__grid {
-      grid-template-columns: repeat(3, 1fr);
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      @include laptop {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }
@@ -54,8 +225,16 @@
 .filter-block {
   margin-bottom: 75px;
 
-  &+& {
+  @include tablet {
+    margin-bottom: 32px;
+  }
+
+  & + & {
     margin-top: 35px;
+
+    @include tablet {
+      margin-top: 0;
+    }
   }
 
   &__head {
@@ -63,6 +242,11 @@
     align-items: center;
     gap: 14px;
     margin-bottom: 18px;
+
+    @include mobile {
+      margin-bottom: 14px;
+      gap: 10px;
+    }
   }
 
   &__title {
@@ -72,21 +256,36 @@
     text-transform: uppercase;
     color: #1a1a1a;
     letter-spacing: 0.4px;
+
+    @include mobile {
+      font-size: 15px;
+    }
   }
 
   &__line {
     height: 3px;
     width: 38px;
     background: #a3bbc8;
+
+    @include mobile {
+      width: 30px;
+    }
+  }
+}
+
+.filter-block--recent {
+  @include tablet {
+    display: none;
   }
 }
 
 /* Category */
-/* Category */
-/* Category */
-/* Category */
 .filter-category {
   margin-bottom: 75px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
 
   &__form {
     display: grid;
@@ -105,48 +304,52 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
     font-family: var(--font-accent);
-    height: 44px;
-    padding: 0 15px;
+    min-height: 44px;
+    padding: 10px 15px;
     border-radius: 5px;
     font-size: 16px;
     font-weight: 400;
     color: #243f4d;
-
     cursor: pointer;
     transition: all 0.3s;
 
-    /* стрелка справа */
+    @include mobile {
+      min-height: 42px;
+      padding: 10px 14px;
+      font-size: 15px;
+    }
+
+    span:first-child {
+      min-width: 0;
+    }
+
     span:last-child {
+      flex-shrink: 0;
       font-size: 18px;
       line-height: 1;
       transform: translateY(-1px);
     }
   }
 
-  /* hover */
   &__label:hover &__checkbox {
     background: #edf1f4;
   }
 
-  /* активный пункт (checked) */
-  &__input:checked+&__checkbox {
+  &__input:checked + &__checkbox {
     background: #edf1f4;
   }
 }
 
-/* Category */
-/* Category */
-/* Category */
-/* Category */
-
-
 .filter-price {
   margin-bottom: 75px;
-  // .filter-price__form
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
 
   &__form {
-
     .irs--flat .irs-line {
       top: 13px;
       height: 3px;
@@ -162,7 +365,7 @@
       box-shadow: 0px 0px 13px 0px rgba(90, 90, 90, 0.2);
     }
 
-    .irs--flat .irs-handle>i:first-child {
+    .irs--flat .irs-handle > i:first-child {
       display: none;
     }
 
@@ -189,23 +392,19 @@
     }
   }
 
-  // .filter-price__input
-
   &__input {}
-
-  // .filter-price__label
 
   &__label {
     display: flex;
     justify-content: space-between;
     align-self: center;
+    gap: 16px;
     font-weight: 500;
 
+    @include mobile {
+      font-size: 14px;
+    }
   }
-
-  span {}
-
-  // .filter-price__btn
 
   &__btn {
     @extend %btn;
@@ -220,6 +419,10 @@
 /* Brand */
 .filter-brand {
   margin-bottom: 75px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
 
   &__form {
     display: grid;
@@ -240,35 +443,41 @@
     justify-content: space-between;
     gap: 12px;
     font-family: var(--font-accent);
-
-    height: 44px;
-    padding: 0 15px;
-
+    min-height: 44px;
+    padding: 10px 15px;
     border-radius: 6px;
     background: transparent;
     font-size: 16px;
     color: #243f4d;
-
     cursor: pointer;
     transition: all 0.3s;
 
-    /* стрелка справа */
+    @include mobile {
+      min-height: 42px;
+      padding: 10px 14px;
+      font-size: 15px;
+    }
+
+    span:first-child {
+      min-width: 0;
+      overflow-wrap: break-word;
+    }
+
     span:last-child {
+      flex-shrink: 0;
       font-size: 18px;
       line-height: 1;
       color: #b3b3b3;
       transform: translateY(-1px);
-      transition: all .3s;
+      transition: all 0.3s;
     }
   }
 
-  /* hover */
   &__label:hover &__checkbox {
     background: #edf1f4;
   }
 
-  /* активный пункт (checked) */
-  &__input:checked+&__checkbox {
+  &__input:checked + &__checkbox {
     background: #edf1f4;
     color: #243f4d;
 
@@ -280,19 +489,20 @@
 
 /* Recent products */
 .recent-list {
-
   &__item {
-    &+& {
+    min-width: 0;
+
+    & + & {
       margin-top: 14px;
     }
   }
 
   &__link {
-
     display: grid;
     grid-template-columns: 71px 1fr;
     gap: 12px;
     align-items: center;
+    min-width: 0;
   }
 
   &__img {
@@ -302,12 +512,18 @@
     border: 3px solid #f2f2f2;
   }
 
+  &__info {
+    min-width: 0;
+  }
+
   &__name {
     display: inline-block;
     color: #333;
     text-decoration: none;
     font-weight: 400;
     margin-bottom: 6px;
+    line-height: 1.4;
+    overflow-wrap: break-word;
   }
 
   .gl-star-rating {
@@ -315,7 +531,8 @@
   }
 
   .gl-star-rating {
-        margin-bottom: 6px;
+    margin-bottom: 6px;
+
     .gl-star-rating--stars {
       span {
         cursor: pointer;
@@ -335,7 +552,13 @@
   margin-top: 40px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
+
+  @include mobile {
+    margin-top: 30px;
+    gap: 8px;
+  }
 
   &__btn {
     min-width: 38px;
@@ -350,6 +573,12 @@
     background: #fff;
     transition: all 0.25s;
 
+    @include mobile {
+      min-width: 36px;
+      height: 36px;
+      font-size: 14px;
+    }
+
     &:hover {
       background: #f2f6f8;
     }
@@ -362,6 +591,10 @@
 
     &--next {
       padding: 0 14px;
+
+      @include mobile {
+        padding: 0 12px;
+      }
     }
   }
 }

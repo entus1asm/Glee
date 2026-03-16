@@ -242,6 +242,100 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Product list one mobile filters
+  safeInit(qs(".product-list-one"), () => {
+    const productList = qs(".product-list-one");
+    const sidebar = qs(".product-list-one__sidebar", productList);
+    const content = qs(".product-list-one__content", productList);
+
+    if (!sidebar || !content) return;
+
+    let overlay = qs(".product-list-one__overlay", productList);
+    if (!overlay) {
+      overlay = document.createElement("div");
+      overlay.className = "product-list-one__overlay";
+      productList.prepend(overlay);
+    }
+
+    let toolbar = qs(".product-list-one__toolbar", content);
+    if (!toolbar) {
+      toolbar = document.createElement("div");
+      toolbar.className = "product-list-one__toolbar";
+      toolbar.innerHTML = `
+        <button class="product-list-one__filters-btn" type="button" aria-expanded="false" aria-label="Open filters">
+          Filters
+        </button>
+      `;
+      content.prepend(toolbar);
+    }
+
+    let sidebarTop = qs(".product-list-one__sidebar-top", sidebar);
+    if (!sidebarTop) {
+      sidebarTop = document.createElement("div");
+      sidebarTop.className = "product-list-one__sidebar-top";
+      sidebarTop.innerHTML = `
+        <span class="product-list-one__sidebar-name">Filters</span>
+        <button class="product-list-one__sidebar-close" type="button" aria-label="Close filters">×</button>
+      `;
+      sidebar.prepend(sidebarTop);
+    }
+
+    qsa(".filter-block", sidebar).forEach((block) => {
+      const title = qs(".filter-block__title", block);
+      if (!title) return;
+
+      if (title.textContent.trim().toLowerCase() === "recent products") {
+        block.classList.add("filter-block--recent");
+      }
+    });
+
+    const openBtn = qs(".product-list-one__filters-btn", content);
+    const closeBtn = qs(".product-list-one__sidebar-close", sidebar);
+
+    const toggleFilters = (isOpen) => {
+      const shouldOpen = window.innerWidth <= 992 ? isOpen : false;
+
+      sidebar.classList.toggle("is-open", shouldOpen);
+      overlay.classList.toggle("is-active", shouldOpen);
+      document.body.classList.toggle("no-scroll", shouldOpen);
+      sidebar.setAttribute("aria-hidden", String(!shouldOpen));
+
+      if (openBtn) {
+        openBtn.setAttribute("aria-expanded", String(shouldOpen));
+      }
+    };
+
+    toggleFilters(false);
+
+    if (openBtn) {
+      openBtn.addEventListener("click", () => {
+        toggleFilters(true);
+      });
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        toggleFilters(false);
+      });
+    }
+
+    overlay.addEventListener("click", () => {
+      toggleFilters(false);
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && sidebar.classList.contains("is-open")) {
+        toggleFilters(false);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 992) {
+        toggleFilters(false);
+      }
+    });
+  });
+
   // Quantity (.qty__btn--plus / .qty__btn--minus)
   safeInit(qsa(".qty").length, () => {
     qsa(".qty").forEach((wrap) => {
