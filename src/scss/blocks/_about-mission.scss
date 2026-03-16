@@ -1,14 +1,51 @@
 .about-mission {
   padding: 120px 0;
 
+  @include laptop {
+    padding: 100px 0;
+  }
+
+  @include tablet {
+    padding: 80px 0;
+  }
+
+  @include mobile {
+    padding: 60px 0;
+  }
+
   &__inner {
     display: flex;
     gap: 50px;
     align-items: center;
+
+    @include laptop {
+      gap: 36px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 40px;
+    }
+
+    @include mobile {
+      gap: 28px;
+    }
   }
 
   &__media {
     flex: 0 0 570px;
+
+    @include laptop {
+      flex-basis: 480px;
+    }
+
+    @include tablet {
+      flex: none;
+      width: 100%;
+      max-width: 570px;
+      margin: 0 auto;
+    }
   }
 
   &__img {
@@ -19,12 +56,24 @@
 
   &__content {
     flex: 1;
+    min-width: 0;
   }
 
   &__experience {
     display: flex;
     align-items: center;
     gap: 30px;
+    margin-bottom: 18px;
+
+    @include laptop {
+      gap: 24px;
+      justify-content: center;
+    }
+
+    @include mobile {
+      gap: 16px;
+      margin-bottom: 14px;
+    }
   }
 
   &__years {
@@ -32,6 +81,19 @@
     font-weight: 700;
     color: #a3bbc8;
     font-family: var(--font-accent);
+    line-height: 1;
+
+    @include laptop {
+      font-size: 120px;
+    }
+
+    @include tablet {
+      font-size: 96px;
+    }
+
+    @include mobile {
+      font-size: 72px;
+    }
   }
 
   &__years-text {
@@ -40,6 +102,11 @@
     gap: 6px;
     line-height: 1.2;
     color: #243f4d;
+
+    @include mobile {
+      gap: 4px;
+      font-size: 14px;
+    }
   }
 
   &__title {
@@ -48,12 +115,41 @@
     font-weight: 700;
     color: #243f4d;
     margin-bottom: 30px;
+
+    @include laptop {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+
+    @include tablet {
+      font-size: 30px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
   }
 
   &__text {
     line-height: 1.8;
     color: var(--text-color);
     margin-bottom: 65px;
+
+    @include laptop {
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    @include tablet {
+      margin-bottom: 36px;
+    }
+
+    @include mobile {
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
   }
 
   &__stats {
@@ -63,6 +159,29 @@
     border-top: 1px solid #e6e6e6;
     padding-top: 30px;
     gap: 34px;
+
+    @include laptop {
+      gap: 24px;
+    }
+
+    @include tablet {
+      max-width: none;
+      width: fit-content;
+      margin: 0 auto;
+      justify-content: center;
+      gap: 20px;
+      padding-top: 24px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      border-top: none;
+      border-bottom: 1px solid #e6e6e6;
+      padding-top: 0;
+      padding-bottom: 20px;
+    }
   }
 
   &__stat {
@@ -72,10 +191,35 @@
     column-gap: 20px;
     row-gap: 2px;
     align-items: center;
+    min-width: 0;
 
     &:not(:last-child) {
       padding-right: 34px;
       border-right: 1px solid #e6e6e6;
+
+      @include laptop {
+        padding-right: 24px;
+      }
+
+      @include tablet {
+        flex: none;
+      }
+
+      @include mobile {
+        padding-right: 0;
+        padding-bottom: 18px;
+        margin-bottom: 18px;
+        border-right: none;
+        border-bottom: 1px solid #e6e6e6;
+      }
+    }
+
+    @include tablet {
+      flex: 1;
+    }
+
+    @include mobile {
+      width: 100%;
     }
   }
 
@@ -86,6 +230,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    @include mobile {
+      width: 32px;
+      height: 34px;
+    }
 
     svg {
       width: 100%;
@@ -99,11 +248,27 @@
     font-weight: 700;
     color: var(--text-color);
     line-height: 1.1;
+
+    @include laptop {
+      font-size: 30px;
+    }
+
+    @include tablet {
+      font-size: 26px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+    }
   }
 
   &__stat-label {
     color: #4c4c4c;
     line-height: 1.2;
     font-weight: 700;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 }

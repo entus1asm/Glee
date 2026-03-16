@@ -1,37 +1,84 @@
 .team {
   padding-top: 120px;
   padding-bottom: 60px;
-  // .team__inner
+
+  @include laptop {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  @include tablet {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  @include mobile {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     gap: 60px;
-  }
 
-  // .team__content
+    @include laptop {
+      gap: 40px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    @include mobile {
+      gap: 32px;
+    }
+  }
 
   &__content {
     max-width: 305px;
-  }
+    flex-shrink: 0;
+    margin-bottom: 24px;
+    line-height: 26px;
 
-  // .team__title
+    @include tablet {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
 
   &__title {
     margin-bottom: 35px;
     font-size: 36px;
     font-weight: 700;
-  }
 
-  // .team__text
+    @include tablet {
+      margin-bottom: 24px;
+      font-size: 32px;
+    }
+
+    @include mobile {
+      margin-bottom: 18px;
+      font-size: 28px;
+    }
+  }
 
   &__text {
     margin-bottom: 40px;
     font-family: var(--font-accent);
     line-height: 30px;
-  }
 
-  // .team__btn
+    @include tablet {
+      margin-bottom: 30px;
+      line-height: 28px;
+    }
+
+    @include mobile {
+      margin-bottom: 24px;
+      line-height: 26px;
+    }
+  }
 
   &__btn {
     @extend %btn;
@@ -41,6 +88,10 @@
     border-radius: 5px;
     position: relative;
 
+    @include mobile {
+      padding: 17px 54px 16px 18px;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -49,20 +100,37 @@
       height: 11px;
       right: 25px;
       top: 23px;
+
+      @include mobile {
+        right: 22px;
+        top: 20px;
+      }
     }
   }
 
-  // .team__btn-icon
-
   &__btn-icon {}
-
-  // .team__grid
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
     row-gap: 100px;
+    flex: 1;
+    min-width: 0;
+
+    @include laptop {
+      column-gap: 24px;
+    }
+
+    @include tablet {
+      column-gap: 20px;
+      row-gap: 85px;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      row-gap: 80px;
+    }
   }
 }
 
@@ -72,16 +140,24 @@
 
 .team-card {
   position: relative;
-  // .team-card__image
+  min-width: 0;
 
-  &__image {}
+  &__image {
+    display: block;
 
-  // .team-card__info
+    img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+  }
 
   &__info {
     position: absolute;
     bottom: -60px;
+    left: 0;
     width: 325px;
+    max-width: calc(100% - 20px);
     height: 110px;
     background-color: #fff;
     box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
@@ -89,35 +165,64 @@
     align-items: center;
     justify-content: space-between;
     padding: 0px 25px;
+
+    @include laptop {
+      width: 290px;
+      padding: 0 20px;
+    }
+
+    @include tablet {
+      width: 260px;
+      height: 100px;
+      bottom: -50px;
+      padding: 0 18px;
+    }
+
+    @include mobile {
+      width: calc(100% - 20px);
+      max-width: none;
+      height: auto;
+      min-height: 90px;
+      bottom: -45px;
+      padding: 16px 18px;
+    }
   }
 
-  // .team-card__name
+  &__content {
+    min-width: 0;
+    padding-right: 12px;
+  }
 
   &__name {
     font-size: 22px;
     font-weight: 700;
     color: #436372;
     margin-bottom: 15px;
-  }
 
-  // .team-card__role
+    @include tablet {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+  }
 
   &__role {
     color: #565872;
     font-family: var(--font-accent);
+    line-height: 1.4;
   }
-
-  // .team-card__social
 
   &__social {
     display: flex;
     column-gap: 7px;
+    flex-shrink: 0;
   }
 
-  // .team-card__social-link
-
   &__social-link {
-
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -126,10 +231,14 @@
     align-items: center;
     justify-content: center;
 
+    @include mobile {
+      width: 34px;
+      height: 34px;
+    }
+
     svg {
       width: 18px;
       height: 18px;
     }
-
   }
 }
