@@ -1,38 +1,104 @@
 .breadcrumbs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 125px;
+  padding: 24px 0;
   background-color: #edf1f4;
-  height: 125px;
-display: flex;
-flex-direction: column;
-justify-content: center;
+
+  @include laptop {
+    min-height: 115px;
+    padding: 22px 0;
+  }
+
+  @include tablet {
+    min-height: 105px;
+    padding: 20px 0;
+  }
+
+  @include mobile {
+    min-height: 95px;
+    padding: 18px 0;
+  }
+
+  @include mobile-sm {
+    min-height: 88px;
+    padding: 16px 0;
+  }
+
   .container-full {
+    padding: 0 15px;
     text-align: center;
+
+    @include mobile-sm {
+      padding: 0 12px;
+    }
   }
 
   .breadcrumb-title {
+    margin-bottom: 5px;
     font-family: var(--font-accent);
     font-size: 36px;
-    color: #222933;
+    line-height: 1.2;
     font-weight: 300;
+    color: #222933;
+
+    @include laptop {
+      font-size: 34px;
+    }
+
+    @include tablet {
+      font-size: 30px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+    }
+
+    @include mobile-sm {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    @include mobile-xs {
+      font-size: 18px;
+    }
   }
 
   .breadcrumb-nav {
-    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 1.4;
 
-    .breadcrumb-link {
-      text-decoration: none;
-      color: #737980;
-
-      &:hover {
-        text-decoration: underline;
-      }
+    @include mobile {
+      font-size: 13px;
     }
 
-    .breadcrumb-separator {
-      color: #737980;
+    @include mobile-sm {
+      gap: 3px;
+      font-size: 12px;
     }
+  }
 
-    .breadcrumb-current {
-      color: #737980;
+  .breadcrumb-link {
+    text-decoration: none;
+    color: #737980;
+
+    &:hover {
+      text-decoration: underline;
     }
+  }
+
+  .breadcrumb-separator {
+    color: #737980;
+  }
+
+  .breadcrumb-current {
+    color: #737980;
   }
 }
