@@ -116,19 +116,19 @@
 			</div>
 		</div>
 		<main class="blog-page">
+			<section class="breadcrumbs">
+				<div class="container-full">
+					<h2 class="breadcrumb-title">Blog Details</h2>
+					<nav class="breadcrumb-nav">
+						<a href="#" class="breadcrumb-link">Home</a>
+						<span class="breadcrumb-separator">/</span>
+						<a href="#" class="breadcrumb-link">Blog</a>
+						<span class="breadcrumb-separator">/</span>
+						<span class="breadcrumb-current">Blog details</span>
+					</nav>
+				</div>
+			</section>
 			<main class="blog-page blog-details">
-				<section class="breadcrumbs">
-					<div class="container-full">
-						<h2 class="breadcrumb-title">Blog Details</h2>
-						<nav class="breadcrumb-nav">
-							<a href="#" class="breadcrumb-link">Home</a>
-							<span class="breadcrumb-separator">/</span>
-							<a href="#" class="breadcrumb-link">Blog</a>
-							<span class="breadcrumb-separator">/</span>
-							<span class="breadcrumb-current">Blog details</span>
-						</nav>
-					</div>
-				</section>
 				<div class="container--narrow">
 					<div class="blog-page__layout">
 						<section class="blog-page__content">
@@ -139,23 +139,23 @@
 										<source srcset="./img/blog-page/1.jpg 1x, ./img/blog-page/1@2x.jpg 2x" type="image/jpeg" />
 										<img class="blog-card__image" src="./img/blog-page/1.jpg" alt="Bedroom interior" />
 									</picture>
+
+									<div class="blog-card__meta">
+										<span class="blog-card__meta-item">
+											<svg class="calendar-icon icon icon--calendar-blog">
+												<use href="./img/svgsprite/sprite.symbol.svg#calendar-icon"></use>
+											</svg>
+											28 January, 2020
+										</span>
+
+										<span class="blog-card__meta-item">
+											<svg class="user-icon icon icon--user-blog">
+												<use href="./img/svgsprite/sprite.symbol.svg#user-icon"></use>
+											</svg>
+											By&#160;admin
+										</span>
+									</div>
 								</a>
-
-								<div class="blog-card__meta">
-									<span class="blog-card__meta-item">
-										<svg class="calendar-icon icon icon--calendar-blog">
-											<use href="./img/svgsprite/sprite.symbol.svg#calendar-icon"></use>
-										</svg>
-										28 January, 2020
-									</span>
-
-									<span class="blog-card__meta-item">
-										<svg class="user-icon icon icon--user-blog">
-											<use href="./img/svgsprite/sprite.symbol.svg#user-icon"></use>
-										</svg>
-										By&#160;admin
-									</span>
-								</div>
 
 								<h2 class="blog-card__title">
 									<a class="blog-card__title-link" href="#">Fonsectetur adipisicing eiusmod</a>
@@ -284,8 +284,8 @@
 												sociosqu ad&#160;litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem, ultrices
 											</p>
 
-											<a class="blog-details__reply-link" href="#"
-												>Reply
+											<a class="blog-details__reply-link" href="#">
+												Reply
 												<span>
 													<svg class="arrow-blog-icon icon icon--arrow-blog">
 														<use href="./img/svgsprite/sprite.symbol.svg#arrow-blog-icon"></use>
@@ -315,8 +315,8 @@
 												sociosqu ad&#160;litora torquent per conubia nostra
 											</p>
 
-											<a class="blog-details__reply-link" href="#"
-												>Reply
+											<a class="blog-details__reply-link" href="#">
+												Reply
 												<span>
 													<svg class="arrow-blog-icon icon icon--arrow-blog">
 														<use href="./img/svgsprite/sprite.symbol.svg#arrow-blog-icon"></use>
@@ -346,8 +346,8 @@
 												sociosqu ad&#160;litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem,
 											</p>
 
-											<a class="blog-details__reply-link" href="#"
-												>Reply
+											<a class="blog-details__reply-link" href="#">
+												Reply
 												<span>
 													<svg class="arrow-blog-icon icon icon--arrow-blog">
 														<use href="./img/svgsprite/sprite.symbol.svg#arrow-blog-icon"></use>
@@ -390,8 +390,6 @@
 								</form>
 							</section>
 						</section>
-
-						<!-- ////////////////////////SIDEBAR///////////////////////// -->
 
 						<aside class="blog-page__aside product-list-two__sidebar">
 							<div class="blog-page__search">
@@ -564,7 +562,6 @@
 								</ul>
 							</div>
 						</aside>
-						<!-- ////////////////////////SIDEBAR///////////////////////// -->
 					</div>
 				</div>
 			</main>
