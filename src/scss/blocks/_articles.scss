@@ -104,6 +104,22 @@
   transition: all 0.3s;
   overflow: hidden;
 
+  @include tablet {
+    &:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      width: 100%;
+      max-width: calc((100% - 24px) / 2);
+      justify-self: center;
+    }
+  }
+
+  @include mobile {
+    &:last-child:nth-child(odd) {
+      max-width: 100%;
+      justify-self: stretch;
+    }
+  }
+
   &:hover {
     box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
   }
