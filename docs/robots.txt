@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /docs.html
+Disallow: /login.html
+
+Sitemap: https://entus1asm.github.io/Glee/sitemap.xml

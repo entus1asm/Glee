@@ -1,929 +1,702 @@
 <!DOCTYPE html>
+
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="View detailed product information, specifications, and related items in the Glee catalog." />
-		<title>Product Details&#160;&#8212; Glee</title>
-		<link rel="stylesheet" href="./css/main.css" />
-
-		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
-		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/glee-icon.png" />
-	</head>
-
-	<body class="page page--product-details" data-page="product-details">
-		<header class="header">
-			<div class="container">
-				<div class="header__inner">
-					<a href="index.html" class="logo" aria-label="Glee home">
-						<svg class="logo-icon icon icon--user">
-							<use href="./img/svgsprite/sprite.symbol.svg#logo-icon"></use>
-						</svg>
-						<span class="logo__text">Glee.</span>
-					</a>
-
-					<nav class="header__nav nav" aria-label="Primary navigation">
-						<ul class="nav__list">
-							<li class="nav__item">
-								<a href="index.html" class="nav__link">Home +</a>
-							</li>
-							<li class="nav__item">
-								<a href="about-us.html" class="nav__link">About</a>
-							</li>
-							<li class="nav__item">
-								<a href="product-list-one.html" class="nav__link">Services</a>
-							</li>
-							<li class="nav__item">
-								<a href="login.html" class="nav__link">Pages +</a>
-							</li>
-							<li class="nav__item">
-								<a href="blog-page.html" class="nav__link">News</a>
-							</li>
-							<li class="nav__item">
-								<a href="contact-info.html" class="nav__link">Contact</a>
-							</li>
-						</ul>
-					</nav>
-
-					<div class="header__actions actions">
-						<button class="actions__btn actions__btn--search" type="button" aria-label="Search (coming soon)">
-							<svg class="search-icon icon">
-								<use href="./img/svgsprite/sprite.symbol.svg#search-icon"></use>
-							</svg>
-						</button>
-
-						<div class="header__actions-box">
-							<button class="actions__btn actions__btn--wishlist" type="button" aria-label="Wishlist (coming soon)">
-								<svg class="heart-icon icon">
-									<use href="./img/svgsprite/sprite.symbol.svg#heart-icon"></use>
-								</svg>
-								<span class="actions__count">0</span>
-							</button>
-
-							<button class="actions__btn actions__btn--cart" type="button" aria-label="Cart (coming soon)">
-								<svg class="cart-icon icon">
-									<use href="./img/svgsprite/sprite.symbol.svg#cart-icon"></use>
-								</svg>
-								<span class="actions__count">0</span>
-							</button>
-						</div>
-
-						<button class="actions__btn actions__btn--more" type="button" aria-label="More actions (coming soon)">
-							<svg class="more-icon icon">
-								<use href="./img/svgsprite/sprite.symbol.svg#more-icon"></use>
-							</svg>
-						</button>
-
-						<button class="header__menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
-							<span></span>
-							<span></span>
-							<span></span>
-						</button>
-					</div>
-				</div>
-			</div>
-		</header>
-
-		<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
-			<div class="mobile-nav__overlay"></div>
-
-			<div class="mobile-nav__panel" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-				<button class="mobile-nav__close" type="button" aria-label="Close menu">
-					<span></span>
-					<span></span>
-				</button>
-
-				<ul class="mobile-nav__list">
-					<li class="mobile-nav__item">
-						<a href="index.html" class="mobile-nav__link">Home +</a>
-					</li>
-					<li class="mobile-nav__item">
-						<a href="about-us.html" class="mobile-nav__link">About</a>
-					</li>
-					<li class="mobile-nav__item">
-						<a href="product-list-one.html" class="mobile-nav__link">Services</a>
-					</li>
-					<li class="mobile-nav__item">
-						<a href="login.html" class="mobile-nav__link">Pages +</a>
-					</li>
-					<li class="mobile-nav__item">
-						<a href="blog-page.html" class="mobile-nav__link">News</a>
-					</li>
-					<li class="mobile-nav__item">
-						<a href="contact-info.html" class="mobile-nav__link">Contact</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<main class="product-details" id="main-content">
-			<section>
-				<section class="breadcrumbs">
-					<div class="container-full">
-						<h2 class="breadcrumb-title">Product Details</h2>
-						<nav class="breadcrumb-nav">
-							<a href="index.html" class="breadcrumb-link">Home</a>
-							<span class="breadcrumb-separator">/</span>
-							<span class="breadcrumb-current">Product Details</span>
-						</nav>
-					</div>
-				</section>
-				<section class="product-details">
-					<div class="container--narrow">
-						<div class="product-details__top">
-							<!-- Media -->
-							<div class="product-details__media">
-								<!-- Thumbs Swiper -->
-								<div class="product-details__thumbs-swiper swiper" aria-label="Product thumbnails">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<button class="product-details__thumb-btn" type="button" aria-label="Open image 4">
-												<picture>
-													<source
-														srcset="./img/product-details/product/lamp-main.webp 1x, ./img/product-details/product/lamp-main@2x.webp 2x"
-														type="image/webp"
-													/>
-													<source
-														srcset="./img/product-details/product/lamp-main.png 1x, ./img/product-details/product/lamp-main@2x.png 2x"
-														type="image/png"
-													/>
-													<img src="./img/product-details/product/lamp-main.png" alt="Pendant lamp thumbnail 4" / width="233" height="405" loading="lazy"
-													decoding="async">
-												</picture>
-											</button>
-										</div>
-										<div class="swiper-slide">
-											<button class="product-details__thumb-btn" type="button" aria-label="Open image 1">
-												<picture>
-													<source
-														srcset="./img/product-details/product/lamp-thumb-1.webp 1x, ./img/product-details/product/lamp-thumb-1@2x.webp 2x"
-														type="image/webp"
-													/>
-													<source
-														srcset="./img/product-details/product/lamp-thumb-1.png 1x, ./img/product-details/product/lamp-thumb-1@2x.png 2x"
-														type="image/png"
-													/>
-													<img src="./img/product-details/product/lamp-thumb-1.png" alt="Pendant lamp thumbnail 1" / width="107" height="147" loading="lazy"
-													decoding="async">
-												</picture>
-											</button>
-										</div>
-
-										<div class="swiper-slide">
-											<button class="product-details__thumb-btn" type="button" aria-label="Open image 2">
-												<picture>
-													<source
-														srcset="./img/product-details/product/lamp-thumb-2.webp 1x, ./img/product-details/product/lamp-thumb-2@2x.webp 2x"
-														type="image/webp"
-													/>
-													<source
-														srcset="./img/product-details/product/lamp-thumb-2.png 1x, ./img/product-details/product/lamp-thumb-2@2x.png 2x"
-														type="image/png"
-													/>
-													<img src="./img/product-details/product/lamp-thumb-2.png" alt="Pendant lamp thumbnail 2" / width="105" height="119" loading="lazy"
-													decoding="async">
-												</picture>
-											</button>
-										</div>
-
-										<div class="swiper-slide">
-											<button class="product-details__thumb-btn" type="button" aria-label="Open image 3">
-												<picture>
-													<source
-														srcset="./img/product-details/product/lamp-thumb-3.webp 1x, ./img/product-details/product/lamp-thumb-3@2x.webp 2x"
-														type="image/webp"
-													/>
-													<source
-														srcset="./img/product-details/product/lamp-thumb-3.png 1x, ./img/product-details/product/lamp-thumb-3@2x.png 2x"
-														type="image/png"
-													/>
-													<img src="./img/product-details/product/lamp-thumb-3.png" alt="Pendant lamp thumbnail 3" / width="77" height="158" loading="lazy"
-													decoding="async">
-												</picture>
-											</button>
-										</div>
-									</div>
-								</div>
-
-								<!-- Main Swiper -->
-								<div class="product-details__main-swiper swiper" aria-label="Main product image">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="product-details__main">
-												<picture>
-													<source
-														srcset="./img/product-details/product/lamp-main.webp 1x, ./img/product-details/product/lamp-main@2x.webp 2x"
-														type="image/webp"
-													/>
-													<source
-														srcset="./img/product-details/product/lamp-main.png 1x, ./img/product-details/product/lamp-main@2x.png 2x"
-														type="image/png"
-													/>
-													<img src="./img/product-details/product/lamp-main.png" alt="Pendant lamp view 4" / width="233" height="405" loading="lazy"
-													decoding="async">
-												</picture>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="product-details__main">
-												<picture>
-													<source
-														srcset="./img/product-details/product/lamp-thumb-1.webp 1x, ./img/product-details/product/lamp-thumb-1@2x.webp 2x"
-														type="image/webp"
-													/>
-													<source
-														srcset="./img/product-details/product/lamp-thumb-1.png 1x, ./img/product-details/product/lamp-thumb-1@2x.png 2x"
-														type="image/png"
-													/>
-													<img src="./img/product-details/product/lamp-thumb-1.png" alt="Pendant lamp view 1" / width="107" height="147" loading="lazy"
-													decoding="async">
-												</picture>
-											</div>
-										</div>
-
-										<div class="swiper-slide">
-											<div class="product-details__main">
-												<picture>
-													<source
-														srcset="./img/product-details/product/lamp-thumb-2.webp 1x, ./img/product-details/product/lamp-thumb-2@2x.webp 2x"
-														type="image/webp"
-													/>
-													<source
-														srcset="./img/product-details/product/lamp-thumb-2.png 1x, ./img/product-details/product/lamp-thumb-2@2x.png 2x"
-														type="image/png"
-													/>
-													<img src="./img/product-details/product/lamp-thumb-2.png" alt="Pendant lamp view 2" / width="105" height="119" loading="lazy"
-													decoding="async">
-												</picture>
-											</div>
-										</div>
-
-										<div class="swiper-slide">
-											<div class="product-details__main">
-												<picture>
-													<source
-														srcset="./img/product-details/product/lamp-thumb-3.webp 1x, ./img/product-details/product/lamp-thumb-3@2x.webp 2x"
-														type="image/webp"
-													/>
-													<source
-														srcset="./img/product-details/product/lamp-thumb-3.png 1x, ./img/product-details/product/lamp-thumb-3@2x.png 2x"
-														type="image/png"
-													/>
-													<img src="./img/product-details/product/lamp-thumb-3.png" alt="Pendant lamp view 3" / width="77" height="158" loading="lazy"
-													decoding="async">
-												</picture>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Info -->
-							<div class="product-details__info">
-								<h1 class="product-details__title">Pendant lamp</h1>
-
-								<div class="product-details__rating rating" aria-label="Rating 4 out of 5">
-									<select class="star-rating" disabled>
-										<option value="">Select a&#160;rating</option>
-										<option value="5">Excellent</option>
-										<option value="4" selected>Very Good</option>
-										<option value="3">Average</option>
-										<option value="2">Poor</option>
-										<option value="1">Terrible</option>
-									</select>
-								</div>
-
-								<div class="product-details__price">23$</div>
-
-								<div class="product-details__text">
-									<p>
-										consectetur adipisicing elit, sed do&#160;eiusmod tempor incididunt ut&#160;labore et&#160;dolore magna aliqua. Ut&#160;enim ad&#160;minim
-										veniam, quis nostrud exercitation ullamco laboris nisi ut&#160;aliquip ex&#160;ea&#160;commodo
-									</p>
-								</div>
-
-								<div class="product-details__actions">
-									<div class="product-details__qty qty" aria-label="Quantity">
-										<button class="qty__btn qty__btn--minus" type="button" aria-label="Decrease quantity">&#8722;</button>
-										<input class="qty__input" type="number" min="1" value="1" inputmode="numeric" aria-label="Quantity value" />
-										<button class="qty__btn qty__btn--plus" type="button" aria-label="Increase quantity">+</button>
-									</div>
-
-									<button class="product-details__add" type="button">ADD TO&#160;CART</button>
-								</div>
-
-								<ul class="product-details__meta">
-									<li class="product-details__meta-item">SKU: <span>014</span></li>
-									<li class="product-details__meta-item">Category: <a href="product-list-one.html">Lights</a></li>
-									<li class="product-details__meta-item">Tag: <a href="product-list-one.html">Decorative</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- Tabs -->
-				<div class="product-details__tabs tabs" data-tabs>
-					<div class="container--narrow">
-						<div class="tabs__nav" role="tablist" aria-label="Product tabs">
-							<button class="tabs__btn tabs__btn--active" type="button" role="tab" id="tab-desc-btn" aria-controls="tab-desc" aria-selected="true">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="View detailed product information, specifications, and related items in the Glee catalog." name="description"/>
+<title>Product Details — Glee</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap" rel="stylesheet"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="./css/main.css" rel="stylesheet"/>
+<link href="./img/favicons/favicon.svg" rel="icon" type="image/x-icon"/>
+<link href="./img/favicons/glee-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="https://entus1asm.github.io/Glee/product-details.html" rel="canonical"/><meta content="index, follow" name="robots"/><meta content="#fcd7b6" name="theme-color"/><meta content="Glee" property="og:site_name"/><meta content="en_US" property="og:locale"/><meta content="product" property="og:type"/><meta content="Product Details — Glee" property="og:title"/><meta content="View detailed product information, specifications, and related items in the Glee catalog." property="og:description"/><meta content="https://entus1asm.github.io/Glee/product-details.html" property="og:url"/><meta content="https://entus1asm.github.io/Glee/img/product-list-one/lamp-main.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Product Details — Glee" name="twitter:title"/><meta content="View detailed product information, specifications, and related items in the Glee catalog." name="twitter:description"/><meta content="https://entus1asm.github.io/Glee/img/product-list-one/lamp-main.png" name="twitter:image"/><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://entus1asm.github.io/Glee/#organization", "name": "Glee", "url": "https://entus1asm.github.io/Glee/", "logo": "https://entus1asm.github.io/Glee/img/favicons/glee-icon.png"}, {"@type": "WebSite", "@id": "https://entus1asm.github.io/Glee/#website", "url": "https://entus1asm.github.io/Glee/", "name": "Glee", "publisher": {"@id": "https://entus1asm.github.io/Glee/#organization"}, "inLanguage": "en"}, {"@type": "BreadcrumbList", "@id": "https://entus1asm.github.io/Glee/product-details.html#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://entus1asm.github.io/Glee/"}, {"@type": "ListItem", "position": 2, "name": "Product Details", "item": "https://entus1asm.github.io/Glee/product-details.html"}]}, {"@type": "Product", "@id": "https://entus1asm.github.io/Glee/product-details.html#product", "name": "Pendant Lamp", "image": ["https://entus1asm.github.io/Glee/img/product-list-one/lamp-main.png"], "description": "View detailed product information, specifications, and related items in the Glee catalog.", "brand": {"@type": "Brand", "name": "Glee"}, "offers": {"@type": "Offer", "url": "https://entus1asm.github.io/Glee/product-details.html", "priceCurrency": "USD", "price": "23", "availability": "https://schema.org/InStock"}}]}</script></head>
+<body class="page page--product-details" data-page="product-details">
+<header class="header">
+<div class="container">
+<div class="header__inner">
+<a aria-label="Glee home" class="logo" href="index.html">
+<svg class="logo-icon icon icon--user">
+<use href="./img/svgsprite/sprite.symbol.svg#logo-icon"></use>
+</svg>
+<span class="logo__text">Glee.</span>
+</a>
+<nav aria-label="Primary navigation" class="header__nav nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">Home +</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about-us.html">About</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="product-list-one.html">Services</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="login.html">Pages +</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="blog-page.html">News</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="contact-info.html">Contact</a>
+</li>
+</ul>
+</nav>
+<div class="header__actions actions">
+<button aria-label="Search (coming soon)" class="actions__btn actions__btn--search" type="button">
+<svg class="search-icon icon">
+<use href="./img/svgsprite/sprite.symbol.svg#search-icon"></use>
+</svg>
+</button>
+<div class="header__actions-box">
+<button aria-label="Wishlist (coming soon)" class="actions__btn actions__btn--wishlist" type="button">
+<svg class="heart-icon icon">
+<use href="./img/svgsprite/sprite.symbol.svg#heart-icon"></use>
+</svg>
+<span class="actions__count">0</span>
+</button>
+<button aria-label="Cart (coming soon)" class="actions__btn actions__btn--cart" type="button">
+<svg class="cart-icon icon">
+<use href="./img/svgsprite/sprite.symbol.svg#cart-icon"></use>
+</svg>
+<span class="actions__count">0</span>
+</button>
+</div>
+<button aria-label="More actions (coming soon)" class="actions__btn actions__btn--more" type="button">
+<svg class="more-icon icon">
+<use href="./img/svgsprite/sprite.symbol.svg#more-icon"></use>
+</svg>
+</button>
+<button aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu" class="header__menu-btn" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<div aria-hidden="true" class="mobile-nav" id="mobile-nav">
+<div class="mobile-nav__overlay"></div>
+<div aria-label="Mobile navigation" aria-modal="true" class="mobile-nav__panel" role="dialog">
+<button aria-label="Close menu" class="mobile-nav__close" type="button">
+<span></span>
+<span></span>
+</button>
+<ul class="mobile-nav__list">
+<li class="mobile-nav__item">
+<a class="mobile-nav__link" href="index.html">Home +</a>
+</li>
+<li class="mobile-nav__item">
+<a class="mobile-nav__link" href="about-us.html">About</a>
+</li>
+<li class="mobile-nav__item">
+<a class="mobile-nav__link" href="product-list-one.html">Services</a>
+</li>
+<li class="mobile-nav__item">
+<a class="mobile-nav__link" href="login.html">Pages +</a>
+</li>
+<li class="mobile-nav__item">
+<a class="mobile-nav__link" href="blog-page.html">News</a>
+</li>
+<li class="mobile-nav__item">
+<a class="mobile-nav__link" href="contact-info.html">Contact</a>
+</li>
+</ul>
+</div>
+</div>
+<main class="product-details" id="main-content">
+<section>
+<section class="breadcrumbs">
+<div class="container-full">
+<h2 class="breadcrumb-title">Product Details</h2>
+<nav class="breadcrumb-nav">
+<a class="breadcrumb-link" href="index.html">Home</a>
+<span class="breadcrumb-separator">/</span>
+<span class="breadcrumb-current">Product Details</span>
+</nav>
+</div>
+</section>
+<section class="product-details">
+<div class="container--narrow">
+<div class="product-details__top">
+<!-- Media -->
+<div class="product-details__media">
+<!-- Thumbs Swiper -->
+<div aria-label="Product thumbnails" class="product-details__thumbs-swiper swiper">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<button aria-label="Open image 4" class="product-details__thumb-btn" type="button">
+<picture>
+<source srcset="./img/product-details/product/lamp-main.webp 1x, ./img/product-details/product/lamp-main@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/product-details/product/lamp-main.png 1x, ./img/product-details/product/lamp-main@2x.png 2x" type="image/png"/>
+<img alt="Pendant lamp thumbnail 4" decoding="async" height="437" loading="lazy" src="./img/product-details/product/lamp-main.png" width="233"/>
+</picture>
+</button>
+</div>
+<div class="swiper-slide">
+<button aria-label="Open image 1" class="product-details__thumb-btn" type="button">
+<picture>
+<source srcset="./img/product-details/product/lamp-thumb-1.webp 1x, ./img/product-details/product/lamp-thumb-1@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/product-details/product/lamp-thumb-1.png 1x, ./img/product-details/product/lamp-thumb-1@2x.png 2x" type="image/png"/>
+<img alt="Pendant lamp thumbnail 1" decoding="async" height="437" loading="lazy" src="./img/product-details/product/lamp-thumb-1.png" width="397"/>
+</picture>
+</button>
+</div>
+<div class="swiper-slide">
+<button aria-label="Open image 2" class="product-details__thumb-btn" type="button">
+<picture>
+<source srcset="./img/product-details/product/lamp-thumb-2.webp 1x, ./img/product-details/product/lamp-thumb-2@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/product-details/product/lamp-thumb-2.png 1x, ./img/product-details/product/lamp-thumb-2@2x.png 2x" type="image/png"/>
+<img alt="Pendant lamp thumbnail 2" decoding="async" height="437" loading="lazy" src="./img/product-details/product/lamp-thumb-2.png" width="379"/>
+</picture>
+</button>
+</div>
+<div class="swiper-slide">
+<button aria-label="Open image 3" class="product-details__thumb-btn" type="button">
+<picture>
+<source srcset="./img/product-details/product/lamp-thumb-3.webp 1x, ./img/product-details/product/lamp-thumb-3@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/product-details/product/lamp-thumb-3.png 1x, ./img/product-details/product/lamp-thumb-3@2x.png 2x" type="image/png"/>
+<img alt="Pendant lamp thumbnail 3" decoding="async" height="437" loading="lazy" src="./img/product-details/product/lamp-thumb-3.png" width="319"/>
+</picture>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Swiper -->
+<div aria-label="Main product image" class="product-details__main-swiper swiper">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<div class="product-details__main">
+<picture>
+<source srcset="./img/product-details/product/lamp-main.webp 1x, ./img/product-details/product/lamp-main@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/product-details/product/lamp-main.png 1x, ./img/product-details/product/lamp-main@2x.png 2x" type="image/png"/>
+<img alt="Pendant lamp view 4" decoding="async" height="437" loading="lazy" src="./img/product-details/product/lamp-main.png" width="233"/>
+</picture>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="product-details__main">
+<picture>
+<source srcset="./img/product-details/product/lamp-thumb-1.webp 1x, ./img/product-details/product/lamp-thumb-1@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/product-details/product/lamp-thumb-1.png 1x, ./img/product-details/product/lamp-thumb-1@2x.png 2x" type="image/png"/>
+<img alt="Pendant lamp view 1" decoding="async" height="437" loading="lazy" src="./img/product-details/product/lamp-thumb-1.png" width="397"/>
+</picture>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="product-details__main">
+<picture>
+<source srcset="./img/product-details/product/lamp-thumb-2.webp 1x, ./img/product-details/product/lamp-thumb-2@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/product-details/product/lamp-thumb-2.png 1x, ./img/product-details/product/lamp-thumb-2@2x.png 2x" type="image/png"/>
+<img alt="Pendant lamp view 2" decoding="async" height="437" loading="lazy" src="./img/product-details/product/lamp-thumb-2.png" width="379"/>
+</picture>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="product-details__main">
+<picture>
+<source srcset="./img/product-details/product/lamp-thumb-3.webp 1x, ./img/product-details/product/lamp-thumb-3@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/product-details/product/lamp-thumb-3.png 1x, ./img/product-details/product/lamp-thumb-3@2x.png 2x" type="image/png"/>
+<img alt="Pendant lamp view 3" decoding="async" height="437" loading="lazy" src="./img/product-details/product/lamp-thumb-3.png" width="319"/>
+</picture>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Info -->
+<div class="product-details__info">
+<h1 class="product-details__title">Pendant lamp</h1>
+<div aria-label="Rating 4 out of 5" class="product-details__rating rating">
+<select class="star-rating" disabled="">
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option selected="" value="4">Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+</div>
+<div class="product-details__price">23$</div>
+<div class="product-details__text">
+<p>This pendant lamp brings soft ambient light and a clean silhouette to dining areas, bedrooms, and compact living spaces. Its balanced form makes it easy to pair with both modern and transitional interiors.</p>
+</div>
+<div class="product-details__actions">
+<div aria-label="Quantity" class="product-details__qty qty">
+<button aria-label="Decrease quantity" class="qty__btn qty__btn--minus" type="button">−</button>
+<input aria-label="Quantity value" class="qty__input" inputmode="numeric" min="1" type="number" value="1"/>
+<button aria-label="Increase quantity" class="qty__btn qty__btn--plus" type="button">+</button>
+</div>
+<button class="product-details__add" type="button">ADD TO CART</button>
+</div>
+<ul class="product-details__meta">
+<li class="product-details__meta-item">SKU: <span>014</span></li>
+<li class="product-details__meta-item">Category: <a href="product-list-one.html">Lights</a></li>
+<li class="product-details__meta-item">Tag: <a href="product-list-one.html">Decorative</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Tabs -->
+<div class="product-details__tabs tabs" data-tabs="">
+<div class="container--narrow">
+<div aria-label="Product tabs" class="tabs__nav" role="tablist">
+<button aria-controls="tab-desc" aria-selected="true" class="tabs__btn tabs__btn--active" id="tab-desc-btn" role="tab" type="button">
 								Description
 							</button>
-
-							<button class="tabs__btn" type="button" role="tab" id="tab-additional-btn" aria-controls="tab-additional" aria-selected="false">
+<button aria-controls="tab-additional" aria-selected="false" class="tabs__btn" id="tab-additional-btn" role="tab" type="button">
 								Additional information
 							</button>
-
-							<button class="tabs__btn" type="button" role="tab" id="tab-reviews-btn" aria-controls="tab-reviews" aria-selected="false">
+<button aria-controls="tab-reviews" aria-selected="false" class="tabs__btn" id="tab-reviews-btn" role="tab" type="button">
 								Reviews (2)
 							</button>
-						</div>
-
-						<div class="tabs__content">
-							<div class="tabs__panel tabs__panel--active" role="tabpanel" id="tab-desc" aria-labelledby="tab-desc-btn">
-								<p>
-									consectetur adipisicing elit, sed do&#160;eiusmod tempor incididunt ut&#160;labore et&#160;dolore magna aliqua. Ut&#160;enim ad&#160;minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut&#160;aliquip ex&#160;ea&#160;commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-									sed do&#160;eiusmod tempor incididunt ut&#160;labore et dolore magna aliqua. Ut&#160;enim ad&#160;minim veniam, quis nostrud exercitation ullamco
-									laboris nisi ut&#160;aliquip ex&#160;ea&#160;commodo consequat.
-								</p>
-							</div>
-
-							<div class="tabs__panel" role="tabpanel" id="tab-additional" aria-labelledby="tab-additional-btn" hidden>
-								<p>Additional information content&#8230;</p>
-							</div>
-
-							<div class="tabs__panel" role="tabpanel" id="tab-reviews" aria-labelledby="tab-reviews-btn" hidden>
-								<p>Reviews content&#8230;</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<section class="related-products">
-					<div class="container--narrow">
-						<div class="related-products__head">
-							<h2 class="related-products__title">Related products</h2>
-
-							<div class="related-products__nav">
-								<button class="related-products__btn related-products__btn--prev" type="button" aria-label="Previous">
-									&#8592;
+</div>
+<div class="tabs__content">
+<div aria-labelledby="tab-desc-btn" class="tabs__panel tabs__panel--active" id="tab-desc" role="tabpanel">
+<p>Use it as a standalone statement or combine it with other textured finishes for a layered look. The design is simple enough for everyday use and refined enough for styled commercial spaces.</p>
+</div>
+<div aria-labelledby="tab-additional-btn" class="tabs__panel" hidden="" id="tab-additional" role="tabpanel">
+<p>Additional information includes size guidance, basic care recommendations, and ordering details for a smooth purchasing experience.</p>
+</div>
+<div aria-labelledby="tab-reviews-btn" class="tabs__panel" hidden="" id="tab-reviews" role="tabpanel">
+<p>Reviews highlight the lamp’s clean shape, soft light output, and how easily it fits into modern dining, bedroom, and living room settings.</p>
+</div>
+</div>
+</div>
+</div>
+<section class="related-products">
+<div class="container--narrow">
+<div class="related-products__head">
+<h2 class="related-products__title">Related products</h2>
+<div class="related-products__nav">
+<button aria-label="Previous" class="related-products__btn related-products__btn--prev" type="button">
+									←
 								</button>
-								<button class="related-products__btn related-products__btn--next" type="button" aria-label="Next">
-									&#8594;
+<button aria-label="Next" class="related-products__btn related-products__btn--next" type="button">
+									→
 								</button>
-							</div>
-						</div>
-
-						<div class="related-products__slider swiper">
-							<div class="swiper-wrapper">
-								<!-- 1 slide -->
-								<div class="swiper-slide">
-									<article class="product-card mix category-a">
-										<div class="product-card__image">
-											<picture>
-												<source srcset="./img/products/1.webp 1x, ./img/products/1@2x.webp 2x" type="image/webp" />
-												<source srcset="./img/products/1.png 1x, ./img/products/1@2x.png 2x" type="image/png" />
-												<img src="./img/products/1.png" alt="Wooden chair" width="186" height="279" loading="lazy" decoding="async" />
-											</picture>
-
-											<div class="product-card__actions">
-												<a href="product-details.html" class="product-card__action product-card__action--view">
-													<svg width="20px" height="20px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M19.450,19.448 C18.719,20.181 17.531,20.181 16.799,19.448 L12.211,14.860 C13.274,14.178 14.178,13.272 14.862,12.209 L19.450,16.798 C20.183,17.530 20.183,18.718 19.450,19.448 ZM7.500,14.999 C3.358,14.999 -0.000,11.640 -0.000,7.499 C-0.000,3.357 3.358,-0.002 7.500,-0.002 C11.642,-0.002 14.1000,3.357 14.1000,7.499 C14.1000,11.640 11.642,14.999 7.500,14.999 ZM7.500,1.873 C4.398,1.873 1.875,4.397 1.875,7.499 C1.875,10.601 4.398,13.123 7.500,13.123 C10.602,13.123 13.125,10.601 13.125,7.499 C13.125,4.397 10.602,1.873 7.500,1.873 ZM4.375,7.499 L3.125,7.499 C3.125,5.087 5.088,3.123 7.500,3.123 L7.500,4.374 C5.777,4.374 4.375,5.776 4.375,7.499 Z"
-														/>
-													</svg>
-												</a>
-												<a href="#" class="product-card__action product-card__action--cart">
-													<svg width="22px" height="20px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M21.934,5.216 L18.217,13.776 C18.082,14.075 17.797,14.264 17.471,14.264 L7.257,14.264 C6.891,14.264 6.565,14.020 6.470,13.667 L3.147,1.629 L0.814,1.629 C0.366,1.629 -0.000,1.262 -0.000,0.814 C-0.000,0.365 0.366,-0.002 0.814,-0.002 L3.757,-0.002 C4.124,-0.002 4.449,0.243 4.544,0.596 L7.867,12.634 L16.929,12.634 L19.940,5.705 L9.902,5.705 C9.454,5.705 9.088,5.338 9.088,4.889 C9.088,4.440 9.454,4.074 9.902,4.074 L21.188,4.074 C21.459,4.074 21.717,4.211 21.866,4.440 C22.015,4.673 22.043,4.957 21.934,5.216 ZM6.484,16.303 C7.501,16.303 8.329,17.131 8.329,18.150 C8.329,19.169 7.501,19.999 6.484,19.999 C5.466,19.999 4.639,19.169 4.639,18.150 C4.639,17.131 5.466,16.303 6.484,16.303 ZM17.892,16.303 C18.909,16.235 19.791,17.009 19.859,18.015 C19.886,18.517 19.737,18.994 19.411,19.360 C19.085,19.740 18.638,19.958 18.149,19.999 C18.109,19.999 18.055,19.999 18.014,19.999 C17.051,19.999 16.250,19.238 16.183,18.273 C16.115,17.267 16.874,16.371 17.892,16.303 Z"
-														/>
-													</svg>
-												</a>
-												<a href="#" class="product-card__action product-card__action--favorite">
-													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="18px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M21.990,5.820 C21.907,4.269 21.250,2.813 20.141,1.720 C19.016,0.610 17.545,-0.001 16.002,-0.001 C13.691,-0.001 12.054,1.784 11.175,2.744 C11.125,2.798 11.071,2.857 11.019,2.913 C10.991,2.882 10.963,2.849 10.936,2.819 C10.132,1.903 8.460,-0.001 5.998,-0.001 C4.455,-0.001 2.985,0.610 1.859,1.720 C0.750,2.813 0.093,4.269 0.010,5.820 C-0.072,7.361 0.320,8.700 1.281,10.158 C2.142,11.466 4.385,13.532 6.044,14.906 C7.749,16.317 9.994,17.999 11.009,17.999 C12.041,17.999 14.278,16.319 15.974,14.912 C17.620,13.545 19.850,11.480 20.720,10.158 C21.366,9.174 22.095,7.792 21.990,5.820 ZM19.614,9.430 C18.982,10.391 17.202,12.166 15.183,13.848 C12.777,15.852 11.352,16.643 11.011,16.674 C10.669,16.639 9.241,15.841 6.823,13.831 C4.793,12.145 3.010,10.377 2.386,9.429 C1.591,8.223 1.266,7.132 1.332,5.891 C1.467,3.372 3.560,1.322 5.998,1.322 C7.861,1.322 9.214,2.864 9.941,3.692 C10.369,4.180 10.604,4.447 11.000,4.447 C11.409,4.447 11.672,4.161 12.151,3.638 C12.945,2.772 14.273,1.322 16.002,1.322 C18.440,1.322 20.533,3.372 20.668,5.891 C20.735,7.145 20.420,8.204 19.614,9.430 Z"
-														/>
-													</svg>
-												</a>
-											</div>
-										</div>
-
-										<h3 class="product-card__title">Wooden radio</h3>
-										<span class="product-card__price">$29.00</span>
-									</article>
-								</div>
-
-								<!-- 2 slide -->
-								<div class="swiper-slide">
-									<article class="product-card mix category-a">
-										<div class="product-card__image">
-											<picture>
-												<source srcset="./img/products/2.webp 1x, ./img/products/2@2x.webp 2x" type="image/webp" />
-												<source srcset="./img/products/2.png 1x, ./img/products/2@2x.png 2x" type="image/png" />
-												<img src="./img/products/2.png" alt="Wooden chair" width="148" height="222" loading="lazy" decoding="async" />
-											</picture>
-
-											<div class="product-card__actions">
-												<a href="product-details.html" class="product-card__action product-card__action--view">
-													<svg width="20px" height="20px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M19.450,19.448 C18.719,20.181 17.531,20.181 16.799,19.448 L12.211,14.860 C13.274,14.178 14.178,13.272 14.862,12.209 L19.450,16.798 C20.183,17.530 20.183,18.718 19.450,19.448 ZM7.500,14.999 C3.358,14.999 -0.000,11.640 -0.000,7.499 C-0.000,3.357 3.358,-0.002 7.500,-0.002 C11.642,-0.002 14.1000,3.357 14.1000,7.499 C14.1000,11.640 11.642,14.999 7.500,14.999 ZM7.500,1.873 C4.398,1.873 1.875,4.397 1.875,7.499 C1.875,10.601 4.398,13.123 7.500,13.123 C10.602,13.123 13.125,10.601 13.125,7.499 C13.125,4.397 10.602,1.873 7.500,1.873 ZM4.375,7.499 L3.125,7.499 C3.125,5.087 5.088,3.123 7.500,3.123 L7.500,4.374 C5.777,4.374 4.375,5.776 4.375,7.499 Z"
-														/>
-													</svg>
-												</a>
-												<a href="#" class="product-card__action product-card__action--cart">
-													<svg width="22px" height="20px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M21.934,5.216 L18.217,13.776 C18.082,14.075 17.797,14.264 17.471,14.264 L7.257,14.264 C6.891,14.264 6.565,14.020 6.470,13.667 L3.147,1.629 L0.814,1.629 C0.366,1.629 -0.000,1.262 -0.000,0.814 C-0.000,0.365 0.366,-0.002 0.814,-0.002 L3.757,-0.002 C4.124,-0.002 4.449,0.243 4.544,0.596 L7.867,12.634 L16.929,12.634 L19.940,5.705 L9.902,5.705 C9.454,5.705 9.088,5.338 9.088,4.889 C9.088,4.440 9.454,4.074 9.902,4.074 L21.188,4.074 C21.459,4.074 21.717,4.211 21.866,4.440 C22.015,4.673 22.043,4.957 21.934,5.216 ZM6.484,16.303 C7.501,16.303 8.329,17.131 8.329,18.150 C8.329,19.169 7.501,19.999 6.484,19.999 C5.466,19.999 4.639,19.169 4.639,18.150 C4.639,17.131 5.466,16.303 6.484,16.303 ZM17.892,16.303 C18.909,16.235 19.791,17.009 19.859,18.015 C19.886,18.517 19.737,18.994 19.411,19.360 C19.085,19.740 18.638,19.958 18.149,19.999 C18.109,19.999 18.055,19.999 18.014,19.999 C17.051,19.999 16.250,19.238 16.183,18.273 C16.115,17.267 16.874,16.371 17.892,16.303 Z"
-														/>
-													</svg>
-												</a>
-												<a href="#" class="product-card__action product-card__action--favorite">
-													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="18px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M21.990,5.820 C21.907,4.269 21.250,2.813 20.141,1.720 C19.016,0.610 17.545,-0.001 16.002,-0.001 C13.691,-0.001 12.054,1.784 11.175,2.744 C11.125,2.798 11.071,2.857 11.019,2.913 C10.991,2.882 10.963,2.849 10.936,2.819 C10.132,1.903 8.460,-0.001 5.998,-0.001 C4.455,-0.001 2.985,0.610 1.859,1.720 C0.750,2.813 0.093,4.269 0.010,5.820 C-0.072,7.361 0.320,8.700 1.281,10.158 C2.142,11.466 4.385,13.532 6.044,14.906 C7.749,16.317 9.994,17.999 11.009,17.999 C12.041,17.999 14.278,16.319 15.974,14.912 C17.620,13.545 19.850,11.480 20.720,10.158 C21.366,9.174 22.095,7.792 21.990,5.820 ZM19.614,9.430 C18.982,10.391 17.202,12.166 15.183,13.848 C12.777,15.852 11.352,16.643 11.011,16.674 C10.669,16.639 9.241,15.841 6.823,13.831 C4.793,12.145 3.010,10.377 2.386,9.429 C1.591,8.223 1.266,7.132 1.332,5.891 C1.467,3.372 3.560,1.322 5.998,1.322 C7.861,1.322 9.214,2.864 9.941,3.692 C10.369,4.180 10.604,4.447 11.000,4.447 C11.409,4.447 11.672,4.161 12.151,3.638 C12.945,2.772 14.273,1.322 16.002,1.322 C18.440,1.322 20.533,3.372 20.668,5.891 C20.735,7.145 20.420,8.204 19.614,9.430 Z"
-														/>
-													</svg>
-												</a>
-											</div>
-										</div>
-
-										<h3 class="product-card__title">Wooden radio</h3>
-										<span class="product-card__price">$29.00</span>
-									</article>
-								</div>
-
-								<!-- 3 slide -->
-								<div class="swiper-slide">
-									<article class="product-card mix category-a">
-										<div class="product-card__image">
-											<picture>
-												<source srcset="./img/products/3.webp 1x, ./img/products/3@2x.webp 2x" type="image/webp" />
-												<source srcset="./img/products/3.png 1x, ./img/products/3@2x.png 2x" type="image/png" />
-												<img src="./img/products/3.png" alt="Wooden chair" width="208" height="139" loading="lazy" decoding="async" />
-											</picture>
-
-											<div class="product-card__actions">
-												<a href="product-details.html" class="product-card__action product-card__action--view">
-													<svg width="20px" height="20px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M19.450,19.448 C18.719,20.181 17.531,20.181 16.799,19.448 L12.211,14.860 C13.274,14.178 14.178,13.272 14.862,12.209 L19.450,16.798 C20.183,17.530 20.183,18.718 19.450,19.448 ZM7.500,14.999 C3.358,14.999 -0.000,11.640 -0.000,7.499 C-0.000,3.357 3.358,-0.002 7.500,-0.002 C11.642,-0.002 14.1000,3.357 14.1000,7.499 C14.1000,11.640 11.642,14.999 7.500,14.999 ZM7.500,1.873 C4.398,1.873 1.875,4.397 1.875,7.499 C1.875,10.601 4.398,13.123 7.500,13.123 C10.602,13.123 13.125,10.601 13.125,7.499 C13.125,4.397 10.602,1.873 7.500,1.873 ZM4.375,7.499 L3.125,7.499 C3.125,5.087 5.088,3.123 7.500,3.123 L7.500,4.374 C5.777,4.374 4.375,5.776 4.375,7.499 Z"
-														/>
-													</svg>
-												</a>
-												<a href="#" class="product-card__action product-card__action--cart">
-													<svg width="22px" height="20px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M21.934,5.216 L18.217,13.776 C18.082,14.075 17.797,14.264 17.471,14.264 L7.257,14.264 C6.891,14.264 6.565,14.020 6.470,13.667 L3.147,1.629 L0.814,1.629 C0.366,1.629 -0.000,1.262 -0.000,0.814 C-0.000,0.365 0.366,-0.002 0.814,-0.002 L3.757,-0.002 C4.124,-0.002 4.449,0.243 4.544,0.596 L7.867,12.634 L16.929,12.634 L19.940,5.705 L9.902,5.705 C9.454,5.705 9.088,5.338 9.088,4.889 C9.088,4.440 9.454,4.074 9.902,4.074 L21.188,4.074 C21.459,4.074 21.717,4.211 21.866,4.440 C22.015,4.673 22.043,4.957 21.934,5.216 ZM6.484,16.303 C7.501,16.303 8.329,17.131 8.329,18.150 C8.329,19.169 7.501,19.999 6.484,19.999 C5.466,19.999 4.639,19.169 4.639,18.150 C4.639,17.131 5.466,16.303 6.484,16.303 ZM17.892,16.303 C18.909,16.235 19.791,17.009 19.859,18.015 C19.886,18.517 19.737,18.994 19.411,19.360 C19.085,19.740 18.638,19.958 18.149,19.999 C18.109,19.999 18.055,19.999 18.014,19.999 C17.051,19.999 16.250,19.238 16.183,18.273 C16.115,17.267 16.874,16.371 17.892,16.303 Z"
-														/>
-													</svg>
-												</a>
-												<a href="#" class="product-card__action product-card__action--favorite">
-													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="18px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M21.990,5.820 C21.907,4.269 21.250,2.813 20.141,1.720 C19.016,0.610 17.545,-0.001 16.002,-0.001 C13.691,-0.001 12.054,1.784 11.175,2.744 C11.125,2.798 11.071,2.857 11.019,2.913 C10.991,2.882 10.963,2.849 10.936,2.819 C10.132,1.903 8.460,-0.001 5.998,-0.001 C4.455,-0.001 2.985,0.610 1.859,1.720 C0.750,2.813 0.093,4.269 0.010,5.820 C-0.072,7.361 0.320,8.700 1.281,10.158 C2.142,11.466 4.385,13.532 6.044,14.906 C7.749,16.317 9.994,17.999 11.009,17.999 C12.041,17.999 14.278,16.319 15.974,14.912 C17.620,13.545 19.850,11.480 20.720,10.158 C21.366,9.174 22.095,7.792 21.990,5.820 ZM19.614,9.430 C18.982,10.391 17.202,12.166 15.183,13.848 C12.777,15.852 11.352,16.643 11.011,16.674 C10.669,16.639 9.241,15.841 6.823,13.831 C4.793,12.145 3.010,10.377 2.386,9.429 C1.591,8.223 1.266,7.132 1.332,5.891 C1.467,3.372 3.560,1.322 5.998,1.322 C7.861,1.322 9.214,2.864 9.941,3.692 C10.369,4.180 10.604,4.447 11.000,4.447 C11.409,4.447 11.672,4.161 12.151,3.638 C12.945,2.772 14.273,1.322 16.002,1.322 C18.440,1.322 20.533,3.372 20.668,5.891 C20.735,7.145 20.420,8.204 19.614,9.430 Z"
-														/>
-													</svg>
-												</a>
-											</div>
-										</div>
-
-										<h3 class="product-card__title">Wooden radio</h3>
-										<span class="product-card__price">$29.00</span>
-									</article>
-								</div>
-
-								<!-- 4 slide -->
-								<div class="swiper-slide">
-									<article class="product-card mix category-a">
-										<div class="product-card__image">
-											<picture>
-												<source srcset="./img/products/4.webp 1x, ./img/products/4@2x.webp 2x" type="image/webp" />
-												<source srcset="./img/products/4.png 1x, ./img/products/4@2x.png 2x" type="image/png" />
-												<img src="./img/products/4.png" alt="Wooden chair" width="224" height="149" loading="lazy" decoding="async" />
-											</picture>
-
-											<div class="product-card__actions">
-												<a href="product-details.html" class="product-card__action product-card__action--view">
-													<svg width="20px" height="20px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M19.450,19.448 C18.719,20.181 17.531,20.181 16.799,19.448 L12.211,14.860 C13.274,14.178 14.178,13.272 14.862,12.209 L19.450,16.798 C20.183,17.530 20.183,18.718 19.450,19.448 ZM7.500,14.999 C3.358,14.999 -0.000,11.640 -0.000,7.499 C-0.000,3.357 3.358,-0.002 7.500,-0.002 C11.642,-0.002 14.1000,3.357 14.1000,7.499 C14.1000,11.640 11.642,14.999 7.500,14.999 ZM7.500,1.873 C4.398,1.873 1.875,4.397 1.875,7.499 C1.875,10.601 4.398,13.123 7.500,13.123 C10.602,13.123 13.125,10.601 13.125,7.499 C13.125,4.397 10.602,1.873 7.500,1.873 ZM4.375,7.499 L3.125,7.499 C3.125,5.087 5.088,3.123 7.500,3.123 L7.500,4.374 C5.777,4.374 4.375,5.776 4.375,7.499 Z"
-														/>
-													</svg>
-												</a>
-												<a href="#" class="product-card__action product-card__action--cart">
-													<svg width="22px" height="20px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M21.934,5.216 L18.217,13.776 C18.082,14.075 17.797,14.264 17.471,14.264 L7.257,14.264 C6.891,14.264 6.565,14.020 6.470,13.667 L3.147,1.629 L0.814,1.629 C0.366,1.629 -0.000,1.262 -0.000,0.814 C-0.000,0.365 0.366,-0.002 0.814,-0.002 L3.757,-0.002 C4.124,-0.002 4.449,0.243 4.544,0.596 L7.867,12.634 L16.929,12.634 L19.940,5.705 L9.902,5.705 C9.454,5.705 9.088,5.338 9.088,4.889 C9.088,4.440 9.454,4.074 9.902,4.074 L21.188,4.074 C21.459,4.074 21.717,4.211 21.866,4.440 C22.015,4.673 22.043,4.957 21.934,5.216 ZM6.484,16.303 C7.501,16.303 8.329,17.131 8.329,18.150 C8.329,19.169 7.501,19.999 6.484,19.999 C5.466,19.999 4.639,19.169 4.639,18.150 C4.639,17.131 5.466,16.303 6.484,16.303 ZM17.892,16.303 C18.909,16.235 19.791,17.009 19.859,18.015 C19.886,18.517 19.737,18.994 19.411,19.360 C19.085,19.740 18.638,19.958 18.149,19.999 C18.109,19.999 18.055,19.999 18.014,19.999 C17.051,19.999 16.250,19.238 16.183,18.273 C16.115,17.267 16.874,16.371 17.892,16.303 Z"
-														/>
-													</svg>
-												</a>
-												<a href="#" class="product-card__action product-card__action--favorite">
-													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="18px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M21.990,5.820 C21.907,4.269 21.250,2.813 20.141,1.720 C19.016,0.610 17.545,-0.001 16.002,-0.001 C13.691,-0.001 12.054,1.784 11.175,2.744 C11.125,2.798 11.071,2.857 11.019,2.913 C10.991,2.882 10.963,2.849 10.936,2.819 C10.132,1.903 8.460,-0.001 5.998,-0.001 C4.455,-0.001 2.985,0.610 1.859,1.720 C0.750,2.813 0.093,4.269 0.010,5.820 C-0.072,7.361 0.320,8.700 1.281,10.158 C2.142,11.466 4.385,13.532 6.044,14.906 C7.749,16.317 9.994,17.999 11.009,17.999 C12.041,17.999 14.278,16.319 15.974,14.912 C17.620,13.545 19.850,11.480 20.720,10.158 C21.366,9.174 22.095,7.792 21.990,5.820 ZM19.614,9.430 C18.982,10.391 17.202,12.166 15.183,13.848 C12.777,15.852 11.352,16.643 11.011,16.674 C10.669,16.639 9.241,15.841 6.823,13.831 C4.793,12.145 3.010,10.377 2.386,9.429 C1.591,8.223 1.266,7.132 1.332,5.891 C1.467,3.372 3.560,1.322 5.998,1.322 C7.861,1.322 9.214,2.864 9.941,3.692 C10.369,4.180 10.604,4.447 11.000,4.447 C11.409,4.447 11.672,4.161 12.151,3.638 C12.945,2.772 14.273,1.322 16.002,1.322 C18.440,1.322 20.533,3.372 20.668,5.891 C20.735,7.145 20.420,8.204 19.614,9.430 Z"
-														/>
-													</svg>
-												</a>
-											</div>
-										</div>
-
-										<h3 class="product-card__title">Wooden radio</h3>
-										<span class="product-card__price">$29.00</span>
-									</article>
-								</div>
-
-								<!-- 4 slide -->
-								<div class="swiper-slide">
-									<article class="product-card mix category-a">
-										<div class="product-card__image">
-											<picture>
-												<source srcset="./img/products/4.webp 1x, ./img/products/4@2x.webp 2x" type="image/webp" />
-												<source srcset="./img/products/4.png 1x, ./img/products/4@2x.png 2x" type="image/png" />
-												<img src="./img/products/4.png" alt="Wooden chair" width="224" height="149" loading="lazy" decoding="async" />
-											</picture>
-
-											<div class="product-card__actions">
-												<a href="product-details.html" class="product-card__action product-card__action--view">
-													<svg width="20px" height="20px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M19.450,19.448 C18.719,20.181 17.531,20.181 16.799,19.448 L12.211,14.860 C13.274,14.178 14.178,13.272 14.862,12.209 L19.450,16.798 C20.183,17.530 20.183,18.718 19.450,19.448 ZM7.500,14.999 C3.358,14.999 -0.000,11.640 -0.000,7.499 C-0.000,3.357 3.358,-0.002 7.500,-0.002 C11.642,-0.002 14.1000,3.357 14.1000,7.499 C14.1000,11.640 11.642,14.999 7.500,14.999 ZM7.500,1.873 C4.398,1.873 1.875,4.397 1.875,7.499 C1.875,10.601 4.398,13.123 7.500,13.123 C10.602,13.123 13.125,10.601 13.125,7.499 C13.125,4.397 10.602,1.873 7.500,1.873 ZM4.375,7.499 L3.125,7.499 C3.125,5.087 5.088,3.123 7.500,3.123 L7.500,4.374 C5.777,4.374 4.375,5.776 4.375,7.499 Z"
-														/>
-													</svg>
-												</a>
-												<a href="#" class="product-card__action product-card__action--cart">
-													<svg width="22px" height="20px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M21.934,5.216 L18.217,13.776 C18.082,14.075 17.797,14.264 17.471,14.264 L7.257,14.264 C6.891,14.264 6.565,14.020 6.470,13.667 L3.147,1.629 L0.814,1.629 C0.366,1.629 -0.000,1.262 -0.000,0.814 C-0.000,0.365 0.366,-0.002 0.814,-0.002 L3.757,-0.002 C4.124,-0.002 4.449,0.243 4.544,0.596 L7.867,12.634 L16.929,12.634 L19.940,5.705 L9.902,5.705 C9.454,5.705 9.088,5.338 9.088,4.889 C9.088,4.440 9.454,4.074 9.902,4.074 L21.188,4.074 C21.459,4.074 21.717,4.211 21.866,4.440 C22.015,4.673 22.043,4.957 21.934,5.216 ZM6.484,16.303 C7.501,16.303 8.329,17.131 8.329,18.150 C8.329,19.169 7.501,19.999 6.484,19.999 C5.466,19.999 4.639,19.169 4.639,18.150 C4.639,17.131 5.466,16.303 6.484,16.303 ZM17.892,16.303 C18.909,16.235 19.791,17.009 19.859,18.015 C19.886,18.517 19.737,18.994 19.411,19.360 C19.085,19.740 18.638,19.958 18.149,19.999 C18.109,19.999 18.055,19.999 18.014,19.999 C17.051,19.999 16.250,19.238 16.183,18.273 C16.115,17.267 16.874,16.371 17.892,16.303 Z"
-														/>
-													</svg>
-												</a>
-												<a href="#" class="product-card__action product-card__action--favorite">
-													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="18px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M21.990,5.820 C21.907,4.269 21.250,2.813 20.141,1.720 C19.016,0.610 17.545,-0.001 16.002,-0.001 C13.691,-0.001 12.054,1.784 11.175,2.744 C11.125,2.798 11.071,2.857 11.019,2.913 C10.991,2.882 10.963,2.849 10.936,2.819 C10.132,1.903 8.460,-0.001 5.998,-0.001 C4.455,-0.001 2.985,0.610 1.859,1.720 C0.750,2.813 0.093,4.269 0.010,5.820 C-0.072,7.361 0.320,8.700 1.281,10.158 C2.142,11.466 4.385,13.532 6.044,14.906 C7.749,16.317 9.994,17.999 11.009,17.999 C12.041,17.999 14.278,16.319 15.974,14.912 C17.620,13.545 19.850,11.480 20.720,10.158 C21.366,9.174 22.095,7.792 21.990,5.820 ZM19.614,9.430 C18.982,10.391 17.202,12.166 15.183,13.848 C12.777,15.852 11.352,16.643 11.011,16.674 C10.669,16.639 9.241,15.841 6.823,13.831 C4.793,12.145 3.010,10.377 2.386,9.429 C1.591,8.223 1.266,7.132 1.332,5.891 C1.467,3.372 3.560,1.322 5.998,1.322 C7.861,1.322 9.214,2.864 9.941,3.692 C10.369,4.180 10.604,4.447 11.000,4.447 C11.409,4.447 11.672,4.161 12.151,3.638 C12.945,2.772 14.273,1.322 16.002,1.322 C18.440,1.322 20.533,3.372 20.668,5.891 C20.735,7.145 20.420,8.204 19.614,9.430 Z"
-														/>
-													</svg>
-												</a>
-											</div>
-										</div>
-
-										<h3 class="product-card__title">Wooden radio</h3>
-										<span class="product-card__price">$29.00</span>
-									</article>
-								</div>
-
-								<!-- 4 slide -->
-								<div class="swiper-slide">
-									<article class="product-card mix category-a">
-										<div class="product-card__image">
-											<picture>
-												<source srcset="./img/products/4.webp 1x, ./img/products/4@2x.webp 2x" type="image/webp" />
-												<source srcset="./img/products/4.png 1x, ./img/products/4@2x.png 2x" type="image/png" />
-												<img src="./img/products/4.png" alt="Wooden chair" width="224" height="149" loading="lazy" decoding="async" />
-											</picture>
-
-											<div class="product-card__actions">
-												<a href="product-details.html" class="product-card__action product-card__action--view">
-													<svg width="20px" height="20px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M19.450,19.448 C18.719,20.181 17.531,20.181 16.799,19.448 L12.211,14.860 C13.274,14.178 14.178,13.272 14.862,12.209 L19.450,16.798 C20.183,17.530 20.183,18.718 19.450,19.448 ZM7.500,14.999 C3.358,14.999 -0.000,11.640 -0.000,7.499 C-0.000,3.357 3.358,-0.002 7.500,-0.002 C11.642,-0.002 14.1000,3.357 14.1000,7.499 C14.1000,11.640 11.642,14.999 7.500,14.999 ZM7.500,1.873 C4.398,1.873 1.875,4.397 1.875,7.499 C1.875,10.601 4.398,13.123 7.500,13.123 C10.602,13.123 13.125,10.601 13.125,7.499 C13.125,4.397 10.602,1.873 7.500,1.873 ZM4.375,7.499 L3.125,7.499 C3.125,5.087 5.088,3.123 7.500,3.123 L7.500,4.374 C5.777,4.374 4.375,5.776 4.375,7.499 Z"
-														/>
-													</svg>
-												</a>
-												<a href="#" class="product-card__action product-card__action--cart">
-													<svg width="22px" height="20px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M21.934,5.216 L18.217,13.776 C18.082,14.075 17.797,14.264 17.471,14.264 L7.257,14.264 C6.891,14.264 6.565,14.020 6.470,13.667 L3.147,1.629 L0.814,1.629 C0.366,1.629 -0.000,1.262 -0.000,0.814 C-0.000,0.365 0.366,-0.002 0.814,-0.002 L3.757,-0.002 C4.124,-0.002 4.449,0.243 4.544,0.596 L7.867,12.634 L16.929,12.634 L19.940,5.705 L9.902,5.705 C9.454,5.705 9.088,5.338 9.088,4.889 C9.088,4.440 9.454,4.074 9.902,4.074 L21.188,4.074 C21.459,4.074 21.717,4.211 21.866,4.440 C22.015,4.673 22.043,4.957 21.934,5.216 ZM6.484,16.303 C7.501,16.303 8.329,17.131 8.329,18.150 C8.329,19.169 7.501,19.999 6.484,19.999 C5.466,19.999 4.639,19.169 4.639,18.150 C4.639,17.131 5.466,16.303 6.484,16.303 ZM17.892,16.303 C18.909,16.235 19.791,17.009 19.859,18.015 C19.886,18.517 19.737,18.994 19.411,19.360 C19.085,19.740 18.638,19.958 18.149,19.999 C18.109,19.999 18.055,19.999 18.014,19.999 C17.051,19.999 16.250,19.238 16.183,18.273 C16.115,17.267 16.874,16.371 17.892,16.303 Z"
-														/>
-													</svg>
-												</a>
-												<a href="#" class="product-card__action product-card__action--favorite">
-													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="18px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M21.990,5.820 C21.907,4.269 21.250,2.813 20.141,1.720 C19.016,0.610 17.545,-0.001 16.002,-0.001 C13.691,-0.001 12.054,1.784 11.175,2.744 C11.125,2.798 11.071,2.857 11.019,2.913 C10.991,2.882 10.963,2.849 10.936,2.819 C10.132,1.903 8.460,-0.001 5.998,-0.001 C4.455,-0.001 2.985,0.610 1.859,1.720 C0.750,2.813 0.093,4.269 0.010,5.820 C-0.072,7.361 0.320,8.700 1.281,10.158 C2.142,11.466 4.385,13.532 6.044,14.906 C7.749,16.317 9.994,17.999 11.009,17.999 C12.041,17.999 14.278,16.319 15.974,14.912 C17.620,13.545 19.850,11.480 20.720,10.158 C21.366,9.174 22.095,7.792 21.990,5.820 ZM19.614,9.430 C18.982,10.391 17.202,12.166 15.183,13.848 C12.777,15.852 11.352,16.643 11.011,16.674 C10.669,16.639 9.241,15.841 6.823,13.831 C4.793,12.145 3.010,10.377 2.386,9.429 C1.591,8.223 1.266,7.132 1.332,5.891 C1.467,3.372 3.560,1.322 5.998,1.322 C7.861,1.322 9.214,2.864 9.941,3.692 C10.369,4.180 10.604,4.447 11.000,4.447 C11.409,4.447 11.672,4.161 12.151,3.638 C12.945,2.772 14.273,1.322 16.002,1.322 C18.440,1.322 20.533,3.372 20.668,5.891 C20.735,7.145 20.420,8.204 19.614,9.430 Z"
-														/>
-													</svg>
-												</a>
-											</div>
-										</div>
-
-										<h3 class="product-card__title">Wooden radio</h3>
-										<span class="product-card__price">$29.00</span>
-									</article>
-								</div>
-
-								<!-- 4 slide -->
-								<div class="swiper-slide">
-									<article class="product-card mix category-a">
-										<div class="product-card__image">
-											<picture>
-												<source srcset="./img/products/4.webp 1x, ./img/products/4@2x.webp 2x" type="image/webp" />
-												<source srcset="./img/products/4.png 1x, ./img/products/4@2x.png 2x" type="image/png" />
-												<img src="./img/products/4.png" alt="Wooden chair" width="224" height="149" loading="lazy" decoding="async" />
-											</picture>
-
-											<div class="product-card__actions">
-												<a href="product-details.html" class="product-card__action product-card__action--view">
-													<svg width="20px" height="20px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M19.450,19.448 C18.719,20.181 17.531,20.181 16.799,19.448 L12.211,14.860 C13.274,14.178 14.178,13.272 14.862,12.209 L19.450,16.798 C20.183,17.530 20.183,18.718 19.450,19.448 ZM7.500,14.999 C3.358,14.999 -0.000,11.640 -0.000,7.499 C-0.000,3.357 3.358,-0.002 7.500,-0.002 C11.642,-0.002 14.1000,3.357 14.1000,7.499 C14.1000,11.640 11.642,14.999 7.500,14.999 ZM7.500,1.873 C4.398,1.873 1.875,4.397 1.875,7.499 C1.875,10.601 4.398,13.123 7.500,13.123 C10.602,13.123 13.125,10.601 13.125,7.499 C13.125,4.397 10.602,1.873 7.500,1.873 ZM4.375,7.499 L3.125,7.499 C3.125,5.087 5.088,3.123 7.500,3.123 L7.500,4.374 C5.777,4.374 4.375,5.776 4.375,7.499 Z"
-														/>
-													</svg>
-												</a>
-												<a href="#" class="product-card__action product-card__action--cart">
-													<svg width="22px" height="20px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M21.934,5.216 L18.217,13.776 C18.082,14.075 17.797,14.264 17.471,14.264 L7.257,14.264 C6.891,14.264 6.565,14.020 6.470,13.667 L3.147,1.629 L0.814,1.629 C0.366,1.629 -0.000,1.262 -0.000,0.814 C-0.000,0.365 0.366,-0.002 0.814,-0.002 L3.757,-0.002 C4.124,-0.002 4.449,0.243 4.544,0.596 L7.867,12.634 L16.929,12.634 L19.940,5.705 L9.902,5.705 C9.454,5.705 9.088,5.338 9.088,4.889 C9.088,4.440 9.454,4.074 9.902,4.074 L21.188,4.074 C21.459,4.074 21.717,4.211 21.866,4.440 C22.015,4.673 22.043,4.957 21.934,5.216 ZM6.484,16.303 C7.501,16.303 8.329,17.131 8.329,18.150 C8.329,19.169 7.501,19.999 6.484,19.999 C5.466,19.999 4.639,19.169 4.639,18.150 C4.639,17.131 5.466,16.303 6.484,16.303 ZM17.892,16.303 C18.909,16.235 19.791,17.009 19.859,18.015 C19.886,18.517 19.737,18.994 19.411,19.360 C19.085,19.740 18.638,19.958 18.149,19.999 C18.109,19.999 18.055,19.999 18.014,19.999 C17.051,19.999 16.250,19.238 16.183,18.273 C16.115,17.267 16.874,16.371 17.892,16.303 Z"
-														/>
-													</svg>
-												</a>
-												<a href="#" class="product-card__action product-card__action--favorite">
-													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="18px">
-														<path
-															fill-rule="evenodd"
-															fill="rgb(163, 187, 200)"
-															d="M21.990,5.820 C21.907,4.269 21.250,2.813 20.141,1.720 C19.016,0.610 17.545,-0.001 16.002,-0.001 C13.691,-0.001 12.054,1.784 11.175,2.744 C11.125,2.798 11.071,2.857 11.019,2.913 C10.991,2.882 10.963,2.849 10.936,2.819 C10.132,1.903 8.460,-0.001 5.998,-0.001 C4.455,-0.001 2.985,0.610 1.859,1.720 C0.750,2.813 0.093,4.269 0.010,5.820 C-0.072,7.361 0.320,8.700 1.281,10.158 C2.142,11.466 4.385,13.532 6.044,14.906 C7.749,16.317 9.994,17.999 11.009,17.999 C12.041,17.999 14.278,16.319 15.974,14.912 C17.620,13.545 19.850,11.480 20.720,10.158 C21.366,9.174 22.095,7.792 21.990,5.820 ZM19.614,9.430 C18.982,10.391 17.202,12.166 15.183,13.848 C12.777,15.852 11.352,16.643 11.011,16.674 C10.669,16.639 9.241,15.841 6.823,13.831 C4.793,12.145 3.010,10.377 2.386,9.429 C1.591,8.223 1.266,7.132 1.332,5.891 C1.467,3.372 3.560,1.322 5.998,1.322 C7.861,1.322 9.214,2.864 9.941,3.692 C10.369,4.180 10.604,4.447 11.000,4.447 C11.409,4.447 11.672,4.161 12.151,3.638 C12.945,2.772 14.273,1.322 16.002,1.322 C18.440,1.322 20.533,3.372 20.668,5.891 C20.735,7.145 20.420,8.204 19.614,9.430 Z"
-														/>
-													</svg>
-												</a>
-											</div>
-										</div>
-
-										<h3 class="product-card__title">Wooden radio</h3>
-										<span class="product-card__price">$29.00</span>
-									</article>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</section>
-		</main>
-		<section class="articles">
-			<div class="container container--narrow">
-				<div class="articles__top">
-					<h2 class="articles__title">Our Insights & Articles</h2>
-					<a class="articles__all" href="blog-page.html">
+</div>
+</div>
+<div class="related-products__slider swiper">
+<div class="swiper-wrapper">
+<!-- 1 slide -->
+<div class="swiper-slide">
+<article class="product-card mix category-a">
+<div class="product-card__image">
+<picture>
+<source srcset="./img/products/1.webp 1x, ./img/products/1@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/products/1.png 1x, ./img/products/1@2x.png 2x" type="image/png"/>
+<img alt="Wooden chair" decoding="async" height="279" loading="lazy" src="./img/products/1.png" width="186"/>
+</picture>
+<div class="product-card__actions">
+<a class="product-card__action product-card__action--view" href="product-details.html">
+<svg height="20px" width="20px">
+<path d="M19.450,19.448 C18.719,20.181 17.531,20.181 16.799,19.448 L12.211,14.860 C13.274,14.178 14.178,13.272 14.862,12.209 L19.450,16.798 C20.183,17.530 20.183,18.718 19.450,19.448 ZM7.500,14.999 C3.358,14.999 -0.000,11.640 -0.000,7.499 C-0.000,3.357 3.358,-0.002 7.500,-0.002 C11.642,-0.002 14.1000,3.357 14.1000,7.499 C14.1000,11.640 11.642,14.999 7.500,14.999 ZM7.500,1.873 C4.398,1.873 1.875,4.397 1.875,7.499 C1.875,10.601 4.398,13.123 7.500,13.123 C10.602,13.123 13.125,10.601 13.125,7.499 C13.125,4.397 10.602,1.873 7.500,1.873 ZM4.375,7.499 L3.125,7.499 C3.125,5.087 5.088,3.123 7.500,3.123 L7.500,4.374 C5.777,4.374 4.375,5.776 4.375,7.499 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="product-card__action product-card__action--cart" href="#">
+<svg height="20px" width="22px">
+<path d="M21.934,5.216 L18.217,13.776 C18.082,14.075 17.797,14.264 17.471,14.264 L7.257,14.264 C6.891,14.264 6.565,14.020 6.470,13.667 L3.147,1.629 L0.814,1.629 C0.366,1.629 -0.000,1.262 -0.000,0.814 C-0.000,0.365 0.366,-0.002 0.814,-0.002 L3.757,-0.002 C4.124,-0.002 4.449,0.243 4.544,0.596 L7.867,12.634 L16.929,12.634 L19.940,5.705 L9.902,5.705 C9.454,5.705 9.088,5.338 9.088,4.889 C9.088,4.440 9.454,4.074 9.902,4.074 L21.188,4.074 C21.459,4.074 21.717,4.211 21.866,4.440 C22.015,4.673 22.043,4.957 21.934,5.216 ZM6.484,16.303 C7.501,16.303 8.329,17.131 8.329,18.150 C8.329,19.169 7.501,19.999 6.484,19.999 C5.466,19.999 4.639,19.169 4.639,18.150 C4.639,17.131 5.466,16.303 6.484,16.303 ZM17.892,16.303 C18.909,16.235 19.791,17.009 19.859,18.015 C19.886,18.517 19.737,18.994 19.411,19.360 C19.085,19.740 18.638,19.958 18.149,19.999 C18.109,19.999 18.055,19.999 18.014,19.999 C17.051,19.999 16.250,19.238 16.183,18.273 C16.115,17.267 16.874,16.371 17.892,16.303 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="product-card__action product-card__action--favorite" href="#">
+<svg height="18px" width="22px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M21.990,5.820 C21.907,4.269 21.250,2.813 20.141,1.720 C19.016,0.610 17.545,-0.001 16.002,-0.001 C13.691,-0.001 12.054,1.784 11.175,2.744 C11.125,2.798 11.071,2.857 11.019,2.913 C10.991,2.882 10.963,2.849 10.936,2.819 C10.132,1.903 8.460,-0.001 5.998,-0.001 C4.455,-0.001 2.985,0.610 1.859,1.720 C0.750,2.813 0.093,4.269 0.010,5.820 C-0.072,7.361 0.320,8.700 1.281,10.158 C2.142,11.466 4.385,13.532 6.044,14.906 C7.749,16.317 9.994,17.999 11.009,17.999 C12.041,17.999 14.278,16.319 15.974,14.912 C17.620,13.545 19.850,11.480 20.720,10.158 C21.366,9.174 22.095,7.792 21.990,5.820 ZM19.614,9.430 C18.982,10.391 17.202,12.166 15.183,13.848 C12.777,15.852 11.352,16.643 11.011,16.674 C10.669,16.639 9.241,15.841 6.823,13.831 C4.793,12.145 3.010,10.377 2.386,9.429 C1.591,8.223 1.266,7.132 1.332,5.891 C1.467,3.372 3.560,1.322 5.998,1.322 C7.861,1.322 9.214,2.864 9.941,3.692 C10.369,4.180 10.604,4.447 11.000,4.447 C11.409,4.447 11.672,4.161 12.151,3.638 C12.945,2.772 14.273,1.322 16.002,1.322 C18.440,1.322 20.533,3.372 20.668,5.891 C20.735,7.145 20.420,8.204 19.614,9.430 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+<h3 class="product-card__title">Wooden radio</h3>
+<span class="product-card__price">$29.00</span>
+</article>
+</div>
+<!-- 2 slide -->
+<div class="swiper-slide">
+<article class="product-card mix category-a">
+<div class="product-card__image">
+<picture>
+<source srcset="./img/products/2.webp 1x, ./img/products/2@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/products/2.png 1x, ./img/products/2@2x.png 2x" type="image/png"/>
+<img alt="Wooden chair" decoding="async" height="222" loading="lazy" src="./img/products/2.png" width="148"/>
+</picture>
+<div class="product-card__actions">
+<a class="product-card__action product-card__action--view" href="product-details.html">
+<svg height="20px" width="20px">
+<path d="M19.450,19.448 C18.719,20.181 17.531,20.181 16.799,19.448 L12.211,14.860 C13.274,14.178 14.178,13.272 14.862,12.209 L19.450,16.798 C20.183,17.530 20.183,18.718 19.450,19.448 ZM7.500,14.999 C3.358,14.999 -0.000,11.640 -0.000,7.499 C-0.000,3.357 3.358,-0.002 7.500,-0.002 C11.642,-0.002 14.1000,3.357 14.1000,7.499 C14.1000,11.640 11.642,14.999 7.500,14.999 ZM7.500,1.873 C4.398,1.873 1.875,4.397 1.875,7.499 C1.875,10.601 4.398,13.123 7.500,13.123 C10.602,13.123 13.125,10.601 13.125,7.499 C13.125,4.397 10.602,1.873 7.500,1.873 ZM4.375,7.499 L3.125,7.499 C3.125,5.087 5.088,3.123 7.500,3.123 L7.500,4.374 C5.777,4.374 4.375,5.776 4.375,7.499 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="product-card__action product-card__action--cart" href="#">
+<svg height="20px" width="22px">
+<path d="M21.934,5.216 L18.217,13.776 C18.082,14.075 17.797,14.264 17.471,14.264 L7.257,14.264 C6.891,14.264 6.565,14.020 6.470,13.667 L3.147,1.629 L0.814,1.629 C0.366,1.629 -0.000,1.262 -0.000,0.814 C-0.000,0.365 0.366,-0.002 0.814,-0.002 L3.757,-0.002 C4.124,-0.002 4.449,0.243 4.544,0.596 L7.867,12.634 L16.929,12.634 L19.940,5.705 L9.902,5.705 C9.454,5.705 9.088,5.338 9.088,4.889 C9.088,4.440 9.454,4.074 9.902,4.074 L21.188,4.074 C21.459,4.074 21.717,4.211 21.866,4.440 C22.015,4.673 22.043,4.957 21.934,5.216 ZM6.484,16.303 C7.501,16.303 8.329,17.131 8.329,18.150 C8.329,19.169 7.501,19.999 6.484,19.999 C5.466,19.999 4.639,19.169 4.639,18.150 C4.639,17.131 5.466,16.303 6.484,16.303 ZM17.892,16.303 C18.909,16.235 19.791,17.009 19.859,18.015 C19.886,18.517 19.737,18.994 19.411,19.360 C19.085,19.740 18.638,19.958 18.149,19.999 C18.109,19.999 18.055,19.999 18.014,19.999 C17.051,19.999 16.250,19.238 16.183,18.273 C16.115,17.267 16.874,16.371 17.892,16.303 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="product-card__action product-card__action--favorite" href="#">
+<svg height="18px" width="22px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M21.990,5.820 C21.907,4.269 21.250,2.813 20.141,1.720 C19.016,0.610 17.545,-0.001 16.002,-0.001 C13.691,-0.001 12.054,1.784 11.175,2.744 C11.125,2.798 11.071,2.857 11.019,2.913 C10.991,2.882 10.963,2.849 10.936,2.819 C10.132,1.903 8.460,-0.001 5.998,-0.001 C4.455,-0.001 2.985,0.610 1.859,1.720 C0.750,2.813 0.093,4.269 0.010,5.820 C-0.072,7.361 0.320,8.700 1.281,10.158 C2.142,11.466 4.385,13.532 6.044,14.906 C7.749,16.317 9.994,17.999 11.009,17.999 C12.041,17.999 14.278,16.319 15.974,14.912 C17.620,13.545 19.850,11.480 20.720,10.158 C21.366,9.174 22.095,7.792 21.990,5.820 ZM19.614,9.430 C18.982,10.391 17.202,12.166 15.183,13.848 C12.777,15.852 11.352,16.643 11.011,16.674 C10.669,16.639 9.241,15.841 6.823,13.831 C4.793,12.145 3.010,10.377 2.386,9.429 C1.591,8.223 1.266,7.132 1.332,5.891 C1.467,3.372 3.560,1.322 5.998,1.322 C7.861,1.322 9.214,2.864 9.941,3.692 C10.369,4.180 10.604,4.447 11.000,4.447 C11.409,4.447 11.672,4.161 12.151,3.638 C12.945,2.772 14.273,1.322 16.002,1.322 C18.440,1.322 20.533,3.372 20.668,5.891 C20.735,7.145 20.420,8.204 19.614,9.430 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+<h3 class="product-card__title">Wooden radio</h3>
+<span class="product-card__price">$29.00</span>
+</article>
+</div>
+<!-- 3 slide -->
+<div class="swiper-slide">
+<article class="product-card mix category-a">
+<div class="product-card__image">
+<picture>
+<source srcset="./img/products/3.webp 1x, ./img/products/3@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/products/3.png 1x, ./img/products/3@2x.png 2x" type="image/png"/>
+<img alt="Wooden chair" decoding="async" height="139" loading="lazy" src="./img/products/3.png" width="208"/>
+</picture>
+<div class="product-card__actions">
+<a class="product-card__action product-card__action--view" href="product-details.html">
+<svg height="20px" width="20px">
+<path d="M19.450,19.448 C18.719,20.181 17.531,20.181 16.799,19.448 L12.211,14.860 C13.274,14.178 14.178,13.272 14.862,12.209 L19.450,16.798 C20.183,17.530 20.183,18.718 19.450,19.448 ZM7.500,14.999 C3.358,14.999 -0.000,11.640 -0.000,7.499 C-0.000,3.357 3.358,-0.002 7.500,-0.002 C11.642,-0.002 14.1000,3.357 14.1000,7.499 C14.1000,11.640 11.642,14.999 7.500,14.999 ZM7.500,1.873 C4.398,1.873 1.875,4.397 1.875,7.499 C1.875,10.601 4.398,13.123 7.500,13.123 C10.602,13.123 13.125,10.601 13.125,7.499 C13.125,4.397 10.602,1.873 7.500,1.873 ZM4.375,7.499 L3.125,7.499 C3.125,5.087 5.088,3.123 7.500,3.123 L7.500,4.374 C5.777,4.374 4.375,5.776 4.375,7.499 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="product-card__action product-card__action--cart" href="#">
+<svg height="20px" width="22px">
+<path d="M21.934,5.216 L18.217,13.776 C18.082,14.075 17.797,14.264 17.471,14.264 L7.257,14.264 C6.891,14.264 6.565,14.020 6.470,13.667 L3.147,1.629 L0.814,1.629 C0.366,1.629 -0.000,1.262 -0.000,0.814 C-0.000,0.365 0.366,-0.002 0.814,-0.002 L3.757,-0.002 C4.124,-0.002 4.449,0.243 4.544,0.596 L7.867,12.634 L16.929,12.634 L19.940,5.705 L9.902,5.705 C9.454,5.705 9.088,5.338 9.088,4.889 C9.088,4.440 9.454,4.074 9.902,4.074 L21.188,4.074 C21.459,4.074 21.717,4.211 21.866,4.440 C22.015,4.673 22.043,4.957 21.934,5.216 ZM6.484,16.303 C7.501,16.303 8.329,17.131 8.329,18.150 C8.329,19.169 7.501,19.999 6.484,19.999 C5.466,19.999 4.639,19.169 4.639,18.150 C4.639,17.131 5.466,16.303 6.484,16.303 ZM17.892,16.303 C18.909,16.235 19.791,17.009 19.859,18.015 C19.886,18.517 19.737,18.994 19.411,19.360 C19.085,19.740 18.638,19.958 18.149,19.999 C18.109,19.999 18.055,19.999 18.014,19.999 C17.051,19.999 16.250,19.238 16.183,18.273 C16.115,17.267 16.874,16.371 17.892,16.303 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="product-card__action product-card__action--favorite" href="#">
+<svg height="18px" width="22px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M21.990,5.820 C21.907,4.269 21.250,2.813 20.141,1.720 C19.016,0.610 17.545,-0.001 16.002,-0.001 C13.691,-0.001 12.054,1.784 11.175,2.744 C11.125,2.798 11.071,2.857 11.019,2.913 C10.991,2.882 10.963,2.849 10.936,2.819 C10.132,1.903 8.460,-0.001 5.998,-0.001 C4.455,-0.001 2.985,0.610 1.859,1.720 C0.750,2.813 0.093,4.269 0.010,5.820 C-0.072,7.361 0.320,8.700 1.281,10.158 C2.142,11.466 4.385,13.532 6.044,14.906 C7.749,16.317 9.994,17.999 11.009,17.999 C12.041,17.999 14.278,16.319 15.974,14.912 C17.620,13.545 19.850,11.480 20.720,10.158 C21.366,9.174 22.095,7.792 21.990,5.820 ZM19.614,9.430 C18.982,10.391 17.202,12.166 15.183,13.848 C12.777,15.852 11.352,16.643 11.011,16.674 C10.669,16.639 9.241,15.841 6.823,13.831 C4.793,12.145 3.010,10.377 2.386,9.429 C1.591,8.223 1.266,7.132 1.332,5.891 C1.467,3.372 3.560,1.322 5.998,1.322 C7.861,1.322 9.214,2.864 9.941,3.692 C10.369,4.180 10.604,4.447 11.000,4.447 C11.409,4.447 11.672,4.161 12.151,3.638 C12.945,2.772 14.273,1.322 16.002,1.322 C18.440,1.322 20.533,3.372 20.668,5.891 C20.735,7.145 20.420,8.204 19.614,9.430 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+<h3 class="product-card__title">Wooden radio</h3>
+<span class="product-card__price">$29.00</span>
+</article>
+</div>
+<!-- 4 slide -->
+<div class="swiper-slide">
+<article class="product-card mix category-a">
+<div class="product-card__image">
+<picture>
+<source srcset="./img/products/4.webp 1x, ./img/products/4@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/products/4.png 1x, ./img/products/4@2x.png 2x" type="image/png"/>
+<img alt="Wooden chair" decoding="async" height="149" loading="lazy" src="./img/products/4.png" width="224"/>
+</picture>
+<div class="product-card__actions">
+<a class="product-card__action product-card__action--view" href="product-details.html">
+<svg height="20px" width="20px">
+<path d="M19.450,19.448 C18.719,20.181 17.531,20.181 16.799,19.448 L12.211,14.860 C13.274,14.178 14.178,13.272 14.862,12.209 L19.450,16.798 C20.183,17.530 20.183,18.718 19.450,19.448 ZM7.500,14.999 C3.358,14.999 -0.000,11.640 -0.000,7.499 C-0.000,3.357 3.358,-0.002 7.500,-0.002 C11.642,-0.002 14.1000,3.357 14.1000,7.499 C14.1000,11.640 11.642,14.999 7.500,14.999 ZM7.500,1.873 C4.398,1.873 1.875,4.397 1.875,7.499 C1.875,10.601 4.398,13.123 7.500,13.123 C10.602,13.123 13.125,10.601 13.125,7.499 C13.125,4.397 10.602,1.873 7.500,1.873 ZM4.375,7.499 L3.125,7.499 C3.125,5.087 5.088,3.123 7.500,3.123 L7.500,4.374 C5.777,4.374 4.375,5.776 4.375,7.499 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="product-card__action product-card__action--cart" href="#">
+<svg height="20px" width="22px">
+<path d="M21.934,5.216 L18.217,13.776 C18.082,14.075 17.797,14.264 17.471,14.264 L7.257,14.264 C6.891,14.264 6.565,14.020 6.470,13.667 L3.147,1.629 L0.814,1.629 C0.366,1.629 -0.000,1.262 -0.000,0.814 C-0.000,0.365 0.366,-0.002 0.814,-0.002 L3.757,-0.002 C4.124,-0.002 4.449,0.243 4.544,0.596 L7.867,12.634 L16.929,12.634 L19.940,5.705 L9.902,5.705 C9.454,5.705 9.088,5.338 9.088,4.889 C9.088,4.440 9.454,4.074 9.902,4.074 L21.188,4.074 C21.459,4.074 21.717,4.211 21.866,4.440 C22.015,4.673 22.043,4.957 21.934,5.216 ZM6.484,16.303 C7.501,16.303 8.329,17.131 8.329,18.150 C8.329,19.169 7.501,19.999 6.484,19.999 C5.466,19.999 4.639,19.169 4.639,18.150 C4.639,17.131 5.466,16.303 6.484,16.303 ZM17.892,16.303 C18.909,16.235 19.791,17.009 19.859,18.015 C19.886,18.517 19.737,18.994 19.411,19.360 C19.085,19.740 18.638,19.958 18.149,19.999 C18.109,19.999 18.055,19.999 18.014,19.999 C17.051,19.999 16.250,19.238 16.183,18.273 C16.115,17.267 16.874,16.371 17.892,16.303 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="product-card__action product-card__action--favorite" href="#">
+<svg height="18px" width="22px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M21.990,5.820 C21.907,4.269 21.250,2.813 20.141,1.720 C19.016,0.610 17.545,-0.001 16.002,-0.001 C13.691,-0.001 12.054,1.784 11.175,2.744 C11.125,2.798 11.071,2.857 11.019,2.913 C10.991,2.882 10.963,2.849 10.936,2.819 C10.132,1.903 8.460,-0.001 5.998,-0.001 C4.455,-0.001 2.985,0.610 1.859,1.720 C0.750,2.813 0.093,4.269 0.010,5.820 C-0.072,7.361 0.320,8.700 1.281,10.158 C2.142,11.466 4.385,13.532 6.044,14.906 C7.749,16.317 9.994,17.999 11.009,17.999 C12.041,17.999 14.278,16.319 15.974,14.912 C17.620,13.545 19.850,11.480 20.720,10.158 C21.366,9.174 22.095,7.792 21.990,5.820 ZM19.614,9.430 C18.982,10.391 17.202,12.166 15.183,13.848 C12.777,15.852 11.352,16.643 11.011,16.674 C10.669,16.639 9.241,15.841 6.823,13.831 C4.793,12.145 3.010,10.377 2.386,9.429 C1.591,8.223 1.266,7.132 1.332,5.891 C1.467,3.372 3.560,1.322 5.998,1.322 C7.861,1.322 9.214,2.864 9.941,3.692 C10.369,4.180 10.604,4.447 11.000,4.447 C11.409,4.447 11.672,4.161 12.151,3.638 C12.945,2.772 14.273,1.322 16.002,1.322 C18.440,1.322 20.533,3.372 20.668,5.891 C20.735,7.145 20.420,8.204 19.614,9.430 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+<h3 class="product-card__title">Wooden radio</h3>
+<span class="product-card__price">$29.00</span>
+</article>
+</div>
+<!-- 4 slide -->
+<div class="swiper-slide">
+<article class="product-card mix category-a">
+<div class="product-card__image">
+<picture>
+<source srcset="./img/products/4.webp 1x, ./img/products/4@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/products/4.png 1x, ./img/products/4@2x.png 2x" type="image/png"/>
+<img alt="Wooden chair" decoding="async" height="149" loading="lazy" src="./img/products/4.png" width="224"/>
+</picture>
+<div class="product-card__actions">
+<a class="product-card__action product-card__action--view" href="product-details.html">
+<svg height="20px" width="20px">
+<path d="M19.450,19.448 C18.719,20.181 17.531,20.181 16.799,19.448 L12.211,14.860 C13.274,14.178 14.178,13.272 14.862,12.209 L19.450,16.798 C20.183,17.530 20.183,18.718 19.450,19.448 ZM7.500,14.999 C3.358,14.999 -0.000,11.640 -0.000,7.499 C-0.000,3.357 3.358,-0.002 7.500,-0.002 C11.642,-0.002 14.1000,3.357 14.1000,7.499 C14.1000,11.640 11.642,14.999 7.500,14.999 ZM7.500,1.873 C4.398,1.873 1.875,4.397 1.875,7.499 C1.875,10.601 4.398,13.123 7.500,13.123 C10.602,13.123 13.125,10.601 13.125,7.499 C13.125,4.397 10.602,1.873 7.500,1.873 ZM4.375,7.499 L3.125,7.499 C3.125,5.087 5.088,3.123 7.500,3.123 L7.500,4.374 C5.777,4.374 4.375,5.776 4.375,7.499 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="product-card__action product-card__action--cart" href="#">
+<svg height="20px" width="22px">
+<path d="M21.934,5.216 L18.217,13.776 C18.082,14.075 17.797,14.264 17.471,14.264 L7.257,14.264 C6.891,14.264 6.565,14.020 6.470,13.667 L3.147,1.629 L0.814,1.629 C0.366,1.629 -0.000,1.262 -0.000,0.814 C-0.000,0.365 0.366,-0.002 0.814,-0.002 L3.757,-0.002 C4.124,-0.002 4.449,0.243 4.544,0.596 L7.867,12.634 L16.929,12.634 L19.940,5.705 L9.902,5.705 C9.454,5.705 9.088,5.338 9.088,4.889 C9.088,4.440 9.454,4.074 9.902,4.074 L21.188,4.074 C21.459,4.074 21.717,4.211 21.866,4.440 C22.015,4.673 22.043,4.957 21.934,5.216 ZM6.484,16.303 C7.501,16.303 8.329,17.131 8.329,18.150 C8.329,19.169 7.501,19.999 6.484,19.999 C5.466,19.999 4.639,19.169 4.639,18.150 C4.639,17.131 5.466,16.303 6.484,16.303 ZM17.892,16.303 C18.909,16.235 19.791,17.009 19.859,18.015 C19.886,18.517 19.737,18.994 19.411,19.360 C19.085,19.740 18.638,19.958 18.149,19.999 C18.109,19.999 18.055,19.999 18.014,19.999 C17.051,19.999 16.250,19.238 16.183,18.273 C16.115,17.267 16.874,16.371 17.892,16.303 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="product-card__action product-card__action--favorite" href="#">
+<svg height="18px" width="22px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M21.990,5.820 C21.907,4.269 21.250,2.813 20.141,1.720 C19.016,0.610 17.545,-0.001 16.002,-0.001 C13.691,-0.001 12.054,1.784 11.175,2.744 C11.125,2.798 11.071,2.857 11.019,2.913 C10.991,2.882 10.963,2.849 10.936,2.819 C10.132,1.903 8.460,-0.001 5.998,-0.001 C4.455,-0.001 2.985,0.610 1.859,1.720 C0.750,2.813 0.093,4.269 0.010,5.820 C-0.072,7.361 0.320,8.700 1.281,10.158 C2.142,11.466 4.385,13.532 6.044,14.906 C7.749,16.317 9.994,17.999 11.009,17.999 C12.041,17.999 14.278,16.319 15.974,14.912 C17.620,13.545 19.850,11.480 20.720,10.158 C21.366,9.174 22.095,7.792 21.990,5.820 ZM19.614,9.430 C18.982,10.391 17.202,12.166 15.183,13.848 C12.777,15.852 11.352,16.643 11.011,16.674 C10.669,16.639 9.241,15.841 6.823,13.831 C4.793,12.145 3.010,10.377 2.386,9.429 C1.591,8.223 1.266,7.132 1.332,5.891 C1.467,3.372 3.560,1.322 5.998,1.322 C7.861,1.322 9.214,2.864 9.941,3.692 C10.369,4.180 10.604,4.447 11.000,4.447 C11.409,4.447 11.672,4.161 12.151,3.638 C12.945,2.772 14.273,1.322 16.002,1.322 C18.440,1.322 20.533,3.372 20.668,5.891 C20.735,7.145 20.420,8.204 19.614,9.430 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+<h3 class="product-card__title">Wooden radio</h3>
+<span class="product-card__price">$29.00</span>
+</article>
+</div>
+<!-- 4 slide -->
+<div class="swiper-slide">
+<article class="product-card mix category-a">
+<div class="product-card__image">
+<picture>
+<source srcset="./img/products/4.webp 1x, ./img/products/4@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/products/4.png 1x, ./img/products/4@2x.png 2x" type="image/png"/>
+<img alt="Wooden chair" decoding="async" height="149" loading="lazy" src="./img/products/4.png" width="224"/>
+</picture>
+<div class="product-card__actions">
+<a class="product-card__action product-card__action--view" href="product-details.html">
+<svg height="20px" width="20px">
+<path d="M19.450,19.448 C18.719,20.181 17.531,20.181 16.799,19.448 L12.211,14.860 C13.274,14.178 14.178,13.272 14.862,12.209 L19.450,16.798 C20.183,17.530 20.183,18.718 19.450,19.448 ZM7.500,14.999 C3.358,14.999 -0.000,11.640 -0.000,7.499 C-0.000,3.357 3.358,-0.002 7.500,-0.002 C11.642,-0.002 14.1000,3.357 14.1000,7.499 C14.1000,11.640 11.642,14.999 7.500,14.999 ZM7.500,1.873 C4.398,1.873 1.875,4.397 1.875,7.499 C1.875,10.601 4.398,13.123 7.500,13.123 C10.602,13.123 13.125,10.601 13.125,7.499 C13.125,4.397 10.602,1.873 7.500,1.873 ZM4.375,7.499 L3.125,7.499 C3.125,5.087 5.088,3.123 7.500,3.123 L7.500,4.374 C5.777,4.374 4.375,5.776 4.375,7.499 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="product-card__action product-card__action--cart" href="#">
+<svg height="20px" width="22px">
+<path d="M21.934,5.216 L18.217,13.776 C18.082,14.075 17.797,14.264 17.471,14.264 L7.257,14.264 C6.891,14.264 6.565,14.020 6.470,13.667 L3.147,1.629 L0.814,1.629 C0.366,1.629 -0.000,1.262 -0.000,0.814 C-0.000,0.365 0.366,-0.002 0.814,-0.002 L3.757,-0.002 C4.124,-0.002 4.449,0.243 4.544,0.596 L7.867,12.634 L16.929,12.634 L19.940,5.705 L9.902,5.705 C9.454,5.705 9.088,5.338 9.088,4.889 C9.088,4.440 9.454,4.074 9.902,4.074 L21.188,4.074 C21.459,4.074 21.717,4.211 21.866,4.440 C22.015,4.673 22.043,4.957 21.934,5.216 ZM6.484,16.303 C7.501,16.303 8.329,17.131 8.329,18.150 C8.329,19.169 7.501,19.999 6.484,19.999 C5.466,19.999 4.639,19.169 4.639,18.150 C4.639,17.131 5.466,16.303 6.484,16.303 ZM17.892,16.303 C18.909,16.235 19.791,17.009 19.859,18.015 C19.886,18.517 19.737,18.994 19.411,19.360 C19.085,19.740 18.638,19.958 18.149,19.999 C18.109,19.999 18.055,19.999 18.014,19.999 C17.051,19.999 16.250,19.238 16.183,18.273 C16.115,17.267 16.874,16.371 17.892,16.303 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="product-card__action product-card__action--favorite" href="#">
+<svg height="18px" width="22px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M21.990,5.820 C21.907,4.269 21.250,2.813 20.141,1.720 C19.016,0.610 17.545,-0.001 16.002,-0.001 C13.691,-0.001 12.054,1.784 11.175,2.744 C11.125,2.798 11.071,2.857 11.019,2.913 C10.991,2.882 10.963,2.849 10.936,2.819 C10.132,1.903 8.460,-0.001 5.998,-0.001 C4.455,-0.001 2.985,0.610 1.859,1.720 C0.750,2.813 0.093,4.269 0.010,5.820 C-0.072,7.361 0.320,8.700 1.281,10.158 C2.142,11.466 4.385,13.532 6.044,14.906 C7.749,16.317 9.994,17.999 11.009,17.999 C12.041,17.999 14.278,16.319 15.974,14.912 C17.620,13.545 19.850,11.480 20.720,10.158 C21.366,9.174 22.095,7.792 21.990,5.820 ZM19.614,9.430 C18.982,10.391 17.202,12.166 15.183,13.848 C12.777,15.852 11.352,16.643 11.011,16.674 C10.669,16.639 9.241,15.841 6.823,13.831 C4.793,12.145 3.010,10.377 2.386,9.429 C1.591,8.223 1.266,7.132 1.332,5.891 C1.467,3.372 3.560,1.322 5.998,1.322 C7.861,1.322 9.214,2.864 9.941,3.692 C10.369,4.180 10.604,4.447 11.000,4.447 C11.409,4.447 11.672,4.161 12.151,3.638 C12.945,2.772 14.273,1.322 16.002,1.322 C18.440,1.322 20.533,3.372 20.668,5.891 C20.735,7.145 20.420,8.204 19.614,9.430 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+<h3 class="product-card__title">Wooden radio</h3>
+<span class="product-card__price">$29.00</span>
+</article>
+</div>
+<!-- 4 slide -->
+<div class="swiper-slide">
+<article class="product-card mix category-a">
+<div class="product-card__image">
+<picture>
+<source srcset="./img/products/4.webp 1x, ./img/products/4@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/products/4.png 1x, ./img/products/4@2x.png 2x" type="image/png"/>
+<img alt="Wooden chair" decoding="async" height="149" loading="lazy" src="./img/products/4.png" width="224"/>
+</picture>
+<div class="product-card__actions">
+<a class="product-card__action product-card__action--view" href="product-details.html">
+<svg height="20px" width="20px">
+<path d="M19.450,19.448 C18.719,20.181 17.531,20.181 16.799,19.448 L12.211,14.860 C13.274,14.178 14.178,13.272 14.862,12.209 L19.450,16.798 C20.183,17.530 20.183,18.718 19.450,19.448 ZM7.500,14.999 C3.358,14.999 -0.000,11.640 -0.000,7.499 C-0.000,3.357 3.358,-0.002 7.500,-0.002 C11.642,-0.002 14.1000,3.357 14.1000,7.499 C14.1000,11.640 11.642,14.999 7.500,14.999 ZM7.500,1.873 C4.398,1.873 1.875,4.397 1.875,7.499 C1.875,10.601 4.398,13.123 7.500,13.123 C10.602,13.123 13.125,10.601 13.125,7.499 C13.125,4.397 10.602,1.873 7.500,1.873 ZM4.375,7.499 L3.125,7.499 C3.125,5.087 5.088,3.123 7.500,3.123 L7.500,4.374 C5.777,4.374 4.375,5.776 4.375,7.499 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="product-card__action product-card__action--cart" href="#">
+<svg height="20px" width="22px">
+<path d="M21.934,5.216 L18.217,13.776 C18.082,14.075 17.797,14.264 17.471,14.264 L7.257,14.264 C6.891,14.264 6.565,14.020 6.470,13.667 L3.147,1.629 L0.814,1.629 C0.366,1.629 -0.000,1.262 -0.000,0.814 C-0.000,0.365 0.366,-0.002 0.814,-0.002 L3.757,-0.002 C4.124,-0.002 4.449,0.243 4.544,0.596 L7.867,12.634 L16.929,12.634 L19.940,5.705 L9.902,5.705 C9.454,5.705 9.088,5.338 9.088,4.889 C9.088,4.440 9.454,4.074 9.902,4.074 L21.188,4.074 C21.459,4.074 21.717,4.211 21.866,4.440 C22.015,4.673 22.043,4.957 21.934,5.216 ZM6.484,16.303 C7.501,16.303 8.329,17.131 8.329,18.150 C8.329,19.169 7.501,19.999 6.484,19.999 C5.466,19.999 4.639,19.169 4.639,18.150 C4.639,17.131 5.466,16.303 6.484,16.303 ZM17.892,16.303 C18.909,16.235 19.791,17.009 19.859,18.015 C19.886,18.517 19.737,18.994 19.411,19.360 C19.085,19.740 18.638,19.958 18.149,19.999 C18.109,19.999 18.055,19.999 18.014,19.999 C17.051,19.999 16.250,19.238 16.183,18.273 C16.115,17.267 16.874,16.371 17.892,16.303 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="product-card__action product-card__action--favorite" href="#">
+<svg height="18px" width="22px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M21.990,5.820 C21.907,4.269 21.250,2.813 20.141,1.720 C19.016,0.610 17.545,-0.001 16.002,-0.001 C13.691,-0.001 12.054,1.784 11.175,2.744 C11.125,2.798 11.071,2.857 11.019,2.913 C10.991,2.882 10.963,2.849 10.936,2.819 C10.132,1.903 8.460,-0.001 5.998,-0.001 C4.455,-0.001 2.985,0.610 1.859,1.720 C0.750,2.813 0.093,4.269 0.010,5.820 C-0.072,7.361 0.320,8.700 1.281,10.158 C2.142,11.466 4.385,13.532 6.044,14.906 C7.749,16.317 9.994,17.999 11.009,17.999 C12.041,17.999 14.278,16.319 15.974,14.912 C17.620,13.545 19.850,11.480 20.720,10.158 C21.366,9.174 22.095,7.792 21.990,5.820 ZM19.614,9.430 C18.982,10.391 17.202,12.166 15.183,13.848 C12.777,15.852 11.352,16.643 11.011,16.674 C10.669,16.639 9.241,15.841 6.823,13.831 C4.793,12.145 3.010,10.377 2.386,9.429 C1.591,8.223 1.266,7.132 1.332,5.891 C1.467,3.372 3.560,1.322 5.998,1.322 C7.861,1.322 9.214,2.864 9.941,3.692 C10.369,4.180 10.604,4.447 11.000,4.447 C11.409,4.447 11.672,4.161 12.151,3.638 C12.945,2.772 14.273,1.322 16.002,1.322 C18.440,1.322 20.533,3.372 20.668,5.891 C20.735,7.145 20.420,8.204 19.614,9.430 Z" fill="rgb(163, 187, 200)" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+<h3 class="product-card__title">Wooden radio</h3>
+<span class="product-card__price">$29.00</span>
+</article>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</main>
+<section class="articles">
+<div class="container container--narrow">
+<div class="articles__top">
+<h2 class="articles__title">Our Insights &amp; Articles</h2>
+<a class="articles__all" href="blog-page.html">
 						View All
-						<svg width="16" height="16"><!-- arrow icon --></svg>
-					</a>
-				</div>
-
-				<div class="articles__grid">
-					<article class="article-card">
-						<a class="article-card__image" href="blog-details.html">
-							<picture>
-								<source srcset="./img/articles/1.webp 1x, ./img/articles/1@2x.webp 2x" type="image/webp" />
-								<source srcset="./img/articles/1.jpg 1x, ./img/articles/1@2x.jpg 2x" type="image/jpeg" />
-								<img src="./img/articles/1.jpg" alt="Article image" loading="lazy" decoding="async" />
-							</picture>
-							<span class="article-card__badge">News</span>
-						</a>
-
-						<div class="article-card__content">
-							<h3 class="article-card__title">
-								Diusmod tempor incididunt ut&#160;labore et&#160;dolore magna aliqua. Ut&#160;enim ad&#160;minim veniam
-							</h3>
-							<div class="article-card__line"></div>
-							<div class="article-card__meta">
-								<span class="article-card__meta-item">
-									<svg class="article-card__meta-icon">
-										<use href="./img/svgsprite/sprite.symbol.svg#calendar-icon"></use>
-									</svg>
-									<span>28 January, 2020</span>
-								</span>
-
-								<span class="article-card__meta-item">
-									<svg class="article-card__meta-icon">
-										<use href="./img/svgsprite/sprite.symbol.svg#user-icon"></use>
-									</svg>
-									<span>By&#160;Admin</span>
-								</span>
-							</div>
-						</div>
-					</article>
-
-					<article class="article-card">
-						<a class="article-card__image" href="blog-details.html">
-							<picture>
-								<source srcset="./img/articles/2.webp 1x, ./img/articles/2@2x.webp 2x" type="image/webp" />
-								<source srcset="./img/articles/2.jpg 1x, ./img/articles/2@2x.jpg 2x" type="image/jpeg" />
-								<img src="./img/articles/2.jpg" alt="Article image" loading="lazy" decoding="async" />
-							</picture>
-							<span class="article-card__badge">News</span>
-						</a>
-
-						<div class="article-card__content">
-							<h3 class="article-card__title">
-								Aonsectetur adipisicing elit, sed do&#160;eiusmod tempor incididunt ut&#160;labore et&#160;dolore
-							</h3>
-							<div class="article-card__line"></div>
-							<div class="article-card__meta">
-								<span class="article-card__meta-item">
-									<svg class="article-card__meta-icon">
-										<use href="./img/svgsprite/sprite.symbol.svg#calendar-icon"></use>
-									</svg>
-									<span>28 January, 2020</span>
-								</span>
-
-								<span class="article-card__meta-item">
-									<svg class="article-card__meta-icon">
-										<use href="./img/svgsprite/sprite.symbol.svg#user-icon"></use>
-									</svg>
-									<span>By&#160;Admin</span>
-								</span>
-							</div>
-						</div>
-					</article>
-
-					<article class="article-card">
-						<a class="article-card__image" href="blog-details.html">
-							<picture>
-								<source srcset="./img/articles/3.webp 1x, ./img/articles/3@2x.webp 2x" type="image/webp" />
-								<source srcset="./img/articles/3.jpg 1x, ./img/articles/3@2x.jpg 2x" type="image/jpeg" />
-								<img src="./img/articles/3.jpg" alt="Article image" loading="lazy" decoding="async" />
-							</picture>
-							<span class="article-card__badge">News</span>
-						</a>
-
-						<div class="article-card__content">
-							<h3 class="article-card__title">
-								Diusmod tempor incididunt ut&#160;labore et&#160;dolore magna aliqua. Ut&#160;enim ad&#160;minim veniam
-							</h3>
-							<div class="article-card__line"></div>
-							<div class="article-card__meta">
-								<span class="article-card__meta-item">
-									<svg class="article-card__meta-icon">
-										<use href="./img/svgsprite/sprite.symbol.svg#calendar-icon"></use>
-									</svg>
-									<span>28 January, 2020</span>
-								</span>
-
-								<span class="article-card__meta-item">
-									<svg class="article-card__meta-icon">
-										<use href="./img/svgsprite/sprite.symbol.svg#user-icon"></use>
-									</svg>
-									<span>By&#160;Admin</span>
-								</span>
-							</div>
-						</div>
-					</article>
-				</div>
-			</div>
-		</section>
-		<section class="brands">
-			<div class="container container--narrow container-brands">
-				<ul class="brands__list">
-					<li class="brands__item">
-						<img src="./img/brands/brand-1.svg" alt="Brand logo" loading="lazy" decoding="async" />
-					</li>
-					<li class="brands__item">
-						<img src="./img/brands/brand-2.svg" alt="Brand logo" loading="lazy" decoding="async" />
-					</li>
-					<li class="brands__item">
-						<img src="./img/brands/brand-3.svg" alt="Brand logo" loading="lazy" decoding="async" />
-					</li>
-					<li class="brands__item">
-						<img src="./img/brands/brand-4.svg" alt="Brand logo" loading="lazy" decoding="async" />
-					</li>
-					<li class="brands__item">
-						<img src="./img/brands/brand-5.svg" alt="Brand logo" loading="lazy" decoding="async" />
-					</li>
-				</ul>
-			</div>
-		</section>
-
-		<footer class="footer">
-			<div class="container container--narrow">
-				<!-- TOP -->
-				<div class="footer__top">
-					<!-- Brand -->
-					<div class="footer__brand">
-						<a href="index.html" class="logo footer__logo" aria-label="Glee home">
-							<svg class="logo-icon icon icon--user">
-								<use href="./img/svgsprite/sprite.symbol.svg#logo-icon"></use>
-							</svg>
-							<span class="logo__text">Glee.</span>
-						</a>
-
-						<address class="footer__contacts">
-							<p class="footer__contact">
-								<span class="footer__label">Address:</span>
-								4772 Wines Lane<br />
-								Houston, TX&#160;77032
+						<svg height="16" width="16"><!-- arrow icon --></svg>
+</a>
+</div>
+<div class="articles__grid">
+<article class="article-card">
+<a class="article-card__image" href="blog-details.html">
+<picture>
+<source srcset="./img/articles/1.webp 1x, ./img/articles/1@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/articles/1.png 1x, ./img/articles/1@2x.png 2x" type="image/jpeg"/>
+<img alt="How to choose statement lighting for a modern home" decoding="async" height="250" loading="lazy" src="./img/articles/1.png" width="370"/>
+</picture>
+<span class="article-card__badge">News</span>
+</a>
+<div class="article-card__content">
+<h3 class="article-card__title">How to choose statement lighting for a modern home</h3>
+<div class="article-card__line"></div>
+<div class="article-card__meta">
+<span class="article-card__meta-item">
+<svg class="article-card__meta-icon">
+<use href="./img/svgsprite/sprite.symbol.svg#calendar-icon"></use>
+</svg>
+<span>28 January, 2020</span>
+</span>
+<span class="article-card__meta-item">
+<svg class="article-card__meta-icon">
+<use href="./img/svgsprite/sprite.symbol.svg#user-icon"></use>
+</svg>
+<span>By Admin</span>
+</span>
+</div>
+</div>
+</article>
+<article class="article-card">
+<a class="article-card__image" href="blog-details.html">
+<picture>
+<source srcset="./img/articles/2.webp 1x, ./img/articles/2@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/articles/2.png 1x, ./img/articles/2@2x.png 2x" type="image/jpeg"/>
+<img alt="Five easy ways to add warmth with natural textures" decoding="async" height="250" loading="lazy" src="./img/articles/2.png" width="370"/>
+</picture>
+<span class="article-card__badge">News</span>
+</a>
+<div class="article-card__content">
+<h3 class="article-card__title">Five easy ways to add warmth with natural textures</h3>
+<div class="article-card__line"></div>
+<div class="article-card__meta">
+<span class="article-card__meta-item">
+<svg class="article-card__meta-icon">
+<use href="./img/svgsprite/sprite.symbol.svg#calendar-icon"></use>
+</svg>
+<span>28 January, 2020</span>
+</span>
+<span class="article-card__meta-item">
+<svg class="article-card__meta-icon">
+<use href="./img/svgsprite/sprite.symbol.svg#user-icon"></use>
+</svg>
+<span>By Admin</span>
+</span>
+</div>
+</div>
+</article>
+<article class="article-card">
+<a class="article-card__image" href="blog-details.html">
+<picture>
+<source srcset="./img/articles/3.webp 1x, ./img/articles/3@2x.webp 2x" type="image/webp"/>
+<source srcset="./img/articles/3.png 1x, ./img/articles/3@2x.png 2x" type="image/jpeg"/>
+<img alt="Storage ideas that keep compact rooms feeling open" decoding="async" height="250" loading="lazy" src="./img/articles/3.png" width="370"/>
+</picture>
+<span class="article-card__badge">News</span>
+</a>
+<div class="article-card__content">
+<h3 class="article-card__title">Storage ideas that keep compact rooms feeling open</h3>
+<div class="article-card__line"></div>
+<div class="article-card__meta">
+<span class="article-card__meta-item">
+<svg class="article-card__meta-icon">
+<use href="./img/svgsprite/sprite.symbol.svg#calendar-icon"></use>
+</svg>
+<span>28 January, 2020</span>
+</span>
+<span class="article-card__meta-item">
+<svg class="article-card__meta-icon">
+<use href="./img/svgsprite/sprite.symbol.svg#user-icon"></use>
+</svg>
+<span>By Admin</span>
+</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="brands">
+<div class="container container--narrow container-brands">
+<ul class="brands__list">
+<li class="brands__item">
+<img alt="Brand logo" decoding="async" loading="lazy" src="./img/brands/brand-1.svg"/>
+</li>
+<li class="brands__item">
+<img alt="Brand logo" decoding="async" loading="lazy" src="./img/brands/brand-2.svg"/>
+</li>
+<li class="brands__item">
+<img alt="Brand logo" decoding="async" loading="lazy" src="./img/brands/brand-3.svg"/>
+</li>
+<li class="brands__item">
+<img alt="Brand logo" decoding="async" loading="lazy" src="./img/brands/brand-4.svg"/>
+</li>
+<li class="brands__item">
+<img alt="Brand logo" decoding="async" loading="lazy" src="./img/brands/brand-5.svg"/>
+</li>
+</ul>
+</div>
+</section>
+<footer class="footer">
+<div class="container container--narrow">
+<!-- TOP -->
+<div class="footer__top">
+<!-- Brand -->
+<div class="footer__brand">
+<a aria-label="Glee home" class="logo footer__logo" href="index.html">
+<svg class="logo-icon icon icon--user">
+<use href="./img/svgsprite/sprite.symbol.svg#logo-icon"></use>
+</svg>
+<span class="logo__text">Glee.</span>
+</a>
+<address class="footer__contacts">
+<p class="footer__contact">
+<span class="footer__label">Address:</span>
+								4772 Wines Lane<br/>
+								Houston, TX 77032
 							</p>
-							<p class="footer__contact">
-								<span class="footer__label">Telephone:</span>
-								<a class="footer__contact-link" href="tel:+8323475843">+832-347-5843</a>
-							</p>
-							<p class="footer__contact">
-								<span class="footer__label">Email:</span>
-								<a class="footer__contact-link" href="mailto:contact@glee.com">contact@Glee.com</a>
-							</p>
-						</address>
-					</div>
-
-					<!-- Services -->
-					<nav class="footer__nav footer__nav--services" aria-label="Services">
-						<h4 class="footer__title">Services</h4>
-						<ul class="footer__list">
-							<li class="footer__item"><a class="footer__link" href="about-us.html">About us</a></li>
-							<li class="footer__item"><a class="footer__link" href="terms.html">Return Policy</a></li>
-							<li class="footer__item"><a class="footer__link" href="blog-page.html">Our Blog</a></li>
-							<li class="footer__item"><a class="footer__link" href="contact-info.html">Contact Us</a></li>
-							<li class="footer__item"><a class="footer__link" href="terms.html">Terms & Condition</a></li>
-						</ul>
-					</nav>
-
-					<!-- Account -->
-					<nav class="footer__nav footer__nav--account" aria-label="Account">
-						<h4 class="footer__title">Account</h4>
-						<ul class="footer__list">
-							<li class="footer__item"><a class="footer__link" href="login.html">Your Account</a></li>
-							<li class="footer__item"><a class="footer__link" href="login.html">Checkout</a></li>
-							<li class="footer__item"><a class="footer__link" href="login.html">Login</a></li>
-							<li class="footer__item"><a class="footer__link" href="login.html">Register</a></li>
-						</ul>
-					</nav>
-
-					<!-- Newsletter -->
-					<div class="footer__newsletter">
-						<h4 class="footer__title">Newsletter</h4>
-						<p class="footer__text">
-							Subscribe by&#160;our newsletter and get <br />
-							update protidin.
-						</p>
-
-						<form class="footer__form" action="#" novalidate>
-							<input class="footer__input" type="email" name="email" placeholder="Email address" aria-label="Email address" autocomplete="email" required />
-							<button class="footer__button" type="submit">
+<p class="footer__contact">
+<span class="footer__label">Telephone:</span>
+<a class="footer__contact-link" href="tel:+8323475843">+832-347-5843</a>
+</p>
+<p class="footer__contact">
+<span class="footer__label">Email:</span>
+<a class="footer__contact-link" href="mailto:contact@glee.com">contact@Glee.com</a>
+</p>
+</address>
+</div>
+<!-- Services -->
+<nav aria-label="Services" class="footer__nav footer__nav--services">
+<h4 class="footer__title">Services</h4>
+<ul class="footer__list">
+<li class="footer__item"><a class="footer__link" href="about-us.html">About us</a></li>
+<li class="footer__item"><a class="footer__link" href="terms.html">Return Policy</a></li>
+<li class="footer__item"><a class="footer__link" href="blog-page.html">Our Blog</a></li>
+<li class="footer__item"><a class="footer__link" href="contact-info.html">Contact Us</a></li>
+<li class="footer__item"><a class="footer__link" href="terms.html">Terms &amp; Condition</a></li>
+</ul>
+</nav>
+<!-- Account -->
+<nav aria-label="Account" class="footer__nav footer__nav--account">
+<h4 class="footer__title">Account</h4>
+<ul class="footer__list">
+<li class="footer__item"><a class="footer__link" href="login.html">Your Account</a></li>
+<li class="footer__item"><a class="footer__link" href="login.html">Checkout</a></li>
+<li class="footer__item"><a class="footer__link" href="login.html">Login</a></li>
+<li class="footer__item"><a class="footer__link" href="login.html">Register</a></li>
+</ul>
+</nav>
+<!-- Newsletter -->
+<div class="footer__newsletter">
+<h4 class="footer__title">Newsletter</h4>
+<p class="footer__text">Subscribe to our newsletter for product updates, interior ideas, and seasonal offers.</p>
+<form action="#" class="footer__form" novalidate="">
+<input aria-label="Email address" autocomplete="email" class="footer__input" name="email" placeholder="Email address" required="" type="email"/>
+<button class="footer__button" type="submit">
 								Subscribe
 							</button>
-						</form>
-					</div>
-				</div>
-
-				<div class="footer__line"></div>
-
-				<!-- BOTTOM -->
-				<div class="footer__bottom">
-					<p class="footer__copyright">
-						&#169;2020 CopyRight Example. All rights reserved.
-					</p>
-
-					<ul class="footer__menu">
-						<li class="footer__menu-item"><a class="footer__menu-link" href="index.html">Home</a></li>
-						<li class="footer__menu-item"><a class="footer__menu-link" href="about-us.html">About</a></li>
-						<li class="footer__menu-item"><a class="footer__menu-link" href="blog-page.html">Blog</a></li>
-						<li class="footer__menu-item"><a class="footer__menu-link" href="contact-info.html">Contact</a></li>
-					</ul>
-				</div>
-			</div>
-		</footer>
-
-		<script src="./js/index.bundle.js"></script>
-	</body>
+</form>
+</div>
+</div>
+<div class="footer__line"></div>
+<!-- BOTTOM -->
+<div class="footer__bottom">
+<p class="footer__copyright">©2026 Glee. All rights reserved.</p>
+<ul class="footer__menu">
+<li class="footer__menu-item"><a class="footer__menu-link" href="index.html">Home</a></li>
+<li class="footer__menu-item"><a class="footer__menu-link" href="about-us.html">About</a></li>
+<li class="footer__menu-item"><a class="footer__menu-link" href="blog-page.html">Blog</a></li>
+<li class="footer__menu-item"><a class="footer__menu-link" href="contact-info.html">Contact</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<script src="./js/index.bundle.js"></script>
+</body>
 </html>
