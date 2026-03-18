@@ -5,19 +5,18 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Glee</title>
+	<meta name="description" content="Read the latest Glee articles, interior ideas, and furniture inspiration from our blog archive." />
+	<title>Blog — Glee</title>
 	<link rel="stylesheet" href="./css/main.css" />
 
 	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
 	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/glee-icon.png">
 </head>
 
-<body>
+<body class="page page--blog" data-page="blog">
 	@@include('blocks/header.html')
-	<main class="blog-page">
-		@@include('blog-page/blog-page.html')
-		@@include('blocks/brands.html')
-	</main>
+	@@include('blog-page/blog-page.html')
+	@@include('blocks/brands.html')
 	@@include('blocks/footer.html')
 	<script src="./js/index.bundle.js"></script>
 </body>

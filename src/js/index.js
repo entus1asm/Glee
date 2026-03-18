@@ -412,3 +412,195 @@ safeInit(qs(".related-products__slider"), () => {
 
   return slider;
 });
+
+function initializeProjectEnhancements() {
+  const activeMap = {
+    home: ["index.html"],
+    about: ["about-us.html"],
+    shop: ["product-list-one.html"],
+    "product-details": ["product-list-one.html"],
+    blog: ["blog-page.html"],
+    "blog-details": ["blog-page.html"],
+    contact: ["contact-info.html"],
+    login: ["login.html"],
+    terms: ["terms.html", "login.html"],
+    docs: ["docs.html"],
+  };
+
+  const getFocusables = (root) =>
+    qsa(
+      'a[href], button:not([disabled]), textarea:not([disabled]), input:not([type="hidden"]):not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      root
+    ).filter((el) => el.offsetParent !== null);
+
+  const setLinkActiveState = () => {
+    const pageKey = document.body.dataset.page || "";
+    const activeHrefs = activeMap[pageKey] || [];
+
+    qsa(".nav__link, .mobile-nav__link, .footer__link, .footer__menu-link").forEach((link) => {
+      const href = link.getAttribute("href");
+      if (!href) return;
+
+      const isActive = activeHrefs.includes(href);
+      link.classList.toggle("is-active", isActive);
+
+      if (isActive && link.matches(".nav__link, .mobile-nav__link, .footer__menu-link")) {
+        link.setAttribute("aria-current", "page");
+      } else if (link.getAttribute("aria-current") === "page") {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  const improvePlaceholderLinks = () => {
+    qsa('a[href="#"]').forEach((link) => {
+      link.classList.add("is-placeholder-link");
+      link.setAttribute("aria-disabled", "true");
+      link.addEventListener("click", (e) => e.preventDefault());
+    });
+  };
+
+  const enhanceForms = () => {
+    const forms = qsa(".footer__form, .login__form, .blog-details__form");
+
+    const getStatusNode = (form) => {
+      let node = qs(".form-status", form);
+      if (!node) {
+        node = document.createElement("div");
+        node.className = "form-status";
+        node.setAttribute("role", "status");
+        node.setAttribute("aria-live", "polite");
+        form.append(node);
+      }
+      return node;
+    };
+
+    const getSuccessMessage = (form) => {
+      if (form.classList.contains("login__form")) {
+        return "Demo validation passed. Connect backend authentication when ready.";
+      }
+
+      if (form.classList.contains("footer__form")) {
+        return "Demo subscription form passed validation. Connect backend storage when ready.";
+      }
+
+      return "Demo form passed validation. Connect backend handling when ready.";
+    };
+
+    const getErrorMessage = (field) => {
+      if (field.validity.valueMissing) return "Please fill out this field.";
+      if (field.validity.typeMismatch) return "Please enter a valid email address.";
+      if (field.validity.tooShort) return `Please enter at least ${field.minLength} characters.`;
+      return "Please check this field.";
+    };
+
+    const setFieldState = (field, invalid) => {
+      field.classList.toggle("is-invalid", invalid);
+      field.setAttribute("aria-invalid", String(invalid));
+    };
+
+    forms.forEach((form) => {
+      form.noValidate = true;
+      const fields = qsa("input, textarea, select", form);
+      const status = getStatusNode(form);
+
+      fields.forEach((field) => {
+        field.addEventListener("input", () => {
+          if (field.validity.valid) {
+            setFieldState(field, false);
+            if (status.classList.contains("form-status--error")) {
+              status.textContent = "";
+              status.className = "form-status";
+            }
+          }
+        });
+
+        field.addEventListener("blur", () => {
+          setFieldState(field, !field.validity.valid);
+        });
+      });
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let firstInvalid = null;
+        fields.forEach((field) => {
+          const invalid = !field.validity.valid;
+          setFieldState(field, invalid);
+          if (!firstInvalid && invalid) firstInvalid = field;
+        });
+
+        if (firstInvalid) {
+          status.className = "form-status form-status--error";
+          status.textContent = getErrorMessage(firstInvalid);
+          firstInvalid.focus();
+          return;
+        }
+
+        status.className = "form-status form-status--success";
+        status.textContent = getSuccessMessage(form);
+
+        if (!form.classList.contains("login__form")) {
+          form.reset();
+          fields.forEach((field) => setFieldState(field, false));
+        }
+      });
+    });
+  };
+
+  const enhanceMobileNav = () => {
+    const nav = qs(".mobile-nav");
+    const panel = qs(".mobile-nav__panel", nav);
+    const menuBtn = qs(".header__menu-btn");
+    const closeBtn = qs(".mobile-nav__close", nav);
+
+    if (!nav || !panel || !menuBtn || !closeBtn) return;
+
+    let lastFocused = menuBtn;
+
+    const syncState = () => {
+      const isOpen = nav.classList.contains("mobile-nav--open");
+      menuBtn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+
+      if (isOpen) {
+        lastFocused = document.activeElement || menuBtn;
+        requestAnimationFrame(() => closeBtn.focus());
+      }
+    };
+
+    const observer = new MutationObserver(syncState);
+    observer.observe(nav, { attributes: true, attributeFilter: ["class"] });
+    syncState();
+
+    document.addEventListener("keydown", (e) => {
+      if (!nav.classList.contains("mobile-nav--open") || e.key !== "Tab") return;
+
+      const focusables = getFocusables(panel);
+      if (!focusables.length) return;
+
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    });
+
+    [closeBtn, ...qsa(".mobile-nav__link", nav)].forEach((el) => {
+      el.addEventListener("click", () => {
+        requestAnimationFrame(() => lastFocused.focus());
+      });
+    });
+  };
+
+  setLinkActiveState();
+  improvePlaceholderLinks();
+  enhanceForms();
+  enhanceMobileNav();
+}
+
+document.addEventListener("DOMContentLoaded", initializeProjectEnhancements);

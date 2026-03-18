@@ -4,63 +4,64 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Стартовый шаблон | ВебКадеми</title>
+		<meta name="description" content="Browse project documentation, snippets, and setup notes for the Glee frontend project." />
+		<title>Documentation&#160;&#8212; Glee</title>
 		<link rel="stylesheet" href="./css/main.css" />
 
 		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
 		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
 	</head>
 
-	<body>
+	<body class="page page--docs" data-page="docs">
 		<header class="header">
 			<div class="container">
 				<div class="header__inner">
-					<a href="#" class="logo">
+					<a href="index.html" class="logo" aria-label="Glee home">
 						<svg class="logo-icon icon icon--user">
 							<use href="./img/svgsprite/sprite.symbol.svg#logo-icon"></use>
 						</svg>
 						<span class="logo__text">Glee.</span>
 					</a>
 
-					<nav class="header__nav nav">
+					<nav class="header__nav nav" aria-label="Primary navigation">
 						<ul class="nav__list">
 							<li class="nav__item">
-								<a href="#" class="nav__link">Home +</a>
+								<a href="index.html" class="nav__link">Home +</a>
 							</li>
 							<li class="nav__item">
-								<a href="#" class="nav__link">About</a>
+								<a href="about-us.html" class="nav__link">About</a>
 							</li>
 							<li class="nav__item">
-								<a href="#" class="nav__link">Services</a>
+								<a href="product-list-one.html" class="nav__link">Services</a>
 							</li>
 							<li class="nav__item">
-								<a href="#" class="nav__link">Pages +</a>
+								<a href="login.html" class="nav__link">Pages +</a>
 							</li>
 							<li class="nav__item">
-								<a href="#" class="nav__link">News</a>
+								<a href="blog-page.html" class="nav__link">News</a>
 							</li>
 							<li class="nav__item">
-								<a href="#" class="nav__link">Contact</a>
+								<a href="contact-info.html" class="nav__link">Contact</a>
 							</li>
 						</ul>
 					</nav>
 
 					<div class="header__actions actions">
-						<button class="actions__btn actions__btn--search" type="button" aria-label="Search">
+						<button class="actions__btn actions__btn--search" type="button" aria-label="Search (coming soon)">
 							<svg class="search-icon icon">
 								<use href="./img/svgsprite/sprite.symbol.svg#search-icon"></use>
 							</svg>
 						</button>
 
 						<div class="header__actions-box">
-							<button class="actions__btn actions__btn--wishlist" type="button" aria-label="Wishlist">
+							<button class="actions__btn actions__btn--wishlist" type="button" aria-label="Wishlist (coming soon)">
 								<svg class="heart-icon icon">
 									<use href="./img/svgsprite/sprite.symbol.svg#heart-icon"></use>
 								</svg>
 								<span class="actions__count">0</span>
 							</button>
 
-							<button class="actions__btn actions__btn--cart" type="button" aria-label="Cart">
+							<button class="actions__btn actions__btn--cart" type="button" aria-label="Cart (coming soon)">
 								<svg class="cart-icon icon">
 									<use href="./img/svgsprite/sprite.symbol.svg#cart-icon"></use>
 								</svg>
@@ -68,7 +69,7 @@
 							</button>
 						</div>
 
-						<button class="actions__btn actions__btn--more" type="button" aria-label="More actions">
+						<button class="actions__btn actions__btn--more" type="button" aria-label="More actions (coming soon)">
 							<svg class="more-icon icon">
 								<use href="./img/svgsprite/sprite.symbol.svg#more-icon"></use>
 							</svg>
@@ -87,7 +88,7 @@
 		<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
 			<div class="mobile-nav__overlay"></div>
 
-			<div class="mobile-nav__panel">
+			<div class="mobile-nav__panel" role="dialog" aria-modal="true" aria-label="Mobile navigation">
 				<button class="mobile-nav__close" type="button" aria-label="Close menu">
 					<span></span>
 					<span></span>
@@ -95,22 +96,22 @@
 
 				<ul class="mobile-nav__list">
 					<li class="mobile-nav__item">
-						<a href="#" class="mobile-nav__link">Home +</a>
+						<a href="index.html" class="mobile-nav__link">Home +</a>
 					</li>
 					<li class="mobile-nav__item">
-						<a href="#" class="mobile-nav__link">About</a>
+						<a href="about-us.html" class="mobile-nav__link">About</a>
 					</li>
 					<li class="mobile-nav__item">
-						<a href="#" class="mobile-nav__link">Services</a>
+						<a href="product-list-one.html" class="mobile-nav__link">Services</a>
 					</li>
 					<li class="mobile-nav__item">
-						<a href="#" class="mobile-nav__link">Pages +</a>
+						<a href="login.html" class="mobile-nav__link">Pages +</a>
 					</li>
 					<li class="mobile-nav__item">
-						<a href="#" class="mobile-nav__link">News</a>
+						<a href="blog-page.html" class="mobile-nav__link">News</a>
 					</li>
 					<li class="mobile-nav__item">
-						<a href="#" class="mobile-nav__link">Contact</a>
+						<a href="contact-info.html" class="mobile-nav__link">Contact</a>
 					</li>
 				</ul>
 			</div>
@@ -389,7 +390,7 @@ background-image: image-set(
 				<div class="footer__top">
 					<!-- Brand -->
 					<div class="footer__brand">
-						<a href="#" class="logo footer__logo">
+						<a href="index.html" class="logo footer__logo" aria-label="Glee home">
 							<svg class="logo-icon icon icon--user">
 								<use href="./img/svgsprite/sprite.symbol.svg#logo-icon"></use>
 							</svg>
@@ -404,35 +405,35 @@ background-image: image-set(
 							</p>
 							<p class="footer__contact">
 								<span class="footer__label">Telephone:</span>
-								+832-347-5843
+								<a class="footer__contact-link" href="tel:+8323475843">+832-347-5843</a>
 							</p>
 							<p class="footer__contact">
 								<span class="footer__label">Email:</span>
-								contact@Glee.com
+								<a class="footer__contact-link" href="mailto:contact@glee.com">contact@Glee.com</a>
 							</p>
 						</address>
 					</div>
 
 					<!-- Services -->
-					<nav class="footer__nav footer__nav--services">
+					<nav class="footer__nav footer__nav--services" aria-label="Services">
 						<h4 class="footer__title">Services</h4>
 						<ul class="footer__list">
-							<li class="footer__item"><a class="footer__link" href="#">About us</a></li>
-							<li class="footer__item"><a class="footer__link" href="#">Return Policy</a></li>
-							<li class="footer__item"><a class="footer__link" href="#">Our Blog</a></li>
-							<li class="footer__item"><a class="footer__link" href="#">Contact Us</a></li>
-							<li class="footer__item"><a class="footer__link" href="#">Terms & Condition</a></li>
+							<li class="footer__item"><a class="footer__link" href="about-us.html">About us</a></li>
+							<li class="footer__item"><a class="footer__link" href="terms.html">Return Policy</a></li>
+							<li class="footer__item"><a class="footer__link" href="blog-page.html">Our Blog</a></li>
+							<li class="footer__item"><a class="footer__link" href="contact-info.html">Contact Us</a></li>
+							<li class="footer__item"><a class="footer__link" href="terms.html">Terms & Condition</a></li>
 						</ul>
 					</nav>
 
 					<!-- Account -->
-					<nav class="footer__nav footer__nav--account">
+					<nav class="footer__nav footer__nav--account" aria-label="Account">
 						<h4 class="footer__title">Account</h4>
 						<ul class="footer__list">
-							<li class="footer__item"><a class="footer__link" href="#">Your Account</a></li>
-							<li class="footer__item"><a class="footer__link" href="#">Checkout</a></li>
-							<li class="footer__item"><a class="footer__link" href="#">Login</a></li>
-							<li class="footer__item"><a class="footer__link" href="#">Register</a></li>
+							<li class="footer__item"><a class="footer__link" href="login.html">Your Account</a></li>
+							<li class="footer__item"><a class="footer__link" href="login.html">Checkout</a></li>
+							<li class="footer__item"><a class="footer__link" href="login.html">Login</a></li>
+							<li class="footer__item"><a class="footer__link" href="login.html">Register</a></li>
 						</ul>
 					</nav>
 
@@ -444,8 +445,8 @@ background-image: image-set(
 							update protidin.
 						</p>
 
-						<form class="footer__form">
-							<input class="footer__input" type="email" placeholder="Email address" required />
+						<form class="footer__form" action="#" novalidate>
+							<input class="footer__input" type="email" name="email" placeholder="Email address" aria-label="Email address" autocomplete="email" required />
 							<button class="footer__button" type="submit">
 								Subscribe
 							</button>
@@ -462,10 +463,10 @@ background-image: image-set(
 					</p>
 
 					<ul class="footer__menu">
-						<li class="footer__menu-item"><a class="footer__menu-link" href="#">Home</a></li>
-						<li class="footer__menu-item"><a class="footer__menu-link" href="#">About</a></li>
-						<li class="footer__menu-item"><a class="footer__menu-link" href="#">Blog</a></li>
-						<li class="footer__menu-item"><a class="footer__menu-link" href="#">Contact</a></li>
+						<li class="footer__menu-item"><a class="footer__menu-link" href="index.html">Home</a></li>
+						<li class="footer__menu-item"><a class="footer__menu-link" href="about-us.html">About</a></li>
+						<li class="footer__menu-item"><a class="footer__menu-link" href="blog-page.html">Blog</a></li>
+						<li class="footer__menu-item"><a class="footer__menu-link" href="contact-info.html">Contact</a></li>
 					</ul>
 				</div>
 			</div>

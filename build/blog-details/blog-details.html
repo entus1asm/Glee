@@ -2,24 +2,24 @@
 	<div class="container-full">
 		<h2 class="breadcrumb-title">Blog Details</h2>
 		<nav class="breadcrumb-nav">
-			<a href="#" class="breadcrumb-link">Home</a>
+			<a href="index.html" class="breadcrumb-link">Home</a>
 			<span class="breadcrumb-separator">/</span>
-			<a href="#" class="breadcrumb-link">Blog</a>
+			<a href="blog-page.html" class="breadcrumb-link">Blog</a>
 			<span class="breadcrumb-separator">/</span>
 			<span class="breadcrumb-current">Blog details</span>
 		</nav>
 	</div>
 </section>
-<main class="blog-page blog-details">
+<main class="blog-page blog-details" id="main-content">
 	<div class="container--narrow">
 		<div class="blog-page__layout">
 			<section class="blog-page__content">
 				<article class="blog-card">
-					<a class="blog-card__image-link" href="#">
+					<a class="blog-card__image-link" href="blog-details.html">
 						<picture>
 							<source srcset="./img/blog-page/1.webp 1x, ./img/blog-page/1@2x.webp 2x" type="image/webp" />
 							<source srcset="./img/blog-page/1.jpg 1x, ./img/blog-page/1@2x.jpg 2x" type="image/jpeg" />
-							<img class="blog-card__image" src="./img/blog-page/1.jpg" alt="Bedroom interior" />
+							<img class="blog-card__image" src="./img/blog-page/1.jpg" alt="Bedroom interior" width="830" height="501" loading="lazy" decoding="async" />
 						</picture>
 
 						<div class="blog-card__meta">
@@ -40,7 +40,7 @@
 					</a>
 
 					<h2 class="blog-card__title">
-						<a class="blog-card__title-link" href="#">Fonsectetur adipisicing eiusmod</a>
+						<a class="blog-card__title-link" href="blog-details.html">Fonsectetur adipisicing eiusmod</a>
 					</h2>
 
 					<p class="blog-card__text blog-details__intro">
@@ -69,7 +69,7 @@
 						<picture>
 							<source srcset="./img/blog-details/1.webp 1x, ./img/blog-details/1@2x.webp 2x" type="image/webp" />
 							<source srcset="./img/blog-details/1.jpg 1x, ./img/blog-details/1@2x.jpg 2x" type="image/jpeg" />
-							<img class="blog-details__media-image" src="./img/blog-details/1.jpg" alt="Interior details" />
+							<img class="blog-details__media-image" src="./img/blog-details/1.jpg" alt="Interior details" width="323" height="210" loading="lazy" decoding="async" />
 						</picture>
 
 						<div class="blog-details__media-content">
@@ -94,7 +94,7 @@
 							<picture>
 								<source srcset="./img/blog-details/avatar-1.webp 1x, ./img/blog-details/avatar-1@2x.webp 2x" type="image/webp" />
 								<source srcset="./img/blog-details/avatar-1.jpg 1x, ./img/blog-details/avatar-1@2x.jpg 2x" type="image/jpeg" />
-								<img src="./img/blog-details/avatar-1.jpg" alt="avatar-1" />
+								<img src="./img/blog-details/avatar-1.jpg" alt="avatar-1" width="76" height="76" loading="lazy" decoding="async" />
 							</picture>
 						</div>
 
@@ -108,8 +108,8 @@
 						<div class="blog-details__author-row">
 							<span class="blog-details__author-label">Tags:</span>
 							<div class="blog-details__author-links">
-								<a class="blog-details__author-link" href="#">All,</a>
-								<a class="blog-details__author-link" href="#">Trending</a>
+								<a class="blog-details__author-link" href="blog-page.html">All,</a>
+								<a class="blog-details__author-link" href="blog-page.html">Trending</a>
 							</div>
 						</div>
 
@@ -150,7 +150,7 @@
 								<picture>
 									<source srcset="./img/blog-details/avatar-2.webp 1x, ./img/blog-details/avatar-2@2x.webp 2x" type="image/webp" />
 									<source srcset="./img/blog-details/avatar-2.jpg 1x, ./img/blog-details/avatar-2@2x.jpg 2x" type="image/jpeg" />
-									<img src="./img/blog-details/avatar-2.jpg" alt="avatar-2" />
+									<img src="./img/blog-details/avatar-2.jpg" alt="avatar-2" width="100" height="100" loading="lazy" decoding="async" />
 								</picture>
 							</div>
 
@@ -181,7 +181,7 @@
 								<picture>
 									<source srcset="./img/blog-details/avatar-3.webp 1x, ./img/blog-details/avatar-3@2x.webp 2x" type="image/webp" />
 									<source srcset="./img/blog-details/avatar-3.jpg 1x, ./img/blog-details/avatar-3@2x.jpg 2x" type="image/jpeg" />
-									<img src="./img/blog-details/avatar-3.jpg" alt="avatar-3" />
+									<img src="./img/blog-details/avatar-3.jpg" alt="avatar-3" width="100" height="100" loading="lazy" decoding="async" />
 								</picture>
 							</div>
 
@@ -212,7 +212,7 @@
 								<picture>
 									<source srcset="./img/blog-details/avatar-4.webp 1x, ./img/blog-details/avatar-4@2x.webp 2x" type="image/webp" />
 									<source srcset="./img/blog-details/avatar-4.jpg 1x, ./img/blog-details/avatar-4@2x.jpg 2x" type="image/jpeg" />
-									<img src="./img/blog-details/avatar-4.jpg" alt="avatar-4" />
+									<img src="./img/blog-details/avatar-4.jpg" alt="avatar-4" width="100" height="100" loading="lazy" decoding="async" />
 								</picture>
 							</div>
 
@@ -243,17 +243,17 @@
 				<section class="blog-details__form-block" aria-labelledby="blog-details-form-title">
 					<h3 class="blog-details__section-title" id="blog-details-form-title">Leave A&#160;Comment</h3>
 
-					<form class="blog-details__form" action="#">
+					<form class="blog-details__form" action="#" novalidate>
 						<div class="blog-details__form-row">
 							<label class="blog-details__field blog-details__field--name">
-								<input class="blog-details__input" type="text" name="name" placeholder="Name" aria-label="Name" />
+								<input class="blog-details__input" type="text" name="name" placeholder="Name" aria-label="Name" autocomplete="name" minlength="2" required />
 								<svg class="user-icon icon icon--user-input blog-details__field-icon">
 									<use href="./img/svgsprite/sprite.symbol.svg#user-icon"></use>
 								</svg>
 							</label>
 
 							<label class="blog-details__field blog-details__field--email">
-								<input class="blog-details__input" type="email" name="email" placeholder="youremail@gmail.com" aria-label="Email" />
+								<input class="blog-details__input" type="email" name="email" placeholder="youremail@gmail.com" aria-label="Email" autocomplete="email" required />
 								<svg class="email-icon icon icon--email-input blog-details__field-icon">
 									<use href="./img/svgsprite/sprite.symbol.svg#email-icon"></use>
 								</svg>
@@ -261,7 +261,7 @@
 						</div>
 
 						<label class="blog-details__field blog-details__field--comment">
-							<textarea class="blog-details__textarea" name="comment" placeholder="Comment" aria-label="Comment"></textarea>
+							<textarea class="blog-details__textarea" name="comment" placeholder="Comment" aria-label="Comment" minlength="10" required></textarea>
 							<svg class="blog-details__field-icon">
 								<use href="./img/svgsprite/sprite.symbol.svg#comment-icon"></use>
 							</svg>
@@ -362,11 +362,11 @@
 
 					<ul class="recent-list">
 						<li class="recent-list__item">
-							<a class="recent-list__link" href="#">
+							<a class="recent-list__link" href="blog-details.html">
 								<picture>
 									<source srcset="./img/blog-page/recent-post.webp 1x, ./img/blog-page/recent-post@2x.webp 2x" type="image/webp" />
 									<source srcset="./img/blog-page/recent-post.jpg 1x, ./img/blog-page/recent-post@2x.jpg 2x" type="image/jpeg" />
-									<img class="recent-list__img" src="./img/blog-page/recent-post.jpg" alt="Post" />
+									<img class="recent-list__img" src="./img/blog-page/recent-post.jpg" alt="Post" width="71" height="71" loading="lazy" decoding="async" />
 								</picture>
 								<div class="recent-list__info">
 									<span class="recent-list__name">Corem ipsum dolor tetur adipisicing elit</span>
@@ -382,11 +382,11 @@
 						</li>
 
 						<li class="recent-list__item">
-							<a class="recent-list__link" href="#">
+							<a class="recent-list__link" href="blog-details.html">
 								<picture>
 									<source srcset="./img/blog-page/recent-post2.webp 1x, ./img/blog-page/recent-post2@2x.webp 2x" type="image/webp" />
 									<source srcset="./img/blog-page/recent-post2.jpg 1x, ./img/blog-page/recent-post2@2x.jpg 2x" type="image/jpeg" />
-									<img class="recent-list__img" src="./img/blog-page/recent-post2.jpg" alt="Post 2" />
+									<img class="recent-list__img" src="./img/blog-page/recent-post2.jpg" alt="Post 2" width="71" height="71" loading="lazy" decoding="async" />
 								</picture>
 								<div class="recent-list__info">
 									<span class="recent-list__name">Fdipisicing elit, sed do&#160;eiusmod tempor</span>
@@ -402,11 +402,11 @@
 						</li>
 
 						<li class="recent-list__item">
-							<a class="recent-list__link" href="#">
+							<a class="recent-list__link" href="blog-details.html">
 								<picture>
 									<source srcset="./img/blog-page/recent-post3.webp 1x, ./img/blog-page/recent-post3@2x.webp 2x" type="image/webp" />
 									<source srcset="./img/blog-page/recent-post3.jpg 1x, ./img/blog-page/recent-post3@2x.jpg 2x" type="image/jpeg" />
-									<img class="recent-list__img" src="./img/blog-page/recent-post3.jpg" alt="Post 3" />
+									<img class="recent-list__img" src="./img/blog-page/recent-post3.jpg" alt="Post 3" width="71" height="71" loading="lazy" decoding="async" />
 								</picture>
 								<div class="recent-list__info">
 									<span class="recent-list__name">Eonsectetur adipisicing elit, sed do&#160;eiusmod</span>
@@ -422,11 +422,11 @@
 						</li>
 
 						<li class="recent-list__item">
-							<a class="recent-list__link" href="#">
+							<a class="recent-list__link" href="blog-details.html">
 								<picture>
 									<source srcset="./img/blog-page/recent-post4.webp 1x, ./img/blog-page/recent-post4@2x.webp 2x" type="image/webp" />
 									<source srcset="./img/blog-page/recent-post4.jpg 1x, ./img/blog-page/recent-post4@2x.jpg 2x" type="image/jpeg" />
-									<img class="recent-list__img" src="./img/blog-page/recent-post4.jpg" alt="Post 4" />
+									<img class="recent-list__img" src="./img/blog-page/recent-post4.jpg" alt="Post 4" width="71" height="71" loading="lazy" decoding="async" />
 								</picture>
 								<div class="recent-list__info">
 									<span class="recent-list__name">gnim ad&#160;minim veniam, quis nostrud</span>

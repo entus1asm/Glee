@@ -1,20 +1,19 @@
 @@include('blocks/breadcrumbs.html')
 <section class="login" id="login">
   <div class="container">
-    <form class="login__form" action="#" method="post">
+    <form class="login__form" action="#" method="post" novalidate>
       <div class="login__field">
         <label class="login__label" for="login-username">
           Username or email address <span class="login__required">*</span>
         </label>
-        <input class="login__input" id="login-username" type="text" name="username" autocomplete="username" required />
+        <input class="login__input" id="login-username" type="text" name="username" autocomplete="username" minlength="2" required />
       </div>
 
       <div class="login__field">
         <label class="login__label" for="login-password">
           Password <span class="login__required">*</span>
         </label>
-        <input class="login__input" id="login-password" type="password" name="password" autocomplete="current-password"
-          required />
+        <input class="login__input" id="login-password" type="password" name="password" autocomplete="current-password" minlength="6" required />
       </div>
 
       <button class="login__btn" type="submit">Login</button>
@@ -26,14 +25,14 @@
           <span class="login__remember-text">Remember me</span>
         </label>
 
-        <a class="login__forgot" href="#">Lost your password?</a>
+        <a class="login__forgot" href="login.html">Lost your password?</a>
       </div>
 
       <div class="login__divider"></div>
 
       <p class="login__hint">Not registered? No problem</p>
 
-      <a class="login__create" href="#">Create an account</a>
+      <a class="login__create" href="login.html">Create an account</a>
     </form>
   </div>
 </section>

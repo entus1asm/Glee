@@ -5,23 +5,26 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Glee</title>
+	<meta name="description" content="Explore modern furniture, decor, lighting, and interior inspiration with the Glee storefront experience." />
+	<title>Glee — Modern Furniture Store</title>
 	<link rel="stylesheet" href="./css/main.css" />
 
 	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
 	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/glee-icon.png">
 </head>
 
-<body>
+<body class="page page--home" data-page="home">
 	@@include('blocks/header.html')
-	@@include('blocks/hero.html')
-	@@include('blocks/benefits.html')
-	@@include('blocks/products.html')
-	@@include('blocks/promo.html')
-	@@include('blocks/design.html')
-	@@include('blocks/brand-video.html')
-	@@include('blocks/articles.html')
-	@@include('blocks/brands.html')
+	<main id="main-content">
+		@@include('blocks/hero.html')
+		@@include('blocks/benefits.html')
+		@@include('blocks/products.html')
+		@@include('blocks/promo.html')
+		@@include('blocks/design.html')
+		@@include('blocks/brand-video.html')
+		@@include('blocks/articles.html')
+		@@include('blocks/brands.html')
+	</main>
 	@@include('blocks/footer.html')
 	<script src="./js/index.bundle.js"></script>
 </body>
